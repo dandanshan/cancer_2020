@@ -2124,6 +2124,10 @@ p {
   #agenda .agenda__speaker .title:before {
     content: none;
   }
+  #agenda .memo {
+    padding-left: 20px;
+    text-align: left;
+  }
   #traffic .title {
     width: 100%;
     text-align: center;
