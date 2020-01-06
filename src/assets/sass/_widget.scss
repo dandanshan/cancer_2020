@@ -105,10 +105,7 @@ button {
                 opacity: 1;
             }
         }
-
     }
-
-
 
     &--sm {
         padding: 10px 15px;
@@ -137,7 +134,15 @@ button {
             width: (100%/3);
             padding: 0 15px;
             margin-bottom: 25px;
+        }
+    }
 
+    &--buy {
+        margin: 0 -15px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 15px;
         }
     }
 }
@@ -305,6 +310,85 @@ button {
     }
 }
 
+%icon-traffic {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(44px);
+        background-image: url('../images/forum/icon_traffic@3x.png');
+        background-size: 44px 88px;
+        background-position-x: 0;
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.icon__traffic {
+    @extend %icon-traffic;
+
+    &--bus {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--mrt {
+
+        &:before,
+        &:after {
+            background-position-y: -44px;
+        }
+    }
+}
+
+%icon-ticket {
+
+    &:before,
+    &:after {
+        width: 110px;
+        height: 170px;
+        background-image: url('../images/forum/img_ticket@3x.png');
+        background-size: 110px 510px;
+        background-position-x: 0;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
+
+.icon__ticket {
+    @extend %icon-ticket;
+
+    &--breast {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--colorectal {
+
+        &:before,
+        &:after {
+            background-position-y: -170px;
+        }
+    }
+
+    &--lung {
+
+        &:before,
+        &:after {
+            background-position-y: -340px;
+        }
+    }
+}
+
 /*---------- alignment ----------*/
 .text-left {
     text-align: left !important;
@@ -340,6 +424,7 @@ button {
         display: inline-block;
     }
 }
+
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     .grid {
@@ -358,12 +443,30 @@ button {
                 }
             }
         }
+
+        &--tp {
+            &>li {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &--buy {
+
+            &>li {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 }
-//Small devices (landscape tablets, 768 and down)
-@media only screen and (max-width: $screen-sm) {
-}
-//XSmall devices (portrait phones, 576 and down)
-@media only screen and (max-width: $screen-xs) {
 
-}
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}

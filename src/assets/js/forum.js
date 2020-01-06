@@ -11,14 +11,31 @@ $(document).ready(function() {
         $('.nav').toggleClass('active');
     });
 
+    $('.accordion').click(function(){
+        var $this = $(this);
+        var isActive = $this.hasClass('active');
+        if (isActive) {
+            $this.find('.accordion__body').slideUp(400, function() {
+                $this.removeClass('active');
+            });
+            return
+        }
+        $('.accordion.active').find('.accordion__body').slideUp(400, function() {
+            $('.accordion').removeClass('active');
+        });
+        $this.find('.accordion__body').slideDown(400, function() {
+            $this.addClass('active');
+        });
+    });
+
 
     var rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
     });
 
     $('.about__slides').slick({

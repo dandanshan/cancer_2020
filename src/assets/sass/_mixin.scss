@@ -141,40 +141,40 @@
 }
 
 //arrow
-@mixin arrow-up($size, $color) {
-	width: 0;
-	height: 0;
-	border-left: $size solid transparent;
-	border-right: $size solid transparent;
-	border-bottom: $size solid $color;
-	border-top: none;
+@mixin arrow-up($size, $width, $color) {
+	width: $size;
+	height: $size;
+	border-width: 0px $width $width 0px;
+	border-color: $color;
+	border-style: solid;
+	@include rotate(-135);
 }
 
-@mixin arrow-down($size, $color) {
-	width: 0;
-	height: 0;
-	border-left: $size solid transparent;
-	border-right: $size solid transparent;
-	border-top: $size solid $color;
-	border-bottom: none;
+@mixin arrow-down($size, $width, $color) {
+	width: $size;
+	height: $size;
+	border-width: 0px $width $width 0px;
+	border-color: $color;
+	border-style: solid;
+	@include rotate(45);
 }
 
-@mixin arrow-left($size, $color) {
-	width: 0;
-	height: 0;
-	border-top: $size solid transparent;
-	border-bottom: $size solid transparent;
-	border-right: $size solid $color;
-	border-left: none;
+@mixin arrow-left($size, $width, $color) {
+	width: $size;
+	height: $size;
+	border-width: 0px $width $width 0px;
+	border-color: $color;
+	border-style: solid;
+	@include rotate(135);
 }
 
-@mixin arrow-right($size, $color) {
-	width: 0;
-	height: 0;
-	border-top: $size solid transparent;
-	border-bottom: $size solid transparent;
-	border-left: $size solid $color;
-	border-right: none;
+@mixin arrow-right($size, $width, $color) {
+	width: $size;
+	height: $size;
+	border-width: 0px $width $width 0px;
+	border-color: $color;
+	border-style: solid;
+	@include rotate(-45);
 }
 
 
