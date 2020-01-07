@@ -30,6 +30,7 @@ $forums: (
     red300 : #f87260,
     fuchsia500: #8a5082,
     breast: #ffe1dd,
+    lung: #adadad,
 );
 
 @function forum($forum-name) {
@@ -80,10 +81,11 @@ $font-size-28:            1.75rem !default;
 $font-size-30:            1.875rem !default;
 $font-size-36:            2.25rem !default;
 $font-size-45:            2.8125rem !default;
+$font-size-60:            3.75rem !default;
 
 $font-weight-normal:      400 !default;
 $font-weight-medium:      500 !default;
-$font-weight-bold:       700 !default;
+$font-weight-bold:        700 !default;
 
 //== Media queries breakpoints
 //

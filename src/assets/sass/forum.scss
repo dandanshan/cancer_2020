@@ -19,7 +19,6 @@ p {
     height: 800px;
     position: relative;
     padding: 0;
-    // background: url(../images/forum/test.png);
     background-size: 100%;
     text-align: left;
 
@@ -135,7 +134,7 @@ p {
                 right: 0;
                 width: 550px;
                 height: 263px;
-                background: url('../images/forum/img_kv-ribbon02@3x.png') 0 0/contain
+                background: url('../images/forum/img_kv-ribbon02@3x.png') 0 0/contain no-repeat;
             }
         }
 
@@ -154,9 +153,20 @@ p {
                     font-size: $font-size-24;
                     font-weight: $font-weight-medium;
                 }
-
             }
         }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 270px;
+        height: 365px;
+        background: url('../images/forum/img_kv-ribbon03@3x.png') 0 0/contain no-repeat;
+        position: absolute;
+        right: 0;
+        bottom: -100px;
+        z-index: 1;
     }
 }
 
@@ -271,11 +281,12 @@ p {
     color: forum(gray500);
     font-size: $font-size-base;
 }
+
 #agenda {
     background: forum(gray100);
     position: relative;
 
-    > .wrap {
+    >.wrap {
         position: relative;
         z-index: 1;
     }
@@ -319,17 +330,18 @@ p {
                 font-weight: $font-weight-bold;
                 color: forum(gray600);
                 display: inline-block;
+            }
 
-                >span {
-                    font-size: $font-size-20;
-                    font-weight: $font-weight-normal;
-                    color: forum(gray500);
+            .title {
+                font-size: $font-size-20;
+                font-weight: $font-weight-normal;
+                color: forum(gray500);
+                display: inline-block;
+                line-height: 1.6;
 
-                    &:before {
-                        content: '/';
-                        display: inline-block;
-                        margin: 0 5px;
-                    }
+                &:before {
+                    content: '/';
+                    margin: 0 5px;
                 }
             }
 
@@ -387,6 +399,7 @@ p {
                     }
                 }
             }
+
             .session {
                 text-align: center;
                 padding: 20px 15px;
@@ -399,6 +412,13 @@ p {
                     margin-bottom: 15px;
                     position: relative;
                     z-index: 1;
+
+                    >span {
+                        color: forum(gray500);
+                        font-size: $font-size-base;
+                        margin-top: 10px;
+                        display: none;
+                    }
                 }
 
                 &:after {
@@ -451,7 +471,7 @@ p {
                 right: unset;
                 display: inline-block;
                 z-index: 1;
-                margin:0 10px 20px 10px;
+                margin: 0 8px 20px 8px;
             }
         }
 
@@ -478,22 +498,31 @@ p {
             }
 
             &--ribbon03 {
-                width: 300px;
+                width: 120px;
                 height: 330px;
                 background-position-y: -680px;
                 top: 30%;
-                right: -80px;
-                z-index: 1;
-            }
-            &--ribbon04 {
-                width: 300px;
-                height: 250px;
-                background-position-y: -1010px;
-                top: calc(100% - 400px);
-                right: -60px;
+                right: 0;
                 z-index: 1;
             }
 
+            &--ribbon04 {
+                width: 120px;
+                height: 250px;
+                background-position-y: -1010px;
+                top: calc(100% - 400px);
+                right: 0;
+                z-index: 1;
+            }
+        }
+    }
+
+    .action {
+        display: none;
+
+        .btn {
+            z-index: 1;
+            margin: 0 auto;
         }
     }
 
@@ -506,6 +535,239 @@ p {
     .memo {
         text-align: right;
         margin-top: 15px;
+    }
+}
+
+#ticket {
+    position: relative;
+    padding-bottom: 40px;
+
+    .info {
+        text-align: left;
+        line-height: 1.6;
+        display: inline-block;
+        margin: 0 auto;
+
+        a {
+            color: forum(blue400);
+            text-decoration: underline;
+        }
+
+        >ul>li {
+            margin-bottom: 15px;
+            font-size: $font-size-20;
+
+            >ul {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .buy {
+        margin-top: 40px;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: forum(gray200);
+            z-index: -1;
+        }
+
+        .session {
+            display: block;
+            background: forum(white);
+            border-radius: 4px;
+            padding: 30px 0;
+            width: 100%;
+            box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .25);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            @include transition(all, .3s, ease);
+
+            &:hover {
+                box-shadow: 0 3px 15px -3px rgba(0, 0, 0, .1);
+
+                .icon__ticket:before {
+                    @include scale(30);
+                    @include transition(transform, 1.5s, ease);
+                }
+            }
+
+            &__title {
+                color: forum(navy);
+                font-size: $font-size-20;
+                margin-bottom: 25px;
+
+            }
+
+            &__type {
+                color: forum(gray600);
+                font-size: $font-size-30;
+                font-weight: $font-weight-bold;
+            }
+
+            &--breast {
+                .session__type>span {
+                    color: forum(red300);
+                }
+
+                .btn {
+                    border-color: forum(red300);
+                    background: forum(red300);
+                }
+            }
+
+            &--colorectal {
+                .session__type>span {
+                    color: forum(blue400);
+                }
+
+                .btn {
+                    border-color: forum(blue400);
+                    background: forum(blue400);
+                }
+            }
+
+            &--lung {
+                .session__type>span {
+                    color: forum(lung);
+                }
+
+                .btn {
+                    border-color: forum(gray600);
+                    background: forum(gray600);
+                }
+            }
+        }
+    }
+
+    .form {
+        background-color: forum(gray200);
+        height: 725px;
+        margin-top: 20px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+#notic {
+    text-align: left;
+
+    .notic {
+        font-size: $font-size-base;
+        margin-bottom: 40px;
+
+        ol {
+            line-height: 1.6;
+            list-style-type: decimal;
+            padding-left: 20px;
+
+            li>ul,
+            ul>li {
+                vertical-align: top;
+            }
+        }
+
+        ul.alpha {
+            list-style-type: lower-alpha;
+            list-style-position: inside;
+        }
+    }
+
+    .accordion {
+        background: forum(gray100);
+        margin-bottom: 2px;
+        font-size: $font-size-base;
+        line-height: 1.6;
+
+        &__head {
+            color: forum(gray600);
+            padding: 15px 20px;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                float: right;
+                margin-top: 5px;
+                @include arrow-down(8px, 2px, forum(gray600));
+            }
+        }
+
+        &__body {
+            color: forum(gray500);
+            padding: 15px 40px 15px 20px;
+            display: none;
+        }
+
+        &.active {
+            .accordion__head {
+                &:after {
+                    @include arrow-up(8px, 2px, forum(gray600));
+                }
+            }
+        }
+    }
+
+    a {
+        color: forum(blue400);
+        text-decoration: underline;
+    }
+}
+
+#traffic {
+    background: forum(blue100);
+    overflow: hidden;
+    position: relative;
+
+    .title {
+        float: left;
+        width: calc(60% - 50px);
+        text-align: left;
+    }
+
+    .traffic {
+        &__map {
+            float: right;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__info {
+            width: calc(60% - 50px);
+            text-align: left;
+
+            .icon__traffic {
+                padding-left: 55px;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    color: forum(gray600);
+                    font-size: $font-size-base;
+                }
+            }
+        }
     }
 }
 
@@ -592,14 +854,15 @@ p {
             top: 45%;
             z-index: 3;
 
-
-
             &--desc {
                 max-width: 470px;
                 color: text(gray500);
                 line-height: 1.6;
-
             }
+        }
+
+        &:after {
+            content: none;
         }
     }
 
@@ -627,13 +890,48 @@ p {
             &__content {
                 left: 20px;
 
-                &--logotype {
-                    // width: 280px;
-                }
-
                 &--desc {
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    #agenda {
+        .agenda {
+            &__bg {
+                display: none;
+            }
+
+            &--tp {
+
+                .session {
+                    text-align: center;
+                    padding: 20px 15px;
+                    margin-top: 20px;
+                    position: relative;
+
+                    &__title {
+
+                        >span {
+                            display: block;
+                        }
+                    }
+
+                    &:after {
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+
+    #ticket {
+        .buy {
+            &:after {
+                content: '';
+                height: 570px;
+                bottom: 80px;
             }
         }
     }
@@ -697,6 +995,71 @@ p {
         }
     }
 
+    #agenda {
+        .wrap {
+            padding: 0;
+        }
+
+        .agenda {
+
+            &__speaker {
+
+                .title {
+                    display: block;
+                    margin-top: 10px;
+
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+
+            &__desc {
+                display: none;
+            }
+
+            .action {
+                display: block;
+            }
+
+            &--tp {}
+        }
+
+        .memo {
+            padding-left: 20px;
+            text-align: left;
+        }
+    }
+
+    #ticket {
+        .form {
+            height: 1055px;
+        }
+    }
+
+    #traffic {
+
+        .title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .traffic {
+            &__map {
+                position: relative;
+                float: none;
+                overflow: hidden;
+                height: 400px;
+                margin: 0 -20px 30px -20px;
+                width: calc(100% + 40px);
+            }
+
+            &__info {
+                width: 100%;
+            }
+        }
+    }
+
     #promote {
         .promote {
             &__desc {
@@ -756,6 +1119,14 @@ p {
                         margin-bottom: 10px;
                     }
                 }
+            }
+        }
+    }
+
+    #traffic {
+        .traffic {
+            &__map {
+                height: 200px;
             }
         }
     }

@@ -11,14 +11,32 @@ $(document).ready(function() {
         $('.nav').toggleClass('active');
     });
 
+    //qa accordion
+    $('.accordion').click(function(){
+        var $this = $(this);
+        var isActive = $this.hasClass('active');
+        if (isActive) {
+            $this.find('.accordion__body').slideUp(400, function() {
+                $this.removeClass('active');
+            });
+            return
+        }
+        $('.accordion.active').find('.accordion__body').slideUp(400, function() {
+            $('.accordion').removeClass('active');
+        });
+        $this.find('.accordion__body').slideDown(400, function() {
+            $this.addClass('active');
+        });
+    });
 
+    //rellax
     var rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
     });
 
     $('.about__slides').slick({
@@ -70,5 +88,32 @@ $(document).ready(function() {
             }
             }
         ]
+    });
+
+    $('#intro .intro__slides li').click(function(){
+
+        var name = $(this).find('.intro__name').text();
+        var title = $(this).find('.intro__title').text();
+        var imgUrl = $(this).find('img').attr('src');
+
+        Swal.fire({
+            html: '<div class="avatar"><img src="' + imgUrl + '"></div><div class="intro__name">' + name + '</div><div class="intro__title">' + title + '</div><p>' + '</p>',
+            showCloseButton: true,
+            showConfirmButton: false,
+            customClass: {
+                popup: 'popup--speaker',
+            }
+
+        })
+    });
+
+    //menuSpy
+    var elm = document.querySelector('.nav');
+    var ms = new MenuSpy(elm);
+
+    //agenda desc show in mobile
+    $('.agenda .action').click(function(){
+        $(this).next('.agenda__desc').fadeIn();
+        $(this).hide();
     });
 });

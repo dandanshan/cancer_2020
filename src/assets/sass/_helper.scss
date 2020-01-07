@@ -33,7 +33,6 @@
             }
         }
 
-
         &--prev {
 
             &:before {
@@ -60,11 +59,11 @@
         width: 100%;
         margin-top: 20px;
 
-        & > li {
+        &>li {
             display: inline-block;
             padding: 0 15px;
 
-            & > button {
+            &>button {
                 display: inline-block;
                 padding: 0;
                 border: none;
@@ -83,7 +82,7 @@
             li {
                 &.slick-active {
                     button {
-                        background-color: forum(navy);
+                        background-color: forum(gray500);
                     }
                 }
 
@@ -97,7 +96,7 @@
             li {
                 &.slick-active {
                     button {
-                        background-color: forum(navy);
+                        background-color: forum(blue400);
                     }
                 }
 
@@ -112,3 +111,141 @@
         margin-bottom: 0;
     }
 }
+
+//sweetalert2
+.swal2-container {
+    .swal2-title {
+        font-size: $font-size-24;
+    }
+
+    .popup {
+        &--speaker {
+            .avatar {
+                @include wh-square(120px);
+                margin: 15px auto 0 auto;
+            }
+
+            .intro {
+                &__name {
+                    font-size: $font-size-20;
+                    font-weight: $font-weight-bold;
+                    color: forum(navy);
+                    margin-top: 15px;
+                }
+
+                &__title {
+                    font-size: $font-size-base;
+                    color: forum(gray500);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &--ticket {
+            padding: 50px 40px 40px;
+
+            .plan {
+                background: forum(white);
+                box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .25);
+                border-radius: 4px;
+                display: block;
+                @include transition(all, .3s, ease);
+
+                &__price {
+                    padding: 30px 30px 20px 30px;
+                    border-bottom: 1px solid forum(gray200);
+                    color: forum(black);
+
+                    span {
+                        color: forum(gray600);
+                        display: block;
+                        margin-top: 20px;
+                        font-size: $font-size-24;
+
+                        strong {
+                            font-size: $font-size-60;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+
+                &__content {
+                    padding: 20px 30px 30px 30px;
+                    color: forum(gray500);
+
+                    ul {
+                        text-align: left;
+                        min-height: 160px;
+
+                        li {
+                            margin-bottom: 10px;
+                            position: relative;
+                            padding-left: 20px;
+                            font-weight: $font-weight-medium;
+
+                            &::before {
+                                content: '';
+                                display: inline-block;
+                                width: 6px;
+                                height: 12px;
+                                border-color: forum(gray500);
+                                border-style: solid;
+                                border-width: 0 2px 2px 0;
+                                @include rotate(45);
+                                position: absolute;
+                                left: 0;
+                                top: 4px;
+                            }
+
+                            &.plus {
+                                color: forum(blue400);
+
+                                &::before {
+                                    border-color: forum(blue400);
+                                }
+                            }
+                        }
+                    }
+                    .btn {
+                        padding: 9px 20px;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 3px 15px -3px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+//Large devices (landscape tablets, 1200 and down)
+@media only screen and (max-width: $screen-lg) {}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {}
+
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {
+    .slides {
+        &__dots {
+            >li {
+                padding: 0 6px;
+            }
+        }
+    }
+
+    .swal2-container {
+        .popup {
+            &--ticket {
+                padding: 50px 30px 40px 30px;
+            }
+        }
+    }
+}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}

@@ -69,6 +69,47 @@ button {
 
     }
 
+    &--forumOutlineSec {
+        padding: 13px 20px;
+        border: 1px solid forum(gray600);
+        border-radius: 24px;
+        width: 240px;
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: forum(gray600);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+
+        &:before {
+            content: '';
+            @include transition(all, .6s, ease);
+            @include transform(skew(15deg));
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 110%;
+            bottom: -10px;
+            opacity: 0;
+            background: forum(gray600);
+            z-index: -1;
+        }
+
+        &:hover {
+            .btn__text {
+                color: forum(white);
+            }
+
+            &:before {
+                right: -10px;
+                opacity: 1;
+            }
+        }
+
+    }
+
     &--forumMain {
         padding: 13px 20px;
         border: 1px solid forum(navy);
@@ -105,10 +146,44 @@ button {
                 opacity: 1;
             }
         }
-
     }
 
+    &--forumHighlight {
+        padding: 13px 20px;
+        border: 1px solid forum(red300);
+        background: forum(red300);
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
 
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+    }
+
+    &--forumBuy {
+        border-radius: 24px;
+        width: 200px;
+        padding: 9px 20px;
+        @include animation(btnScale, 2s, infinite);
+
+        @keyframes btnScale {
+            0%, 100% {
+            transform: scale(1);
+            }
+            50% {
+            transform: scale(1.1);
+            }
+        }
+
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+    }
 
     &--sm {
         padding: 10px 15px;
@@ -137,7 +212,24 @@ button {
             width: (100%/3);
             padding: 0 15px;
             margin-bottom: 25px;
+        }
+    }
 
+    &--buy {
+        margin: 0 -15px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 15px;
+        }
+    }
+
+    &--plan {
+        margin: 30px -15px 0 -15px;
+
+        &>li {
+            width: 50%;
+            padding: 0 15px;
         }
     }
 }
@@ -305,6 +397,101 @@ button {
     }
 }
 
+%icon-traffic {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(44px);
+        background-image: url('../images/forum/icon_traffic@3x.png');
+        background-size: 44px 176px;
+        background-position-x: 0;
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.icon__traffic {
+    @extend %icon-traffic;
+
+    &--bus {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--mrt {
+
+        &:before,
+        &:after {
+            background-position-y: -44px;
+        }
+    }
+
+    &--train {
+
+        &:before,
+        &:after {
+            background-position-y: -88px;
+        }
+    }
+
+    &--car {
+
+        &:before,
+        &:after {
+            background-position-y: -132px;
+        }
+    }
+}
+
+%icon-ticket {
+
+    &:before,
+    &:after {
+        width: 110px;
+        height: 170px;
+        background-image: url('../images/forum/img_ticket@3x.png');
+        background-size: 110px 510px;
+        background-position-x: 0;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}
+
+.icon__ticket {
+    @extend %icon-ticket;
+
+    &--breast {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--colorectal {
+
+        &:before,
+        &:after {
+            background-position-y: -170px;
+        }
+    }
+
+    &--lung {
+
+        &:before,
+        &:after {
+            background-position-y: -340px;
+        }
+    }
+}
+
 /*---------- alignment ----------*/
 .text-left {
     text-align: left !important;
@@ -340,6 +527,7 @@ button {
         display: inline-block;
     }
 }
+
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     .grid {
@@ -358,12 +546,43 @@ button {
                 }
             }
         }
+
+        &--tp {
+            &>li {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &--buy {
+
+            &>li {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &--plan {
+            margin: 30px -15px 0 -15px;
+
+            &>li {
+                width: 100%;
+                padding: 0 15px;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
     }
 }
-//Small devices (landscape tablets, 768 and down)
-@media only screen and (max-width: $screen-sm) {
-}
-//XSmall devices (portrait phones, 576 and down)
-@media only screen and (max-width: $screen-xs) {
 
-}
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}
