@@ -38,7 +38,7 @@ p {
 
             &--desc {
                 width: 85%;
-                color: text(gray500);
+                color: forum(gray500);
                 line-height: 1.6;
                 text-align: justify;
             }
@@ -856,7 +856,7 @@ p {
 
             &--desc {
                 max-width: 470px;
-                color: text(gray500);
+                color: forum(gray500);
                 line-height: 1.6;
             }
         }

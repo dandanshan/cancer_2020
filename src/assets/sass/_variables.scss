@@ -6,10 +6,18 @@ $bg: (
 );
 
 //text
-$texts: (
+// $texts: (
 
-    gray100: #393942,
-    gray500: #88888F,
+//     gray100: #393942,
+//     gray500: #88888F,
+// );
+
+//cancer
+$colors: (
+    white: #ffffff,
+    purple500: #705f92,
+    pink500: #ff7b89,
+
 );
 
 //cancer-forum
@@ -32,6 +40,10 @@ $forums: (
     breast: #ffe1dd,
     lung: #adadad,
 );
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
 
 @function forum($forum-name) {
     @return map-get($forums, $forum-name);

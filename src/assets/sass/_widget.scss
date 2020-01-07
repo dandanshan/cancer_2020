@@ -28,6 +28,95 @@ button {
         width: 100%;
     }
 
+    &--main {
+        padding: 13px 20px;
+        border: 1px solid color(purple500);
+        background: color(purple500);
+        border-radius: 24px;
+        width: 240px;
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+        }
+
+    }
+
+    &--mainOutline {
+        padding: 13px 20px;
+        border: 1px solid color(purple500);
+        font-size: $font-size-base;
+        @include transition(all, .6s, ease);
+
+        &:before {
+            content: '';
+            @include transition(all, .6s, ease);
+            @include transform(skew(15deg));
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 110%;
+            bottom: -10px;
+            opacity: 0;
+            background: color(purple500);
+            z-index: -1;
+        }
+
+        &:hover {
+            .btn__text {
+                color: color(white);
+            }
+
+            &:before {
+                right: -10px;
+                opacity: 1;
+            }
+        }
+    }
+
+    &--secOutline {
+        padding: 13px 20px;
+        border: 1px solid color(pink500);
+        border-radius: 24px;
+        width: 240px;
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: color(pink500);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+
+        &:before {
+            content: '';
+            @include transition(all, .6s, ease);
+            @include transform(skew(15deg));
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 110%;
+            bottom: -10px;
+            opacity: 0;
+            background: color(pink500);
+            z-index: -1;
+        }
+
+        &:hover {
+            .btn__text {
+                color: color(white);
+            }
+
+            &:before {
+                right: -10px;
+                opacity: 1;
+            }
+        }
+    }
+
+
     &--forumOutline {
         padding: 13px 20px;
         border: 1px solid forum(navy);
