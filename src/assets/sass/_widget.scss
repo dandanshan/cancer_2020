@@ -148,6 +148,21 @@ button {
         }
     }
 
+    &--forumHighlight {
+        padding: 13px 20px;
+        border: 1px solid forum(red300);
+        background: forum(red300);
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+    }
+
     &--forumBuy {
         border-radius: 24px;
         width: 200px;
@@ -205,6 +220,15 @@ button {
 
         &>li {
             width: (100%/3);
+            padding: 0 15px;
+        }
+    }
+
+    &--plan {
+        margin: 30px -15px 0 -15px;
+
+        &>li {
+            width: 50%;
             padding: 0 15px;
         }
     }
@@ -538,6 +562,19 @@ button {
 
                 &:not(:last-child) {
                     margin-bottom: 15px;
+                }
+            }
+        }
+
+        &--plan {
+            margin: 30px -15px 0 -15px;
+
+            &>li {
+                width: 100%;
+                padding: 0 15px;
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
                 }
             }
         }

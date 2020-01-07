@@ -589,6 +589,7 @@ p {
             box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .25);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
             @include transition(all, .3s, ease);
 
             &:hover {
@@ -645,6 +646,17 @@ p {
                     background: forum(gray600);
                 }
             }
+        }
+    }
+
+    .form {
+        background-color: forum(gray200);
+        height: 725px;
+        margin-top: 20px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -1016,6 +1028,12 @@ p {
         .memo {
             padding-left: 20px;
             text-align: left;
+        }
+    }
+
+    #ticket {
+        .form {
+            height: 1055px;
         }
     }
 

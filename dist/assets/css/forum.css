@@ -492,6 +492,10 @@ th {
   margin-bottom: 0;
 }
 
+.swal2-container .swal2-title {
+  font-size: 1.5rem;
+}
+
 .swal2-container .popup--speaker .avatar {
   width: 120px;
   height: 120px;
@@ -511,12 +515,94 @@ th {
   margin-bottom: 20px;
 }
 
+.swal2-container .popup--ticket {
+  padding: 50px 40px 40px;
+}
+
+.swal2-container .popup--ticket .plan {
+  background: #ffffff;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.swal2-container .popup--ticket .plan__price {
+  padding: 30px 30px 20px 30px;
+  border-bottom: 1px solid #ebebeb;
+  color: #393942;
+}
+
+.swal2-container .popup--ticket .plan__price span {
+  color: #66666f;
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.swal2-container .popup--ticket .plan__price span strong {
+  font-size: 3.75rem;
+  padding-left: 10px;
+}
+
+.swal2-container .popup--ticket .plan__content {
+  padding: 20px 30px 30px 30px;
+  color: #88888f;
+}
+
+.swal2-container .popup--ticket .plan__content ul {
+  text-align: left;
+  min-height: 160px;
+}
+
+.swal2-container .popup--ticket .plan__content ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.swal2-container .popup--ticket .plan__content ul li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 12px;
+  border-color: #88888f;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.swal2-container .popup--ticket .plan__content ul li.plus {
+  color: #5fb1f4;
+}
+
+.swal2-container .popup--ticket .plan__content ul li.plus::before {
+  border-color: #5fb1f4;
+}
+
+.swal2-container .popup--ticket .plan__content .btn {
+  padding: 9px 20px;
+}
+
+.swal2-container .popup--ticket .plan:hover {
+  box-shadow: 0 3px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 768px) {
   .slides__dots > li {
     padding: 0 6px;
+  }
+  .swal2-container .popup--ticket {
+    padding: 50px 30px 40px 30px;
   }
 }
 
@@ -680,6 +766,22 @@ button:focus {
   opacity: 1;
 }
 
+.btn--forumHighlight {
+  padding: 13px 20px;
+  border: 1px solid #f87260;
+  background: #f87260;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--forumHighlight .btn__text {
+  color: #ffffff;
+  font-size: 1rem;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
 .btn--forumBuy {
   border-radius: 24px;
   width: 200px;
@@ -764,6 +866,15 @@ button:focus {
 
 .grid--buy > li {
   width: 33.33333%;
+  padding: 0 15px;
+}
+
+.grid--plan {
+  margin: 30px -15px 0 -15px;
+}
+
+.grid--plan > li {
+  width: 50%;
   padding: 0 15px;
 }
 
@@ -997,6 +1108,16 @@ button:focus {
   .grid--buy > li:not(:last-child) {
     margin-bottom: 15px;
   }
+  .grid--plan {
+    margin: 30px -15px 0 -15px;
+  }
+  .grid--plan > li {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .grid--plan > li:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 html {
@@ -1050,7 +1171,7 @@ ol ol {
 }
 
 .wrap {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -1928,6 +2049,7 @@ p {
   box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -1983,6 +2105,17 @@ p {
 #ticket .buy .session--lung .btn {
   border-color: #66666f;
   background: #66666f;
+}
+
+#ticket .form {
+  background-color: #ebebeb;
+  height: 725px;
+  margin-top: 20px;
+}
+
+#ticket .form iframe {
+  width: 100%;
+  height: 100%;
 }
 
 #notic {
@@ -2280,6 +2413,9 @@ p {
   #agenda .memo {
     padding-left: 20px;
     text-align: left;
+  }
+  #ticket .form {
+    height: 1055px;
   }
   #traffic .title {
     width: 100%;
