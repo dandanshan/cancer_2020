@@ -11,6 +11,7 @@ $(document).ready(function() {
         $('.nav').toggleClass('active');
     });
 
+    //qa accordion
     $('.accordion').click(function(){
         var $this = $(this);
         var isActive = $this.hasClass('active');
@@ -28,7 +29,7 @@ $(document).ready(function() {
         });
     });
 
-
+    //rellax
     var rellax = new Rellax('.rellax', {
         speed: -2,
         center: false,
@@ -106,6 +107,13 @@ $(document).ready(function() {
         })
     });
 
+    //menuSpy
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);
+
+    //agenda desc show in mobile
+    $('.agenda .action').click(function(){
+        $(this).next('.agenda__desc').fadeIn();
+        $(this).hide();
+    });
 });

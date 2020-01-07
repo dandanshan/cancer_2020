@@ -473,7 +473,7 @@ th {
 }
 
 .slides__dots--about li.slick-active button {
-  background-color: #454550;
+  background-color: #88888f;
 }
 
 .slides__dots--about li button {
@@ -481,7 +481,7 @@ th {
 }
 
 .slides__dots--intro li.slick-active button {
-  background-color: #454550;
+  background-color: #5fb1f4;
 }
 
 .slides__dots--intro li button {
@@ -490,6 +490,34 @@ th {
 
 .slides.slick-dotted {
   margin-bottom: 0;
+}
+
+.swal2-container .popup--speaker .avatar {
+  width: 120px;
+  height: 120px;
+  margin: 15px auto 0 auto;
+}
+
+.swal2-container .popup--speaker .intro__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #454550;
+  margin-top: 15px;
+}
+
+.swal2-container .popup--speaker .intro__title {
+  font-size: 1rem;
+  color: #88888f;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .slides__dots > li {
+    padding: 0 6px;
+  }
 }
 
 /*---------- button ----------*/
@@ -569,6 +597,47 @@ button:focus {
 }
 
 .btn--forumOutline:hover:before {
+  right: -10px;
+  opacity: 1;
+}
+
+.btn--forumOutlineSec {
+  padding: 13px 20px;
+  border: 1px solid #66666f;
+  border-radius: 24px;
+  width: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--forumOutlineSec .btn__text {
+  color: #66666f;
+  font-size: 1rem;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.btn--forumOutlineSec:before {
+  content: '';
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: skew(15deg);
+  transform: skew(15deg);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: 110%;
+  bottom: -10px;
+  opacity: 0;
+  background: #66666f;
+  z-index: -1;
+}
+
+.btn--forumOutlineSec:hover .btn__text {
+  color: #ffffff;
+}
+
+.btn--forumOutlineSec:hover:before {
   right: -10px;
   opacity: 1;
 }
@@ -1786,6 +1855,15 @@ p {
   z-index: 1;
 }
 
+#agenda .action {
+  display: none;
+}
+
+#agenda .action .btn {
+  z-index: 1;
+  margin: 0 auto;
+}
+
 #agenda .break {
   padding: 18px;
   color: #88888f;
@@ -2081,25 +2159,6 @@ p {
   margin-left: 20px;
 }
 
-.popup--speaker .avatar {
-  width: 120px;
-  height: 120px;
-  margin: 15px auto 0 auto;
-}
-
-.popup--speaker .intro__name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #454550;
-  margin-top: 15px;
-}
-
-.popup--speaker .intro__title {
-  font-size: 1rem;
-  color: #88888f;
-  margin-bottom: 20px;
-}
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -2211,6 +2270,12 @@ p {
   }
   #agenda .agenda__speaker .title:before {
     content: none;
+  }
+  #agenda .agenda__desc {
+    display: none;
+  }
+  #agenda .agenda .action {
+    display: block;
   }
   #agenda .memo {
     padding-left: 20px;

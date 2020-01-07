@@ -517,6 +517,15 @@ p {
         }
     }
 
+    .action {
+        display: none;
+
+        .btn {
+            z-index: 1;
+            margin: 0 auto;
+        }
+    }
+
     .break {
         padding: 18px;
         color: forum(gray500);
@@ -819,37 +828,6 @@ p {
     }
 }
 
-.popup {
-    &--speaker {
-        .avatar {
-            @include wh-square(120px);
-            margin: 15px auto 0 auto;
-        }
-
-        .intro {
-            &__name {
-                font-size: $font-size-20;
-                font-weight: $font-weight-bold;
-                color: forum(navy);
-                margin-top: 15px;
-
-            }
-            &__title {
-                font-size: $font-size-base;
-                color: forum(gray500);
-                margin-bottom: 20px;
-
-            }
-        }
-
-
-
-
-    }
-}
-
-
-
 
 /* ==========================================================================
    Media Queries
@@ -868,9 +846,9 @@ p {
                 max-width: 470px;
                 color: text(gray500);
                 line-height: 1.6;
-
             }
         }
+
         &:after {
             content: none;
         }
@@ -899,10 +877,6 @@ p {
 
             &__content {
                 left: 20px;
-
-                &--logotype {
-                    // width: 280px;
-                }
 
                 &--desc {
                     width: 100%;
@@ -937,7 +911,6 @@ p {
                     }
                 }
             }
-
         }
     }
 
@@ -1027,6 +1000,14 @@ p {
                         content: none;
                     }
                 }
+            }
+
+            &__desc {
+                display: none;
+            }
+
+            .action {
+                display: block;
             }
 
             &--tp {}
