@@ -107,6 +107,28 @@ button {
         }
     }
 
+    &--forumBuy {
+        border-radius: 24px;
+        width: 200px;
+        padding: 9px 20px;
+        @include animation(btnScale, 2s, infinite);
+
+        @keyframes btnScale {
+            0%, 100% {
+            transform: scale(1);
+            }
+            50% {
+            transform: scale(1.1);
+            }
+        }
+
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
+    }
+
     &--sm {
         padding: 10px 15px;
         border-radius: 24px;
@@ -317,7 +339,7 @@ button {
     &:after {
         @include wh-square(44px);
         background-image: url('../images/forum/icon_traffic@3x.png');
-        background-size: 44px 88px;
+        background-size: 44px 176px;
         background-position-x: 0;
         display: block;
         position: absolute;
@@ -341,6 +363,22 @@ button {
         &:before,
         &:after {
             background-position-y: -44px;
+        }
+    }
+
+    &--train {
+
+        &:before,
+        &:after {
+            background-position-y: -88px;
+        }
+    }
+
+    &--car {
+
+        &:before,
+        &:after {
+            background-position-y: -132px;
         }
     }
 }

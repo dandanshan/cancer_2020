@@ -88,4 +88,24 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('#intro .intro__slides li').click(function(){
+
+        var name = $(this).find('.intro__name').text();
+        var title = $(this).find('.intro__title').text();
+        var imgUrl = $(this).find('img').attr('src');
+
+        Swal.fire({
+            html: '<div class="avatar"><img src="' + imgUrl + '"></div><div class="intro__name">' + name + '</div><div class="intro__title">' + title + '</div><p>' + '</p>',
+            showCloseButton: true,
+            showConfirmButton: false,
+            customClass: {
+                popup: 'popup--speaker',
+            }
+
+        })
+    });
+
+    var elm = document.querySelector('.nav');
+    var ms = new MenuSpy(elm);
 });

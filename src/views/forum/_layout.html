@@ -9,6 +9,8 @@
         <link href="../assets/css/slick.css" rel="stylesheet">
         <link href="../assets/css/slick-theme.css" rel="stylesheet">
         <link href="../assets/css/forum.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@9.5.4/dist/sweetalert2.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.5.4/dist/sweetalert2.all.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -23,14 +25,14 @@
                         <li><a href="" class="menu__name">首頁</a></li>
                         <li><a href="#about" class="menu__name">關於</a></li>
                         <li><a href="#intro" class="menu__name">講者</a></li>
-                        <li><a href="" class="menu__name">議程</a></li>
+                        <li><a href="#agenda" class="menu__name">議程</a></li>
                         <li>
                             <div class="menu__highlight">
                                 <div class="menu__name">論壇資訊</div>
                                 <ul class="menu__content">
-                                    <li><a href="" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.18</span> 高雄</span></a></li>
-                                    <li><a href="" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.19</span> 台中</span></a></li>
-                                    <li><a href="" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.24</span> 台北</span></a></li>
+                                    <li><a href="./kh.html" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.18</span> 高雄</span></a></li>
+                                    <li><a href="./tc.html" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.19</span> 台中</span></a></li>
+                                    <li><a href="./tp.html" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.24</span> 台北</span></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -53,13 +55,13 @@
                 <div class="kv__content--logotype"></div>
                 <div class="kv__content--desc">癌症慢性病化及中壯年族群罹癌成長快速，讓「抗癌」不僅要專注「治療當下」，更重要的是，把癌症視為一種慢性病來管理－癌後的「終生管理」，就成為抗癌新課題。</div>
                 <div class="kv__action">
-                    <a href="#" class="btn btn--inblock btn--forumOutline" target="_blank">
+                    <a href="./kh.html" class="btn btn--inblock btn--forumOutline">
                         <span class="btn__text">4.18 高雄</span>
                     </a>
-                    <a href="#" class="btn btn--inblock btn--forumOutline" target="_blank">
+                    <a href="./tc.html" class="btn btn--inblock btn--forumOutline">
                         <span class="btn__text">4.19 台中</span>
                     </a>
-                    <a href="#" class="btn btn--inblock btn--forumOutline" target="_blank">
+                    <a href="./tp.html" class="btn btn--inblock btn--forumOutline">
                         <span class="btn__text">4.26 台北</span>
                     </a>
                 </div>
@@ -180,6 +182,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../assets/js/rellax.min.js"></script>
         <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/menuspy.min.js"></script>
         <script src="../assets/js/data.js"></script>
         <script src="../assets/js/forum.js"></script>
         <!-- @@placeholder = endBody -->

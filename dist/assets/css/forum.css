@@ -611,6 +611,45 @@ button:focus {
   opacity: 1;
 }
 
+.btn--forumBuy {
+  border-radius: 24px;
+  width: 200px;
+  padding: 9px 20px;
+  -webkit-animation: btnScale 2s;
+  animation: btnScale 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes btnScale {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes btnScale {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.btn--forumBuy .btn__text {
+  color: #ffffff;
+  font-size: 1rem;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
 .btn--sm {
   padding: 10px 15px;
   border-radius: 24px;
@@ -784,7 +823,7 @@ button:focus {
   width: 44px;
   height: 44px;
   background-image: url("../images/forum/icon_traffic@3x.png");
-  background-size: 44px 88px;
+  background-size: 44px 176px;
   background-position-x: 0;
   display: block;
   position: absolute;
@@ -797,6 +836,14 @@ button:focus {
 
 .icon__traffic--mrt:before, .icon__traffic--mrt:after {
   background-position-y: -44px;
+}
+
+.icon__traffic--train:before, .icon__traffic--train:after {
+  background-position-y: -88px;
+}
+
+.icon__traffic--car:before, .icon__traffic--car:after {
+  background-position-y: -132px;
 }
 
 .icon__ticket:before, .icon__ticket:after {
@@ -987,6 +1034,11 @@ ol ol {
 .header .nav .menu li {
   display: inline-block;
   font-size: 1rem;
+}
+
+.header .nav .menu li.active .menu__name:before {
+  left: 0;
+  right: 0;
 }
 
 .header .nav .menu__name {
@@ -1363,7 +1415,7 @@ p {
   right: 0;
   width: 550px;
   height: 263px;
-  background: url("../images/forum/img_kv-ribbon02@3x.png") 0 0/contain;
+  background: url("../images/forum/img_kv-ribbon02@3x.png") 0 0/contain no-repeat;
 }
 
 #kv .kv__action {
@@ -1382,6 +1434,18 @@ p {
 #kv .kv__action .btn__text {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+#kv:after {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 365px;
+  background: url("../images/forum/img_kv-ribbon03@3x.png") 0 0/contain no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  z-index: 1;
 }
 
 #about .about__slides {
@@ -1705,20 +1769,20 @@ p {
 }
 
 #agenda .agenda__bg--ribbon03 {
-  width: 300px;
+  width: 120px;
   height: 330px;
   background-position-y: -680px;
   top: 30%;
-  right: -80px;
+  right: 0;
   z-index: 1;
 }
 
 #agenda .agenda__bg--ribbon04 {
-  width: 300px;
+  width: 120px;
   height: 250px;
   background-position-y: -1010px;
   top: calc(100% - 400px);
-  right: -60px;
+  right: 0;
   z-index: 1;
 }
 
@@ -1731,52 +1795,6 @@ p {
 #agenda .memo {
   text-align: right;
   margin-top: 15px;
-}
-
-#traffic {
-  background: #c9e5fb;
-}
-
-#promote .title > span {
-  font-size: 1rem;
-  font-weight: 500;
-  display: block;
-}
-
-#promote .subtitle {
-  color: #5fb1f4;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-#promote .promote__item {
-  overflow: hidden;
-  text-align: left;
-}
-
-#promote .promote__item:not(:first-child) {
-  margin-top: 40px;
-}
-
-#promote .promote__item:nth-child(odd) .promote__desc {
-  float: left;
-}
-
-#promote .promote__item:nth-child(odd) .icon__promote {
-  float: right;
-}
-
-#promote .promote__item:nth-child(even) .promote__desc {
-  float: right;
-}
-
-#promote .promote__item:nth-child(even) .icon__promote {
-  float: left;
-}
-
-#promote .promote__desc {
-  width: calc(100% - 340px);
 }
 
 #ticket {
@@ -1831,12 +1849,23 @@ p {
   width: 100%;
   box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.25);
   position: relative;
+  overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 #ticket .buy .session:hover {
   box-shadow: 0 3px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#ticket .buy .session:hover .icon__ticket:before {
+  -webkit-transform: scale(30);
+  transform: scale(30);
+  -webkit-transition: transform 1.5s ease;
+  -webkit-transition: -webkit-transform 1.5s ease;
+  transition: -webkit-transform 1.5s ease;
+  transition: transform 1.5s ease;
+  transition: transform 1.5s ease, -webkit-transform 1.5s ease;
 }
 
 #ticket .buy .session__title {
@@ -1849,11 +1878,6 @@ p {
   color: #66666f;
   font-size: 1.875rem;
   font-weight: 700;
-}
-
-#ticket .buy .session .btn {
-  width: 200px;
-  padding: 9px 20px;
 }
 
 #ticket .buy .session--breast .session__type > span {
@@ -1901,7 +1925,6 @@ p {
 #notic .notic ol li > ul,
 #notic .notic ol ul > li {
   vertical-align: top;
-  max-width: 800px;
 }
 
 #notic .notic ul.alpha {
@@ -1957,6 +1980,7 @@ p {
 }
 
 #traffic {
+  background: #c9e5fb;
   overflow: hidden;
   position: relative;
 }
@@ -1990,13 +2014,55 @@ p {
   padding-left: 55px;
 }
 
-#traffic .traffic__info .icon__traffic:first-child {
+#traffic .traffic__info .icon__traffic:not(:last-child) {
   margin-bottom: 30px;
 }
 
 #traffic .traffic__info .icon__traffic p {
   color: #66666f;
   font-size: 1rem;
+}
+
+#promote .title > span {
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+}
+
+#promote .subtitle {
+  color: #5fb1f4;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#promote .promote__item {
+  overflow: hidden;
+  text-align: left;
+}
+
+#promote .promote__item:not(:first-child) {
+  margin-top: 40px;
+}
+
+#promote .promote__item:nth-child(odd) .promote__desc {
+  float: left;
+}
+
+#promote .promote__item:nth-child(odd) .icon__promote {
+  float: right;
+}
+
+#promote .promote__item:nth-child(even) .promote__desc {
+  float: right;
+}
+
+#promote .promote__item:nth-child(even) .icon__promote {
+  float: left;
+}
+
+#promote .promote__desc {
+  width: calc(100% - 340px);
 }
 
 #sponsor {
@@ -2015,6 +2081,25 @@ p {
   margin-left: 20px;
 }
 
+.popup--speaker .avatar {
+  width: 120px;
+  height: 120px;
+  margin: 15px auto 0 auto;
+}
+
+.popup--speaker .intro__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #454550;
+  margin-top: 15px;
+}
+
+.popup--speaker .intro__title {
+  font-size: 1rem;
+  color: #88888f;
+  margin-bottom: 20px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -2029,6 +2114,9 @@ p {
     max-width: 470px;
     color: #88888F;
     line-height: 1.6;
+  }
+  #kv:after {
+    content: none;
   }
 }
 

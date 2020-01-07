@@ -100,6 +100,13 @@ ol {
             li {
                 display: inline-block;
                 font-size: $font-size-base;
+
+                &.active {
+                    .menu__name:before {
+                        left: 0;
+                        right: 0;
+                    }
+                }
             }
 
             &__name {
@@ -127,6 +134,8 @@ ol {
                         right: 0;
                     }
                 }
+
+
             }
 
             &__content {
