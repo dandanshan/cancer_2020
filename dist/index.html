@@ -46,10 +46,34 @@
             </header>
             <div class="ad"></div>
             <section class="section" id="chart">
-                <canvas id="chart1" width="400" height="400"></canvas>
-                <canvas id="chart2" width="400" height="400"></canvas>
+                <div class="wrap">
+                    <div class="wrapper">
+                        <div class="section__title">癌症關鍵數字</div>
+                        <div class="chart">
+                            <div class="chart__desc">
+                                <div class="subtitle">國人十大死因</div>
+                                <p>衛生福利部統計數據顯示，惡性腫瘤佔比28.2%，為國人十大死因之冠。</p>
+                                <div>資料來源：衛生福利部</div>
+                            </div>
+                            <div class="chart__canvas">
+                                <canvas id="chart1" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div class="chart__desc">
+                                <div class="subtitle">家族癌症病史分佈</div>
+                                <p>根據台灣人體生物資料庫統計數據，家族癌症史分布中，肝癌佔比居冠，達9.3%，其次為肺癌7.8%、乳癌6.5%、胃癌3.8%、大腸癌8.6%。</p>
+                                <div>資料來源：台灣人體生物資料庫</div>
+                            </div>
+                            <div class="chart__canvas">
+                                <canvas id="chart2" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <div class="ad"></div>
+            <section class="section" id="promote"></section>
             <section class="section" id="sponsor">
                 <div class="wrap">
                     <div class="wrapper">
@@ -92,23 +116,25 @@
                         datasets: [{
                             data: [0.7, 1.3, 3.3, 2.0, 2.1, 8.6, 3.8, 6.5, 7.8, 9.3],
                             backgroundColor: [
-                                '#705f92',
-                                '#705f92',
-                                '#705f92',
-                                '#705f92',
-                                '#705f92',
-                                '#ff7b89',
-                                '#ff7b89',
-                                '#ff7b89',
-                                '#ff7b89',
-                                '#ff7b89',
-                            ]
+                                '#c6bfd3',
+                                '#c6bfd3',
+                                '#c6bfd3',
+                                '#c6bfd3',
+                                '#c6bfd3',
+                                '#ff95a1',
+                                '#ff95a1',
+                                '#ff95a1',
+                                '#ff95a1',
+                                '#ff95a1',
+                            ],
+                            barPercentage: .6,
+                            // padding: 5,
                         }]
                     },
                     options: {
                         legend: {
                             display: false
-                        }
+                        },
                     }
                 });
             });

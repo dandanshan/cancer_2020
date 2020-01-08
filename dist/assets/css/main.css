@@ -1209,6 +1209,50 @@ button:focus {
   }
 }
 
+body {
+  color: #5c5c5c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.container {
+  position: relative;
+}
+
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section__title {
+  font-size: 2.25rem;
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.section__title:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: #ff7b89;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.subtitle {
+  color: #705f92;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
 .header {
   background: #ffffff;
   position: fixed;
@@ -1406,8 +1450,36 @@ button:focus {
   padding: 20px 0;
 }
 
-.section {
-  padding: 60px 0;
+#chart .chart {
+  overflow: hidden;
+}
+
+#chart .chart__desc {
+  width: calc(60% - 50px);
+}
+
+#chart .chart__canvas {
+  width: 40%;
+}
+
+#chart .chart:nth-of-type(odd) .chart__desc {
+  float: left;
+}
+
+#chart .chart:nth-of-type(odd) .chart__canvas {
+  float: right;
+}
+
+#chart .chart:nth-of-type(even) .chart__desc {
+  float: right;
+}
+
+#chart .chart:nth-of-type(even) .chart__canvas {
+  float: left;
+}
+
+#promote {
+  background: #c6bfd3;
 }
 
 #sponsor {
@@ -1416,6 +1488,9 @@ button:focus {
 
 #sponsor .subtitle {
   margin-bottom: 15px;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 #sponsor img {
