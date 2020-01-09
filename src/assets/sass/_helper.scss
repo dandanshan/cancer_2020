@@ -2,10 +2,6 @@
 .slides {
     position: relative;
 
-    &__item {
-        @include box-sizing(border-box);
-    }
-
     &__arrow {
         width: 56px;
         height: 70px;
@@ -21,13 +17,13 @@
             opacity: 1;
         }
 
-        &--about {
+        &--gray {
             &:before {
                 background-image: url('../images/forum/icon_slides-arrow-gray@3x.png');
             }
         }
 
-        &--intro {
+        &--white {
             &:before {
                 background-image: url('../images/forum/icon_slides-arrow-white@3x.png');
             }
@@ -78,7 +74,21 @@
             }
         }
 
-        &--about {
+        &--purple {
+            li {
+                &.slick-active {
+                    button {
+                        background-color: color(purple500);
+                    }
+                }
+
+                button {
+                    background-color: color(gray300);
+                }
+            }
+        }
+
+        &--gray {
             li {
                 &.slick-active {
                     button {
@@ -92,7 +102,7 @@
             }
         }
 
-        &--intro {
+        &--blue {
             li {
                 &.slick-active {
                     button {

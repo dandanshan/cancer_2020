@@ -1,0 +1,175 @@
+@import "variables";
+@import "mixin";
+@import "normalize";
+@import "helper";
+@import "widget";
+@import "layout";
+
+#topslide {
+    .slides {
+        margin: 0 20px;
+
+        &__top {
+            width: 940px;
+            height: 470px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+
+            >img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#chart {
+    background: color(gray100);
+
+    .chart {
+        overflow: hidden;
+
+        &__desc {
+            width: calc(45% - 50px);
+        }
+
+        &__canvas {
+            width: 55%;
+        }
+
+        &:nth-child(odd) {
+            .chart__desc {
+                float: right;
+            }
+
+            .chart__canvas {
+                float: left;
+            }
+        }
+
+        &:nth-child(even) {
+            .chart__desc {
+                float: left;
+            }
+
+            .chart__canvas {
+                float: right;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+#month {
+    background: color(gray100);
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: color(purple200);
+        height: 300px;
+    }
+}
+
+
+#promote {
+    background: color(purple200);
+    font-size: $font-size-base;
+
+    .promote {
+        &__item {
+            .title {
+                color: color(black);
+                font-size: $font-size-36;
+                font-weight: $font-weight-bold;
+            }
+
+            &.heighlight {
+                .subtitle {
+                    color: color(pink500);
+                }
+
+                .action {
+                    .btn {
+                        width: 150px;
+
+                        &:not(:last-of-type) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+#sponsor {
+    text-align: center;
+
+    .subtitle {
+        margin-bottom: 15px;
+        color: color(black);
+        font-size: $font-size-base;
+        font-weight: $font-weight-normal;
+    }
+
+    img {
+        margin-bottom: 25px;
+
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+    }
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+//Large devices (landscape tablets, 1200 and down)
+@media only screen and (max-width: $screen-lg) {
+
+    #topslide {
+        .slides {
+            margin: 0;
+
+            &__top {
+                width: 600px;
+                height: 300px;
+                overflow: hidden;
+                display: block;
+                margin: 0 auto;
+
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {
+}
+
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {
+    #topslide {
+
+    }
+}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {
+
+}

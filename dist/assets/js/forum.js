@@ -44,9 +44,9 @@ $(document).ready(function() {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: '<button class="slick-prev slides__arrow slides__arrow--about slides__arrow--prev" aria-label="Previous" type="button"></button>',
-        nextArrow: '<button class="slick-next slides__arrow slides__arrow--about slides__arrow--next" aria-label="Next" type="button"></button>',
-        dotsClass: 'slides__dots slides__dots--about',
+        prevArrow: '<button class="slick-prev slides__arrow slides__arrow--gray slides__arrow--prev" aria-label="Previous" type="button"></button>',
+        nextArrow: '<button class="slick-next slides__arrow slides__arrow--gray slides__arrow--next" aria-label="Next" type="button"></button>',
+        dotsClass: 'slides__dots slides__dots--gray',
         responsive: [
             {
             breakpoint: 992,
@@ -69,9 +69,9 @@ $(document).ready(function() {
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 3,
-        prevArrow: '<button class="slick-prev slides__arrow slides__arrow--intro slides__arrow--prev" aria-label="Previous" type="button"></button>',
-        nextArrow: '<button class="slick-next slides__arrow slides__arrow--intro slides__arrow--next" aria-label="Next" type="button"></button>',
-        dotsClass: 'slides__dots slides__dots--intro',
+        prevArrow: '<button class="slick-prev slides__arrow slides__arrow--white slides__arrow--prev" aria-label="Previous" type="button"></button>',
+        nextArrow: '<button class="slick-next slides__arrow slides__arrow--white slides__arrow--next" aria-label="Next" type="button"></button>',
+        dotsClass: 'slides__dots slides__dots--blue',
         responsive: [
             {
             breakpoint: 992,

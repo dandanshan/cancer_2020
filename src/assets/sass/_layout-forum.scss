@@ -3,6 +3,12 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    color: forum(navy);
+    margin: 0;
+    padding: 0;
+}
+
 h2 {
     font-size: $font-size-36;
     color: forum(navy);
@@ -26,7 +32,7 @@ h5 {
 }
 
 p {
-    margin: 0;
+    margin: 0 0 15px 0;
     line-height: 1.6;
 }
 
@@ -54,6 +60,12 @@ ol {
 
 .section {
     padding: 60px 0;
+}
+
+.avatar {
+    @include mask-circle;
+    width: 100%;
+    height: 100%;
 }
 
 .header {
@@ -210,7 +222,7 @@ ol {
                 left: 0;
                 width: 100%;
                 height: 2px;
-                background-color: #434141;
+                background-color: forum(navy);
                 border-radius: 2px;
                 @include rotate(0);
                 @include transition(all, .3s, ease);
@@ -322,7 +334,6 @@ ol {
 
             &.active {
                 left: 0;
-
             }
 
             .menu {
