@@ -44,6 +44,22 @@ button {
 
     }
 
+    &--sec {
+        padding: 13px 20px;
+        border: 1px solid color(pink500);
+        background: color(pink500);
+        border-radius: 24px;
+        width: 240px;
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: forum(white);
+            font-size: $font-size-base;
+        }
+
+    }
+
     &--mainOutline {
         padding: 13px 20px;
         border: 1px solid color(purple500);
