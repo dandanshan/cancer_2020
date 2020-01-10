@@ -306,12 +306,12 @@ button {
         @include box-sizing(border-box);
     }
 
-    &--month {
+    &--topic {
         margin: 0 -30px;
 
         &>li {
             width: (100%/3);
-            padding: 0 30px;
+            padding: 0 15px;
             margin-bottom: 30px;
         }
     }

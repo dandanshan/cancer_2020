@@ -78,6 +78,35 @@
     }
 }
 
+.topic {
+    .grid {
+        li:first-child {
+            width: calc(100% / 3 * 2);
+            height: calc(#{width} / 2);
+            float: right;
+        }
+
+        li {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.recommend {
+    &__media {
+        line-height: 0;
+    }
+
+    &__text {
+        margin-top: 10px;
+        font-size: $font-size-20;
+        font-weight: $font-weight-medium;
+        line-height: 1.4;
+    }
+}
+
 
 #promote {
     background: color(purple200);

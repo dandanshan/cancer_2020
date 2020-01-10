@@ -958,13 +958,13 @@ button:focus {
   box-sizing: border-box;
 }
 
-.grid--month {
+.grid--topic {
   margin: 0 -30px;
 }
 
-.grid--month > li {
+.grid--topic > li {
   width: 33.33333%;
-  padding: 0 30px;
+  padding: 0 15px;
   margin-bottom: 30px;
 }
 

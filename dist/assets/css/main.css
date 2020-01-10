@@ -958,13 +958,13 @@ button:focus {
   box-sizing: border-box;
 }
 
-.grid--month {
+.grid--topic {
   margin: 0 -30px;
 }
 
-.grid--month > li {
+.grid--topic > li {
   width: 33.33333%;
-  padding: 0 30px;
+  padding: 0 15px;
   margin-bottom: 30px;
 }
 
@@ -1726,6 +1726,27 @@ p {
   bottom: 0;
   background: #c6bfd3;
   height: 300px;
+}
+
+.topic .grid li:first-child {
+  width: calc(100% / 3 * 2);
+  height: calc(width / 2);
+  float: right;
+}
+
+.topic .grid li img {
+  width: 100%;
+}
+
+.recommend__media {
+  line-height: 0;
+}
+
+.recommend__text {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 #promote {
