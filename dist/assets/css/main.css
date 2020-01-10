@@ -1728,14 +1728,40 @@ p {
   height: 300px;
 }
 
-.topic .grid li:first-child {
+.topic .wrapper {
+  position: relative;
+}
+
+.topic .wrapper:after {
+  content: '';
+  display: block;
+  background: #fafafa;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 200px;
+  z-index: -1;
+}
+
+.topic .section__content {
+  padding: 0 65px 10px 65px;
+}
+
+.topic .grid--topic.top li:first-child {
   width: calc(100% / 3 * 2);
-  height: calc(width / 2);
   float: right;
+}
+
+.topic .grid--topic.more {
+  display: none;
 }
 
 .topic .grid li img {
   width: 100%;
+}
+
+.topic .action {
+  text-align: center;
 }
 
 .recommend__media {

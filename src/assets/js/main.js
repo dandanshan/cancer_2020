@@ -23,6 +23,10 @@ $(document).ready(function(){
         dotsClass: 'slides__dots slides__dots--purple',
     });
 
+    $('.action.more .btn').click(function(){
+        $(this).closest('.section__content').find('.grid.more').show();
+    });
+
     //menuSpy
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);
