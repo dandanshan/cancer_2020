@@ -958,6 +958,16 @@ button:focus {
   box-sizing: border-box;
 }
 
+.grid--month {
+  margin: 0 -30px;
+}
+
+.grid--month > li {
+  width: 33.33333%;
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
 .grid--tp {
   margin: 0 -15px;
 }
@@ -1249,6 +1259,10 @@ ul ol,
 ol ul,
 ol ol {
   margin-bottom: 0;
+}
+
+p {
+  line-height: 1.6;
 }
 
 .container {

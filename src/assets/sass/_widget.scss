@@ -41,7 +41,6 @@ button {
             color: forum(white);
             font-size: $font-size-base;
         }
-
     }
 
     &--sec {
@@ -57,7 +56,6 @@ button {
             color: forum(white);
             font-size: $font-size-base;
         }
-
     }
 
     &--mainOutline {
@@ -171,7 +169,6 @@ button {
                 opacity: 1;
             }
         }
-
     }
 
     &--forumOutlineSec {
@@ -212,7 +209,6 @@ button {
                 opacity: 1;
             }
         }
-
     }
 
     &--forumMain {
@@ -308,6 +304,16 @@ button {
         position: relative;
         float: left;
         @include box-sizing(border-box);
+    }
+
+    &--month {
+        margin: 0 -30px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 30px;
+            margin-bottom: 30px;
+        }
     }
 
     &--tp {
