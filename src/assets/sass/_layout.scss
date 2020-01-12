@@ -21,6 +21,7 @@ ol {
 
 p {
     line-height: 1.6;
+    margin: 0 0 15px 0;
 }
 
 .container {
@@ -166,18 +167,6 @@ p {
                     top: calc(50% - 8px);
                     bottom: 0;
                 }
-
-                // &:after {
-                //     content: '';
-                //     display: inline-block;
-                //     background: color(purple500);
-                //     width: 1px;
-                //     height: 15px;
-                //     position: absolute;
-                //     right: 0;
-                //     top: calc(50% - 8px);
-                //     bottom: 0;
-                // }
             }
         }
     }
@@ -215,13 +204,14 @@ p {
 
                 &:nth-of-type(4) {
                     top: 17px;
-                }
+                }    
             }
         }
 
         &.active {
             .burger__wrap {
                 span {
+                    background-color: color(purple500);
 
                     &:nth-of-type(1),
                     &:nth-of-type(4) {
@@ -428,6 +418,14 @@ p {
 
     .section {
         padding: 40px 0;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        .top {
+            
+        }
     }
 }
 

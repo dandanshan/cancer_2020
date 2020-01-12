@@ -64,7 +64,7 @@
 }
 
 #month {
-    background: color(gray100);
+    background: color(purple200);
     position: relative;
 
     &:after {
@@ -72,9 +72,33 @@
         display: block;
         width: 100%;
         position: absolute;
-        bottom: 0;
-        background: color(purple200);
-        height: 300px;
+        top: 0;
+        background: color(gray100);
+        height: 215px;
+    }
+
+    .section__title {
+        width: calc(100% / 3 - 30px);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    p {
+        position: absolute; 
+        top: 60px;
+        width: calc(100% / 3 - 30px);
+    }
+
+    .grid--month {
+
+        li {
+            
+        }
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -86,27 +110,22 @@
             content: '';
             display: block;
             background: color(gray100);
-            width: 100%;
+            width: calc(100% + 100px);
             position: absolute;
             bottom: 0;
             top: 200px;
+            left: -50px;
+            right: -50px;
             z-index: -1;
         }
     }
 
     .section__content {
-        padding: 0 65px 10px 65px;
+        padding: 0 15px 10px 15px;
     }
 
     .grid {
         &--topic {
-            &.top {
-                li:first-child {
-                    width: calc(100% / 3 * 2);
-                    // height: calc(#{width} / 2);
-                    float: right;
-                }
-            }
 
             &.more {
                 display: none;
@@ -219,6 +238,62 @@
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
+    #chart {
+        .chart {
+            &:nth-child(odd), &:nth-child(even) {
+                .chart__desc {
+                    width: 100%;
+                    float: left;
+                    margin-bottom: 20px;
+                }
+                .chart__canvas {
+                    width: 100%;
+                    max-width: 650px;
+                    float: left;
+                }
+            }
+        }
+    }
+    #month {
+        .section {
+            &__title {
+                position: relative;
+                width: 100%;
+                top: unset;
+            }
+            &__content {
+                padding: 0;
+            }
+        }
+        p {
+            position: relative;
+            width: 100%;
+            top: unset;
+        } 
+
+        &:after {
+            top: 0;
+            height: 250px;
+        }
+    }
+
+    .topic {
+        background: color(gray100);
+        .wrapper {
+            
+            &:after {
+                content: none;
+            }
+
+            .section {
+                &__content {
+                    padding: 0;
+                }
+            }
+
+        }
+
+    }
 }
 
 //Small devices (landscape tablets, 768 and down)

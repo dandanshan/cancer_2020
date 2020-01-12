@@ -306,6 +306,21 @@ button {
         @include box-sizing(border-box);
     }
 
+    &--month {
+        margin: 0 -30px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 15px;
+            margin-bottom: 30px;
+
+            &:first-child {
+                width: calc(100% / 3 * 2);
+                margin-left: calc(100% / 3);
+            }
+        }
+    }
+
     &--topic {
         margin: 0 -30px;
 
@@ -313,6 +328,13 @@ button {
             width: (100%/3);
             padding: 0 15px;
             margin-bottom: 30px;
+        }
+
+        &.top {
+            li:first-child {
+                width: calc(100% / 3 * 2);
+                float: right;
+            }
         }
     }
 
@@ -642,6 +664,39 @@ button {
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     .grid {
+        &--month {
+            margin: 0;
+            width: 100%;
+    
+            &>li, li:first-child {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+                margin-left: 0;
+            }
+        }
+
+        &--topic {
+            margin: 0;
+
+            &.top {
+                &>li, li:first-child {
+                    padding: 0;
+                    width: 100%;
+                    float: none;
+                }
+            }
+            &.more {
+                &>li {
+                    padding: 0;
+                    width: 100%;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
 
         //forum
         &--about {
