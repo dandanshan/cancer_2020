@@ -131,7 +131,7 @@
         </div>
     </div>
 </section>
-<section class="section" id="agenda">
+<section class="section" id="agenda" data-city="tp">
     <div class="wrap">
         <div class="wrapper">
             <h2 class="title">台北場議程</h2>
@@ -577,7 +577,7 @@
         <script src="../assets/js/forum.js"></script>
 <!-- start endBody -->
 <script>
-    var city = "台北";
+    var city = "tp";
     $.each(data, function(index, value1) {
         if (index == city) {
             $.each(value1, function(index, value2) {
@@ -611,34 +611,28 @@
         })
     });
 
-// var id = [];
+    var dataId = '';
 
-// $('.agenda').each(function(){
+    $('.agenda').click(function(){
+        dataId = $(this).attr('data-id');
 
-//     id.push($(this).attr('data-id'));
+        $.each(data, function(key1, value1) {
+        if (key1 == city) {
+            //$('#demo').append('key1: '+ key1 +'<br>');//will output: city
+            $.each(value1, function(key2, value2) {
+                //$('#demo').append('key2: '+ key2+ ' ' + value2 +'<br>');//will output: id
+                // console.log(value2.id);
 
-//     console.log(id);
+                if (dataId == value2.id ) {
+                    console.log(value2.name)
+                    console.log(value2.title)
+                    console.log(value2.topic)
+                }
+            });
+        }
+    });
+});
 
-//     $.each(data, function(key1, value1) {
-//         if (key1 == city) {
-//             //$('#demo').append('key1: '+ key1 +'<br>');//will output: city
-//             $.each(value1, function(key2, value2) {
-//                 //$('#demo').append('key2: '+ key2+ ' ' + value2 +'<br>');//will output: id
-//                 // console.log(value2.id);
-
-//                 // if (id == value2.id ) {
-//                 //     console.log(id)
-//                 // }
-
-
-//                 $.each(value2, function(key3, value3){
-//                 	if (key3 == "id" && value3 != id) return false;
-//                     // console.log(value3);
-//                 });
-//             });
-//         }
-//     });
-// });
 </script>
 
 <!-- end endBody -->
