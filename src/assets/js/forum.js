@@ -11,6 +11,45 @@ $(document).ready(function() {
         $('.nav').toggleClass('active');
     });
 
+    var city = $('#intro').attr('data-city');
+
+    console.log(city)
+
+    $.each(data, function(index, value1) {
+        if (index == city) {
+            $.each(value1, function(index, value2) {
+                $('.intro__slides').append('<li><div class="intro__info" data-id="' + value2.id + '">' +
+                    '<div class="intro__avatar">' +
+                    '<div class="avatar"><img src="https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + value2.id + '.jpg" alt=""></div></div>' +
+                    '<div class="intro__name">' + value2.name + '</div>' +
+                    '<div class="intro__title">' + value2.title + '</div>' +
+                    '<button class="btn btn--inblock btn--forumOutline btn--sm"><span class="btn__text">詳細介紹</span></button>' +
+                    '</div></li>')
+            });
+        } 
+    });
+
+    var dataId = '';
+
+    $('.agenda').click(function(){
+        dataId = $(this).attr('data-id');
+
+        $.each(data, function(key1, value1) {
+            if (key1 == city) {
+                $.each(value1, function(key2, value2) {
+
+                    if (dataId == value2.id ) {
+                        console.log(value2.name)
+                        console.log(value2.title)
+                        console.log(value2.topic)
+
+                        gName = value2.name;
+                    }
+                });
+            }
+        });
+    });
+
     //qa accordion
     $('.accordion').click(function(){
         var $this = $(this);
@@ -64,6 +103,51 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('.intro__slides').on('init', function(event, slick){
+        console.log("initialized")
+
+       
+
+        $('#intro .intro__slides li').click(function(){
+
+            var gName = '';
+            var gTitle = '';
+
+            console.log('click')
+    
+            var dataId = $(this).find('.intro__info').attr('data-id');
+
+            console.log(dataId)
+            
+            $.each(data, function(key1, value1) {
+                console.log(city)
+                if (key1 == city) {
+                    $.each(value1, function(key2, value2) {
+    
+                        if (dataId == value2.id ) {
+                            console.log(value2.name)
+                            console.log(value2.title)
+                            console.log(value2.topic)
+    
+                            gName = value2.name;
+                            gTitle = value2.title
+                        }
+                    });
+                }
+            });
+    
+            Swal.fire({
+                html: '<div class="avatar"><img src=""></div><div class="intro__name">' + gName + '</div><div class="intro__title">' + gTitle + '</div><p>' + '</p>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    popup: 'popup--speaker',
+                }
+            })
+        });
+    });
+
     $('.intro__slides').slick({
         dots: true,
         speed: 300,
@@ -90,22 +174,7 @@ $(document).ready(function() {
         ]
     });
 
-    $('#intro .intro__slides li').click(function(){
-
-        var name = $(this).find('.intro__name').text();
-        var title = $(this).find('.intro__title').text();
-        var imgUrl = $(this).find('img').attr('src');
-
-        Swal.fire({
-            html: '<div class="avatar"><img src="' + imgUrl + '"></div><div class="intro__name">' + name + '</div><div class="intro__title">' + title + '</div><p>' + '</p>',
-            showCloseButton: true,
-            showConfirmButton: false,
-            customClass: {
-                popup: 'popup--speaker',
-            }
-
-        })
-    });
+    
 
     //menuSpy
     var elm = document.querySelector('.nav');

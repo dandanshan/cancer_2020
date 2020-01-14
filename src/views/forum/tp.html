@@ -3,7 +3,7 @@
 <title>tp</title>
 <!-- @@close-->
 <!-- @@block  =  content-->
-<section class="section" id="intro">
+<section class="section" id="intro" data-city="tp">
     <div class="wrap">
         <div class="wrapper">
             <h2 class="title">講者</h2>
@@ -11,7 +11,7 @@
         </div>
     </div>
 </section>
-<section class="section" id="agenda" data-city="tp">
+<section class="section" id="agenda">
     <div class="wrap">
         <div class="wrapper">
             <h2 class="title">台北場議程</h2>
@@ -391,20 +391,6 @@
 <!-- @@close-->
 <!-- @@block  =  endBody-->
 <script>
-    var city = "tp";
-    $.each(data, function(index, value1) {
-        if (index == city) {
-            $.each(value1, function(index, value2) {
-                $('.intro__slides').append('<li><div class="intro__info">' +
-                    '<div class="intro__avatar">' +
-                    '<div class="avatar"><img src="https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + value2.id + '.jpg" alt=""></div></div>' +
-                    '<div class="intro__name">' + value2.name + '</div>' +
-                    '<div class="intro__title">' + value2.title + '</div>' +
-                    '<button class="btn btn--inblock btn--forumOutline btn--sm"><span class="btn__text">詳細介紹</span></button>' +
-                    '</div></li>')
-            });
-        }
-    });
 
     $('#ticket .session').click(function(){
 
@@ -424,28 +410,6 @@
             }
         })
     });
-
-    var dataId = '';
-
-    $('.agenda').click(function(){
-        dataId = $(this).attr('data-id');
-
-        $.each(data, function(key1, value1) {
-        if (key1 == city) {
-            //$('#demo').append('key1: '+ key1 +'<br>');//will output: city
-            $.each(value1, function(key2, value2) {
-                //$('#demo').append('key2: '+ key2+ ' ' + value2 +'<br>');//will output: id
-                // console.log(value2.id);
-
-                if (dataId == value2.id ) {
-                    console.log(value2.name)
-                    console.log(value2.title)
-                    console.log(value2.topic)
-                }
-            });
-        }
-    });
-});
 
 </script>
 <!-- @@close-->
