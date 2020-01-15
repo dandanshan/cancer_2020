@@ -6,6 +6,8 @@
 @import "layout";
 
 #topslide {
+    overflow: hidden;
+
     .slides {
         margin: 0 20px;
 
@@ -18,6 +20,41 @@
 
             >img {
                 width: 100%;
+            }
+        }
+    }
+    .ts {
+        &__background {
+            background-image: url('../images/img_blob-deco@3x.png');
+            background-position-x: 0;
+            z-index: -1;
+            position: absolute;
+
+            &--blob1 {
+                width: 250px;
+                height: 245px;
+                background-size: 250px 645px;
+                background-position-y: 0;
+                right: -100px;
+                bottom: 100px;
+            }
+
+            &--blob2 {
+                width: 245px;
+                height: 210px;
+                background-size: 245px 632px;
+                background-position-y: -240px;
+                left: -100px;
+                top: 100px;
+            }
+
+            &--blob3 {
+                width: 120px;
+                height: 89px;
+                background-size: 120px 309px;
+                background-position-y: -220px;
+                right: -200px;
+                top: 100px;
             }
         }
     }
@@ -327,7 +364,31 @@
 
 //Small devices (landscape tablets, 768 and down)
 @media only screen and (max-width: $screen-sm) {
+    #topslide {
+        .wrap {
+            padding: 0;
+        }
+
+        .ts {
+            &__background {
+                &--blob1 {
+                    display: none;
+                }
+
+                &--blob2 {
+                    display: none;
+                }
+
+                &--blob3 {
+                    display: none;
+                }
+            }
+        }
+    }
     .bottom__fixed {
+        .wrap {
+            padding: 0;
+        }
 
         a {
             > span {
@@ -335,7 +396,7 @@
             }
 
             .btn {
-                margin-left: 20px;
+                margin-left: 10px;
             }
         }
     }

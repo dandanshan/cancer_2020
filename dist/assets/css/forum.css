@@ -1714,11 +1714,14 @@ ol ol {
   .section {
     padding: 40px 0;
   }
+  .bottom__fixed .wrap {
+    padding: 0;
+  }
   .bottom__fixed a > span {
     display: none;
   }
   .bottom__fixed a .btn {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 

@@ -424,6 +424,9 @@ ol {
     }
 
     .bottom__fixed {
+        .wrap {
+            padding: 0;
+        }
 
         a {
             > span {
@@ -431,7 +434,7 @@ ol {
             }
 
             .btn {
-                margin-left: 20px;
+                margin-left: 10px;
             }
         }
     }

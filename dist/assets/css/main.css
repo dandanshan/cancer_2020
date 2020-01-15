@@ -1768,6 +1768,10 @@ p {
   }
 }
 
+#topslide {
+  overflow: hidden;
+}
+
 #topslide .slides {
   margin: 0 20px;
 }
@@ -1782,6 +1786,40 @@ p {
 
 #topslide .slides__top > img {
   width: 100%;
+}
+
+#topslide .ts__background {
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position-x: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+#topslide .ts__background--blob1 {
+  width: 250px;
+  height: 245px;
+  background-size: 250px 645px;
+  background-position-y: 0;
+  right: -100px;
+  bottom: 100px;
+}
+
+#topslide .ts__background--blob2 {
+  width: 245px;
+  height: 210px;
+  background-size: 245px 632px;
+  background-position-y: -240px;
+  left: -100px;
+  top: 100px;
+}
+
+#topslide .ts__background--blob3 {
+  width: 120px;
+  height: 89px;
+  background-size: 120px 309px;
+  background-position-y: -220px;
+  right: -200px;
+  top: 100px;
 }
 
 #chart {
@@ -2032,10 +2070,25 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  #topslide .wrap {
+    padding: 0;
+  }
+  #topslide .ts__background--blob1 {
+    display: none;
+  }
+  #topslide .ts__background--blob2 {
+    display: none;
+  }
+  #topslide .ts__background--blob3 {
+    display: none;
+  }
+  .bottom__fixed .wrap {
+    padding: 0;
+  }
   .bottom__fixed a > span {
     display: none;
   }
   .bottom__fixed a .btn {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
