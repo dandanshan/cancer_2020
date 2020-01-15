@@ -85,7 +85,7 @@
     }
 
     p {
-        position: absolute; 
+        position: absolute;
         top: 60px;
         width: calc(100% / 3 - 30px);
     }
@@ -93,7 +93,7 @@
     .grid--month {
 
         li {
-            
+
         }
 
         img {
@@ -154,6 +154,7 @@
         font-size: $font-size-20;
         font-weight: $font-weight-medium;
         line-height: 1.4;
+        color: color(black);
     }
 }
 
@@ -269,7 +270,7 @@
             position: relative;
             width: 100%;
             top: unset;
-        } 
+        }
 
         &:after {
             top: 0;
@@ -280,7 +281,7 @@
     .topic {
         background: color(gray100);
         .wrapper {
-            
+
             &:after {
                 content: none;
             }
@@ -290,9 +291,7 @@
                     padding: 0;
                 }
             }
-
         }
-
     }
 }
 
