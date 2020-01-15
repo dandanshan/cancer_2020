@@ -599,7 +599,7 @@ th {
 }
 
 .swal2-container .popup--ticket .plan__content .btn {
-  padding: 9px 20px;
+  padding: 11px 20px;
 }
 
 .swal2-container .popup--ticket .plan:hover {
@@ -920,7 +920,7 @@ button:focus {
 .btn--forumBuy {
   border-radius: 24px;
   width: 200px;
-  padding: 9px 20px;
+  padding: 11px 20px;
   -webkit-animation: btnScale 2s;
   animation: btnScale 2s;
   -webkit-animation-iteration-count: infinite;

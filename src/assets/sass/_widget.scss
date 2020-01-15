@@ -286,7 +286,7 @@ button {
     &--forumBuy {
         border-radius: 24px;
         width: 200px;
-        padding: 9px 20px;
+        padding: 11px 20px;
         @include animation(btnScale, 2s, infinite);
 
         @keyframes btnScale {
