@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     setSlideSize();
     mobileMenuClose();
     mousefollow();
 
-    $('.burger').click(function(){
+    $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
     });
@@ -19,7 +19,7 @@ $(document).ready(function(){
         dotsClass: 'slides__dots slides__dots--purple',
     });
 
-    $('.action.more .btn').click(function(){
+    $('.action.more .btn').click(function () {
         $(this).closest('.section__content').find('.grid.more').slideDown();
         $(this).parent('.more').hide();
     });
@@ -28,23 +28,37 @@ $(document).ready(function(){
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         setSlideSize();
         mobileMenuClose();
+    });
+
+    $(window).scroll(function () {
+        //bottom fixed align bottom
+        if ($('.bottom__fixed').length) {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+
+            var paddingBottom = $('.bottom__fixed').outerHeight();
+
+            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                $('.container').css('padding-bottom', paddingBottom);
+            }
+        }
     });
 
     //set top slides dynamically
     function setSlideSize() {
         if ($(window).width() < 992) {
-            $('#topslide .slides__top').css('width','100%');
-            $('#topslide .slides__top').height( $(this).width() / 2 );
+            $('#topslide .slides__top').css('width', '100%');
+            $('#topslide .slides__top').height($(this).width() / 2);
         }
     }
 
     //close menu before menuSpy on mobile
     function mobileMenuClose() {
         if ($(window).width() < 992) {
-            $('.nav .menu__name').click(function(){
+            $('.nav .menu__name').click(function () {
                 $('.nav, .burger').removeClass('active');
             });
         }
@@ -74,7 +88,7 @@ $(document).ready(function(){
         }
         animate();
 
-        $('body').mousemove(function(e) {
+        $('body').mousemove(function (e) {
             mouseX = e.pageX;
             mouseY = e.pageY;
         });

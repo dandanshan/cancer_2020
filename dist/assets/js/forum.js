@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-    $(window).scroll(function () {
-
-        //header background color
-        $(window).scrollTop() > $('#kv').outerHeight() ? $('.header').css('background', '#ffffff') : $('.header').css('background', 'transparent');
-    });
-
     $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
@@ -38,7 +32,6 @@ $(document).ready(function () {
 
             if (index == city) {
                 $.each(value1, function (key, value2) {
-
                     if (dataId == value2.id) {
 
                         img = 'https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + dataId + '.jpg';
@@ -65,7 +58,6 @@ $(document).ready(function () {
         $('#intro .intro__slides li').click(function () {
 
             dataId = $(this).find('.intro__info').attr('data-id');
-
             getData();
         });
     });
@@ -74,7 +66,6 @@ $(document).ready(function () {
     $('.agenda .avatar').click(function () {
 
         dataId = $(this).attr('data-id');
-
         getData();
     });
 
@@ -166,6 +157,23 @@ $(document).ready(function () {
     $('.agenda .action').click(function () {
         $(this).next('.agenda__desc').fadeIn();
         $(this).hide();
+    });
+
+    $(window).scroll(function () {
+        //header background color
+        $(window).scrollTop() > $('#kv').outerHeight() ? $('.header').css('background', '#ffffff') : $('.header').css('background', 'transparent');
+
+        //bottom fixed align bottom
+        if ($('.bottom__fixed').length) {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+
+            var paddingBottom = $('.bottom__fixed').outerHeight();
+
+            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                $('.container').css('padding-bottom', paddingBottom);
+            }
+        }
     });
 
     //get data
