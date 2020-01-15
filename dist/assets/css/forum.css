@@ -519,6 +519,14 @@ th {
   margin-bottom: 20px;
 }
 
+.swal2-container .popup--speaker p {
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .swal2-container .popup--ticket {
   padding: 50px 40px 40px;
 }
@@ -1987,7 +1995,7 @@ ol ol {
   border: 1px solid #88888f;
   display: inline-block;
   margin-right: 15px;
-  vertical-align: bottom;
+  vertical-align: text-bottom;
 }
 
 #agenda .agenda__avatar {
@@ -1996,6 +2004,7 @@ ol ol {
   position: absolute;
   top: calc(50% - 50px);
   right: 45px;
+  cursor: pointer;
 }
 
 #agenda .agenda__avatar .avatar {

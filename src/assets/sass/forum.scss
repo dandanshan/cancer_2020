@@ -337,7 +337,7 @@
                 border: 1px solid forum(gray500);
                 display: inline-block;
                 margin-right: 15px;
-                vertical-align: bottom;
+                vertical-align: text-bottom;
             }
         }
 
@@ -347,6 +347,7 @@
             position: absolute;
             top: calc(50% - 50px);
             right: 45px;
+            cursor: pointer;
 
             .avatar {
                 background: forum(gray200);

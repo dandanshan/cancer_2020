@@ -149,6 +149,14 @@
                     margin-bottom: 20px;
                 }
             }
+
+            p {
+                text-align: justify;
+                font-size: $font-size-base;
+                max-width: 420px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
         }
 
         &--ticket {

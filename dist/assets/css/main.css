@@ -519,6 +519,14 @@ th {
   margin-bottom: 20px;
 }
 
+.swal2-container .popup--speaker p {
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .swal2-container .popup--ticket {
   padding: 50px 40px 40px;
 }
