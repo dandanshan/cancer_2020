@@ -1366,6 +1366,24 @@ p {
   color: #333333;
   font-weight: 700;
   margin-bottom: 40px;
+  position: relative;
+  line-height: 1;
+}
+
+.section__title span {
+  padding-left: 15px;
+}
+
+.section__title:before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #ff7b89;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
 }
 
 .section__title:after {
