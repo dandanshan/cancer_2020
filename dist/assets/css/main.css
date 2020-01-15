@@ -639,6 +639,7 @@ button:focus {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  line-height: 1;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -671,6 +672,7 @@ button:focus {
 .btn--main .btn__text {
   color: #ffffff;
   font-size: 1rem;
+  vertical-align: middle;
 }
 
 .btn--sec {
@@ -686,6 +688,21 @@ button:focus {
 .btn--sec .btn__text {
   color: #ffffff;
   font-size: 1rem;
+  vertical-align: middle;
+}
+
+.btn--white {
+  padding: 13px 20px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  border-radius: 24px;
+  width: 240px;
+}
+
+.btn--white .btn__text {
+  color: #705f92;
+  font-size: 1rem;
+  vertical-align: middle;
 }
 
 .btn--mainOutline {
@@ -857,6 +874,7 @@ button:focus {
 .btn--forumMain .btn__text {
   color: #ffffff;
   font-size: 1rem;
+  vertical-align: middle;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
@@ -894,6 +912,7 @@ button:focus {
 .btn--forumHighlight .btn__text {
   color: #ffffff;
   font-size: 1rem;
+  vertical-align: middle;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
@@ -933,6 +952,7 @@ button:focus {
 .btn--forumBuy .btn__text {
   color: #ffffff;
   font-size: 1rem;
+  vertical-align: middle;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
@@ -941,6 +961,12 @@ button:focus {
   padding: 10px 15px;
   border-radius: 24px;
   width: 150px;
+}
+
+.btn--xs {
+  padding: 2px 15px;
+  border-radius: 24px;
+  width: 100px;
 }
 
 /*---------- grid ----------*/
@@ -1897,6 +1923,36 @@ p {
   margin-left: 20px;
 }
 
+.bottom__fixed {
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  background: #705f92;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+.bottom__fixed a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.bottom__fixed a > span {
+  font-size: 1rem;
+  padding-left: 20px;
+  vertical-align: middle;
+}
+
+.bottom__fixed a .btn {
+  margin-left: 30px;
+}
+
+.bottom__fixed a .btn .btn__text {
+  color: #705f92;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -1952,5 +2008,14 @@ p {
   }
   .topic .wrapper .section__content {
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom__fixed a > span {
+    display: none;
+  }
+  .bottom__fixed a .btn {
+    margin-left: 20px;
   }
 }

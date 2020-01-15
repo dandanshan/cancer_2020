@@ -291,6 +291,35 @@ ol {
     }
 }
 
+.bottom__fixed {
+    padding: 10px 0;
+    width: 100%;
+    background: forum(blue300);
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+
+    a {
+        color: color(white);
+        font-size: $font-size-24;
+        font-weight: $font-weight-bold;
+
+        > span {
+            font-size: $font-size-base;
+            padding-left: 20px;
+            vertical-align: middle;
+        }
+
+        .btn {
+            margin-left: 30px;
+
+            .btn__text {
+                color: forum(blue400);
+            }
+        }
+    }
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -392,6 +421,19 @@ ol {
 
     .section {
         padding: 40px 0;
+    }
+
+    .bottom__fixed {
+
+        a {
+            > span {
+                display: none;
+            }
+
+            .btn {
+                margin-left: 20px;
+            }
+        }
     }
 }
 //XSmall devices (portrait phones, 576 and down)
