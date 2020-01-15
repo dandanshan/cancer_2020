@@ -280,10 +280,11 @@ p {
 }
 
 #cursor {
-    @include wh-square(45px);
+    @include wh-square(55px);
     position: absolute;
-    left: calc(50% - 45px);
-    top: calc(50% - 45px);
+    left: 0;
+    top: 0;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 99;
     mix-blend-mode: multiply;
 
@@ -292,12 +293,12 @@ p {
         position: absolute;
         top: 0;
         left: 0;
-        @include wh-square(100%);
         background: color(purple500);
         transform-origin: 50% 50%;
         animation: transform 10s ease-in-out infinite both alternate;
         opacity: .4;
         mix-blend-mode: difference;
+        @include wh-square(100%);
         @include transition(all, .2s, ease-in-out);
 
         @keyframes transform {
