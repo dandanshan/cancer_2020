@@ -1717,6 +1717,10 @@ ol ol {
 }
 
 @media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+    margin: 0 0 30px 0;
+  }
   .wrap {
     max-width: 100%;
     padding: 0 20px;
@@ -2054,6 +2058,7 @@ ol ol {
 
 #agenda .agenda__speaker {
   margin-bottom: 15px;
+  position: relative;
 }
 
 #agenda .agenda__speaker .name {
@@ -2092,7 +2097,7 @@ ol ol {
   height: 100px;
   position: absolute;
   top: calc(50% - 50px);
-  right: 45px;
+  right: -135px;
   cursor: pointer;
 }
 
@@ -2104,6 +2109,7 @@ ol ol {
   font-size: 1rem;
   color: #88888f;
   line-height: 1.6;
+  margin-top: 15px;
 }
 
 #agenda .agenda--tp .agenda__time {
@@ -2409,14 +2415,16 @@ ol ol {
 
 #notic .accordion__head {
   color: #66666f;
-  padding: 15px 20px;
+  padding: 15px 40px 15px 20px;
   cursor: pointer;
+  position: relative;
 }
 
 #notic .accordion__head:after {
   content: '';
-  float: right;
-  margin-top: 5px;
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 15px;
   width: 8px;
   height: 8px;
   border-width: 0px 2px 2px 0px;
@@ -2429,6 +2437,7 @@ ol ol {
 #notic .accordion__body {
   color: #88888f;
   padding: 15px 40px 15px 20px;
+  text-align: justify;
   display: none;
 }
 
@@ -2654,15 +2663,34 @@ ol ol {
   #agenda .wrap {
     padding: 0;
   }
+  #agenda .agenda {
+    padding: 20px;
+  }
+  #agenda .agenda__info {
+    width: 100%;
+  }
+  #agenda .agenda__time {
+    margin-bottom: 15px;
+  }
   #agenda .agenda__speaker .title {
     display: block;
     margin-top: 10px;
+    width: calc(100% - 90px);
   }
   #agenda .agenda__speaker .title:before {
     content: none;
   }
+  #agenda .agenda__avatar {
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 10px;
+  }
   #agenda .agenda__desc {
     display: none;
+  }
+  #agenda .agenda--tp .session {
+    margin-top: 0;
   }
   #agenda .agenda .action {
     display: block;
@@ -2692,11 +2720,20 @@ ol ol {
   #promote .promote__desc {
     width: 100%;
   }
+  #promote .subtitle {
+    margin-bottom: 10px;
+  }
   #promote .icon__promote {
     display: none;
   }
   #promote .action {
     text-align: center;
+  }
+  #notic .accordion__head {
+    padding: 15px 40px 15px 15px;
+  }
+  #notic .accordion__body {
+    padding: 15px;
   }
 }
 

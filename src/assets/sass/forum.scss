@@ -322,6 +322,7 @@
 
         &__speaker {
             margin-bottom: 15px;
+            position: relative;
 
             .name {
                 font-size: $font-size-24;
@@ -360,7 +361,7 @@
             height: 100px;
             position: absolute;
             top: calc(50% - 50px);
-            right: 45px;
+            right: -135px;
             cursor: pointer;
 
             .avatar {
@@ -372,6 +373,7 @@
             font-size: $font-size-base;
             color: forum(gray500);
             line-height: 1.6;
+            margin-top: 15px;
         }
 
         &--tp {
@@ -692,13 +694,15 @@
 
         &__head {
             color: forum(gray600);
-            padding: 15px 20px;
+            padding: 15px 40px 15px 20px;
             cursor: pointer;
+            position: relative;
 
             &:after {
                 content: '';
-                float: right;
-                margin-top: 5px;
+                position: absolute;
+                top: calc(50% - 5px);
+                right: 15px;
                 @include arrow-down(8px, 2px, forum(gray600));
             }
         }
@@ -706,6 +710,7 @@
         &__body {
             color: forum(gray500);
             padding: 15px 40px 15px 20px;
+            text-align: justify;
             display: none;
         }
 
@@ -1000,12 +1005,22 @@
         }
 
         .agenda {
+            padding: 20px;
+
+            &__info {
+                width: 100%;
+            }
+
+            &__time {
+                margin-bottom: 15px;
+            }
 
             &__speaker {
 
                 .title {
                     display: block;
                     margin-top: 10px;
+                    width: calc(100% - 90px);
 
                     &:before {
                         content: none;
@@ -1013,15 +1028,23 @@
                 }
             }
 
+            &__avatar {
+                @include wh-square(70px);
+                top: 0;
+                right: 10px;
+            }
+
             &__desc {
                 display: none;
+            }
+
+            &--tp .session {
+                margin-top: 0;
             }
 
             .action {
                 display: block;
             }
-
-            &--tp {}
         }
 
         .memo {
@@ -1066,12 +1089,27 @@
             }
         }
 
+        .subtitle {
+            margin-bottom: 10px;
+        }
+
         .icon__promote {
             display: none;
         }
 
         .action {
             text-align: center;
+        }
+    }
+    #notic {
+        .accordion {
+            &__head {
+                padding: 15px 40px 15px 15px;
+            }
+
+            &__body {
+                padding: 15px;
+            }
         }
     }
 }

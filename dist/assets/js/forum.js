@@ -42,12 +42,13 @@ $(document).ready(function () {
                             '<div class="agenda__info">' +
                             '<div class="agenda__time">' + value2.sessions + '<span>' + value2.topic + '</span></div>' +
                             '<div class="agenda__speaker">' +
-                            '<div class="tag">主講人</div><div class="name">' + value2.name + '</div><div class="title">' + value2.title + '</div></div>' +
+                            '<div class="tag">主講人</div><div class="name">' + value2.name + '</div><div class="title">' + value2.title + '</div>' +
+                            '<div class="agenda__avatar"><div class="avatar" data-id="' + dataId + '">' +
+                            '<img src="' + img + '" alt=""></div>' +
+                            '</div>' +
                             '<div class="action"><button class="btn btn--block btn--forumOutlineSec btn--sm"><span class="btn__text">詳細介紹</span></button></div>' +
                             '<div class="agenda__desc">' + value2.info + '</div></div>' +
-                            '<div class="agenda__avatar"><div class="avatar" data-id="' + dataId + '">' +
-                            '<img src="' + img + '" alt="">' +
-                            '</div></div>');
+                            '</div>');
                     }
                 });
             }
