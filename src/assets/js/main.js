@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     //close menu before menuSpy on mobile
     function mobileMenuClose() {
-        if ($(window).width() < 992) {
+        if ($(window).width() < 1200) {
             $('.nav .menu__name').click(function () {
                 $('.nav, .burger').removeClass('active');
             });
