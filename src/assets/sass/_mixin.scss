@@ -134,11 +134,13 @@
 	transform-origin: $x $y;
 }
 
-@mixin animation($property, $duration, $count) {
+@mixin animation($property, $duration, $count, $timing, $delay) {
     -webkit-animation: $property $duration;
     -moz-animation: $property $duration;
 	animation: $property $duration;
 	animation-iteration-count: $count;
+	animation-timing-function: $timing;
+	animation-delay: $delay;
 }
 
 //arrow

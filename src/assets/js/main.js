@@ -1,16 +1,12 @@
-$(document).ready(function(){
-    $('.burger').click(function(){
+$(document).ready(function () {
+
+    setSlideSize();
+    mobileMenuClose();
+    mousefollow();
+
+    $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
-    });
-
-    $(window).resize(function(){
-
-        //set top slides dynamically
-        if ($(this).width() < 768) {
-            $('#topslide .slides__top').css('width','100%');
-            $('#topslide .slides__top').height( $(this).width() / 2 );
-        }
     });
 
     $('.top__slides').slick({
@@ -23,16 +19,78 @@ $(document).ready(function(){
         dotsClass: 'slides__dots slides__dots--purple',
     });
 
+    $('.action.more .btn').click(function () {
+        $(this).closest('.section__content').find('.grid.more').slideDown();
+        $(this).parent('.more').hide();
+    });
+
     //menuSpy
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);
 
-    //mouse follow
-    $('body').mousemove(function(e){
-        $('#cursor').css({
-            left: e.pageX + 10,
-            top: e.pageY + 10,
-        });
+    $(window).resize(function () {
+        setSlideSize();
+        mobileMenuClose();
     });
 
+    $(window).scroll(function () {
+        //bottom fixed align bottom
+        if ($('.bottom__fixed').length) {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+
+            var paddingBottom = $('.bottom__fixed').outerHeight();
+
+            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                $('.container').css('padding-bottom', paddingBottom);
+            }
+        }
+    });
+
+    //set top slides dynamically
+    function setSlideSize() {
+        if ($(window).width() < 992) {
+            $('#topslide .slides__top').css('width', '100%');
+            $('#topslide .slides__top').height($(this).width() / 2);
+        }
+    }
+
+    //close menu before menuSpy on mobile
+    function mobileMenuClose() {
+        if ($(window).width() < 992) {
+            $('.nav .menu__name').click(function () {
+                $('.nav, .burger').removeClass('active');
+            });
+        }
+    }
+
+    //mouse follow
+    function mousefollow() {
+
+        var $cursor = $('#cursor');
+        var mouseX = 0;
+        var mouseY = 0;
+        var cursorX = 0;
+        var cursorY = 0;
+        var speed = 0.1;
+
+        function animate() {
+            var distX = mouseX - cursorX + 40;
+            var distY = mouseY - cursorY + 40;
+
+            cursorX = cursorX + (distX * speed);
+            cursorY = cursorY + (distY * speed);
+
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        $('body').mousemove(function (e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+    }
 });

@@ -1,30 +1,91 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $(window).scroll(function() {
+    mobileMenuClose();
 
-        //header background color
-        $(window).scrollTop() > $('#kv').outerHeight() ? $('.header').css('background','#ffffff') : $('.header').css('background','transparent');
-    });
-
-    $('.burger').click(function(){
+    $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
     });
 
+    //detect city
+    var city = $('#intro').attr('data-city');
+
+    //build intro data
+    $.each(data, function (index, value1) {
+        if (index == city) {
+            $.each(value1, function (index, value2) {
+                $('.intro__slides').append('<li><div class="intro__info" data-id="' + value2.id + '">' +
+                    '<div class="intro__avatar">' +
+                    '<div class="avatar"><img src="../assets/images/forum/speaker/' + value2.img + '.png" alt=""></div></div>' +
+                    '<div class="intro__name">' + value2.name + '</div>' +
+                    '<div class="intro__title">' + value2.title + '</div>' +
+                    '<button class="btn btn--inblock btn--forumOutline btn--sm"><span class="btn__text">詳細介紹</span></button>' +
+                    '</div></li>');
+            });
+        }
+    });
+
+    //build agenda data
+    $('.agenda').each(function () {
+
+        dataId = $(this).attr('data-id');
+
+        $.each(data, function (index, value1) {
+
+            if (index == city) {
+                $.each(value1, function (key, value2) {
+                    if (dataId == value2.id) {
+
+                        img = '../assets/images/forum/speaker/' + value2.img + '.png';
+
+                        $('.agenda[data-id="' + dataId + '"]').append(
+                            '<div class="agenda__info">' +
+                            '<div class="agenda__time">' + value2.sessions + '<span>' + value2.topic + '</span></div>' +
+                            '<div class="agenda__speaker">' +
+                            '<div class="tag">主講人</div><div class="name">' + value2.name + '</div><div class="title">' + value2.title + '</div>' +
+                            '<div class="agenda__avatar"><div class="avatar" data-id="' + dataId + '">' +
+                            '<img src="' + img + '" alt=""></div>' +
+                            '</div>' +
+                            '<div class="action"><button class="btn btn--block btn--forumOutlineSec btn--sm"><span class="btn__text">詳細介紹</span></button></div>' +
+                            '<div class="agenda__desc">' + value2.info + '</div></div>' +
+                            '</div>');
+                    }
+                });
+            }
+        });
+    });
+
+    //intro popup
+    $('.intro__slides').on('init', function (event, slick) {
+
+        $('#intro .intro__slides li').click(function () {
+
+            dataId = $(this).find('.intro__info').attr('data-id');
+            getData();
+        });
+    });
+
+    //speaker popup
+    $('.agenda .avatar').click(function () {
+
+        dataId = $(this).attr('data-id');
+        getData();
+    });
+
     //qa accordion
-    $('.accordion').click(function(){
+    $('.accordion').click(function () {
         var $this = $(this);
         var isActive = $this.hasClass('active');
         if (isActive) {
-            $this.find('.accordion__body').slideUp(400, function() {
+            $this.find('.accordion__body').slideUp(400, function () {
                 $this.removeClass('active');
             });
             return
         }
-        $('.accordion.active').find('.accordion__body').slideUp(400, function() {
+        $('.accordion.active').find('.accordion__body').slideUp(400, function () {
             $('.accordion').removeClass('active');
         });
-        $this.find('.accordion__body').slideDown(400, function() {
+        $this.find('.accordion__body').slideDown(400, function () {
             $this.addClass('active');
         });
     });
@@ -49,21 +110,22 @@ $(document).ready(function() {
         dotsClass: 'slides__dots slides__dots--gray',
         responsive: [
             {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             },
             {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
         ]
     });
+
     $('.intro__slides').slick({
         dots: true,
         speed: 300,
@@ -74,37 +136,20 @@ $(document).ready(function() {
         dotsClass: 'slides__dots slides__dots--blue',
         responsive: [
             {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             },
             {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
         ]
-    });
-
-    $('#intro .intro__slides li').click(function(){
-
-        var name = $(this).find('.intro__name').text();
-        var title = $(this).find('.intro__title').text();
-        var imgUrl = $(this).find('img').attr('src');
-
-        Swal.fire({
-            html: '<div class="avatar"><img src="' + imgUrl + '"></div><div class="intro__name">' + name + '</div><div class="intro__title">' + title + '</div><p>' + '</p>',
-            showCloseButton: true,
-            showConfirmButton: false,
-            customClass: {
-                popup: 'popup--speaker',
-            }
-
-        })
     });
 
     //menuSpy
@@ -112,8 +157,71 @@ $(document).ready(function() {
     var ms = new MenuSpy(elm);
 
     //agenda desc show in mobile
-    $('.agenda .action').click(function(){
+    $('.agenda .action').click(function () {
         $(this).next('.agenda__desc').fadeIn();
         $(this).hide();
     });
+
+    $(window).resize(function () {
+        mobileMenuClose();
+    });
+
+
+    $(window).scroll(function () {
+        //header background color
+        $(window).scrollTop() > $('#kv').outerHeight() ? $('.header').css('background', '#ffffff') : $('.header').css('background', 'transparent');
+
+        //bottom fixed align bottom
+        if ($('.bottom__fixed').length) {
+            var scrollHeight = $(document).height();
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+
+            var paddingBottom = $('.bottom__fixed').outerHeight();
+
+            if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                $('.container').css('padding-bottom', paddingBottom);
+            }
+        }
+    });
+
+    //close menu before menuSpy on mobile
+    function mobileMenuClose() {
+        if ($(window).width() < 992) {
+            $('.nav .menu__name').click(function () {
+                $('.nav, .burger').removeClass('active');
+            });
+        }
+    }
+
+    //get data
+    function getData() {
+        $.each(data, function (index, value1) {
+            if (index == city) {
+                $.each(value1, function (key, value2) {
+                    if (dataId == value2.id) {
+
+                        name = value2.name;
+                        title = value2.title;
+                        intro = value2.intro;
+                        time = value2.sessions;
+                        img = '../assets/images/forum/speaker/' + value2.img + '.png';
+
+                        popup();
+                    }
+                });
+            }
+        });
+    }
+
+    //popup template
+    function popup() {
+        Swal.fire({
+            html: '<div class="avatar"><img src="' + img + '"></div><div class="intro__name">' + name + '</div><div class="intro__title">' + title + '</div><p>' + intro + '</p>',
+            showCloseButton: true,
+            showConfirmButton: false,
+            customClass: {
+                popup: 'popup--speaker',
+            }
+        })
+    }
 });

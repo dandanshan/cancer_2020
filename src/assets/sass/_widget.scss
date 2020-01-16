@@ -15,6 +15,7 @@ button {
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
+    line-height: 1;
     @include box-sizing(border-box);
     @include appearance(none);
     @include transition(all, .3s, ease-in-out);
@@ -40,8 +41,8 @@ button {
         .btn__text {
             color: forum(white);
             font-size: $font-size-base;
+            vertical-align: middle;
         }
-
     }
 
     &--sec {
@@ -56,8 +57,22 @@ button {
         .btn__text {
             color: forum(white);
             font-size: $font-size-base;
+            vertical-align: middle;
         }
+    }
 
+    &--white {
+        padding: 13px 20px;
+        border: 1px solid color(white);
+        background: color(white);
+        border-radius: 24px;
+        width: 240px;
+
+        .btn__text {
+            color: color(purple500);
+            font-size: $font-size-base;
+            vertical-align: middle;
+        }
     }
 
     &--mainOutline {
@@ -171,7 +186,6 @@ button {
                 opacity: 1;
             }
         }
-
     }
 
     &--forumOutlineSec {
@@ -212,7 +226,6 @@ button {
                 opacity: 1;
             }
         }
-
     }
 
     &--forumMain {
@@ -227,6 +240,7 @@ button {
         .btn__text {
             color: forum(white);
             font-size: $font-size-base;
+            vertical-align: middle;
             @include transition(all, .6s, ease);
         }
 
@@ -264,6 +278,7 @@ button {
         .btn__text {
             color: forum(white);
             font-size: $font-size-base;
+            vertical-align: middle;
             @include transition(all, .6s, ease);
         }
     }
@@ -271,8 +286,8 @@ button {
     &--forumBuy {
         border-radius: 24px;
         width: 200px;
-        padding: 9px 20px;
-        @include animation(btnScale, 2s, infinite);
+        padding: 11px 20px;
+        @include animation(btnScale, 2s, infinite, ease, 0);
 
         @keyframes btnScale {
             0%, 100% {
@@ -286,6 +301,7 @@ button {
         .btn__text {
             color: forum(white);
             font-size: $font-size-base;
+            vertical-align: middle;
             @include transition(all, .6s, ease);
         }
     }
@@ -294,6 +310,12 @@ button {
         padding: 10px 15px;
         border-radius: 24px;
         width: 150px;
+    }
+
+    &--xs {
+        padding: 2px 15px;
+        border-radius: 24px;
+        width: 100px;
     }
 
 }
@@ -308,6 +330,38 @@ button {
         position: relative;
         float: left;
         @include box-sizing(border-box);
+    }
+
+    &--month {
+        margin: 0 -30px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 15px;
+            margin-bottom: 30px;
+
+            &:first-child {
+                width: calc(100% / 3 * 2);
+                margin-left: calc(100% / 3);
+            }
+        }
+    }
+
+    &--topic {
+        margin: 0 -30px;
+
+        &>li {
+            width: (100%/3);
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        &.top {
+            li:first-child {
+                width: calc(100% / 3 * 2);
+                float: right;
+            }
+        }
     }
 
     &--tp {
@@ -636,6 +690,39 @@ button {
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     .grid {
+        &--month {
+            margin: 0;
+            width: 100%;
+
+            &>li, li:first-child {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+                margin-left: 0;
+            }
+        }
+
+        &--topic {
+            margin: 0;
+
+            &.top {
+                &>li, li:first-child {
+                    padding: 0;
+                    width: 100%;
+                    float: none;
+                }
+            }
+            &.more {
+                &>li {
+                    padding: 0;
+                    width: 100%;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
 
         //forum
         &--about {
