@@ -909,6 +909,7 @@
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     #kv {
+        height: 600px;
 
         .kv {
             &__background {
@@ -921,12 +922,13 @@
                 }
 
                 &--circle {
-                    top: -500px;
+                    top: -550px;
                 }
             }
 
             &__content {
-                left: 20px;
+                left: calc(50% - 300px);
+                top: calc(50% + 40px);
 
                 &--desc {
                     width: 100%;
@@ -993,16 +995,16 @@
                 }
 
                 &--people1 {
-                    width: 120px;
-                    height: 170px;
+                    width: 150px;
+                    height: 210px;
                     top: 490px;
                     left: 415px;
                     z-index: 2;
                 }
 
                 &--people2 {
-                    width: 120px;
-                    height: 155px;
+                    width: 150px;
+                    height: 190px;
                     top: 480px;
                     right: -230px;
                     left: auto;
@@ -1022,8 +1024,8 @@
                 right: 20px;
 
                 &--logotype {
-                    width: 280px;
-                    height: 60px;
+                    width: 300px;
+                    height: 70px;
                 }
 
                 &--desc {
@@ -1168,7 +1170,7 @@
             }
 
             &__content {
-                top: 40%;
+                top: 45%;
 
                 &--logotype {
                     margin-bottom: 15px;

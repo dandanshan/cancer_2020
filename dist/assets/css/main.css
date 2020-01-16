@@ -933,10 +933,10 @@ button:focus {
   padding: 11px 20px;
   -webkit-animation: btnScale 2s;
   animation: btnScale 2s;
-  -webkit-animation-iteration-count: ease;
-  animation-iteration-count: ease;
-  -webkit-animation-timing-function: infinite;
-  animation-timing-function: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
   -webkit-animation-delay: 0;
   animation-delay: 0;
 }
@@ -1955,10 +1955,27 @@ p {
   font-size: 1rem;
 }
 
+#promote .promote__item {
+  padding: 60px 0;
+  position: relative;
+}
+
 #promote .promote__item .title {
   color: #333333;
   font-size: 2.25rem;
   font-weight: 700;
+}
+
+#promote .promote__item.normal:after {
+  content: '';
+  display: block;
+  width: 400px;
+  height: 330px;
+  background: url("../images/img_blob-bg@3x.png") no-repeat 0 0/400px 960px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 #promote .promote__item.heighlight .subtitle {
@@ -1971,6 +1988,30 @@ p {
 
 #promote .promote__item.heighlight .action .btn:not(:last-of-type) {
   margin-right: 20px;
+}
+
+#promote .promote__item.heighlight:before {
+  content: '';
+  display: block;
+  width: 260px;
+  height: 190px;
+  background: url("../images/img_blob-bg@3x.png") no-repeat 0 -438px/260px 624px;
+  position: absolute;
+  top: calc(50% - 90px);
+  right: 0;
+  z-index: -1;
+}
+
+#promote .promote__item.heighlight:after {
+  content: '';
+  display: block;
+  width: 500px;
+  height: 425px;
+  background: url("../images/img_blob-bg@3x.png") no-repeat 0 -415px/500px 1200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #promote .promote__item:not(:last-of-type) {
@@ -2082,6 +2123,9 @@ p {
   .topic .wrapper .section__content {
     padding: 0;
   }
+  #promote .promote__item.heighlight:before {
+    content: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2105,5 +2149,12 @@ p {
   }
   .bottom__fixed a .btn {
     margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #promote .promote__item.heighlight .action .btn {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
