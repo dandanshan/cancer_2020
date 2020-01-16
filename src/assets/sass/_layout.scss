@@ -276,6 +276,7 @@ p {
 
     p {
         font-size: $font-size-14;
+        margin-bottom: 0;
     }
 }
 
@@ -323,7 +324,7 @@ p {
 
             56% {
                 border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-                @include scale(.9);
+                @include scale(.75);
             }
 
             70% {
