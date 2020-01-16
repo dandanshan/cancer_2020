@@ -197,6 +197,7 @@
 #promote {
     background: color(purple200);
     font-size: $font-size-base;
+    overflow: hidden;
 
     .promote {
         &__item {

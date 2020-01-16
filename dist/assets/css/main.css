@@ -1953,6 +1953,7 @@ p {
 #promote {
   background: #c6bfd3;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 #promote .promote__item {
