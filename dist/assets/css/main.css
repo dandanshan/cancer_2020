@@ -933,8 +933,12 @@ button:focus {
   padding: 11px 20px;
   -webkit-animation: btnScale 2s;
   animation: btnScale 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: ease;
+  animation-iteration-count: ease;
+  -webkit-animation-timing-function: infinite;
+  animation-timing-function: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
 }
 
 @-webkit-keyframes btnScale {

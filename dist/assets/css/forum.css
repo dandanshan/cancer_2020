@@ -933,8 +933,12 @@ button:focus {
   padding: 11px 20px;
   -webkit-animation: btnScale 2s;
   animation: btnScale 2s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: ease;
+  animation-iteration-count: ease;
+  -webkit-animation-timing-function: infinite;
+  animation-timing-function: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
 }
 
 @-webkit-keyframes btnScale {
@@ -1804,57 +1808,89 @@ ol ol {
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
-#kv .kv__background--people01 {
+#kv .kv__background--people1 {
   width: 185px;
   height: 250px;
-  background: url("../images/forum/img_kv-people01@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-people1@3x.png") 0 0/contain no-repeat;
   position: absolute;
   top: 650px;
   left: 500px;
   z-index: 2;
+  -webkit-animation: jump1 6s;
+  animation: jump1 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-#kv .kv__background--people02 {
+#kv .kv__background--people2 {
   width: 190px;
   height: 240px;
-  background: url("../images/forum/img_kv-people02@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-people2@3x.png") 0 0/contain no-repeat;
   position: absolute;
   top: 650px;
   left: 820px;
   z-index: 2;
+  -webkit-animation: jump2 3s;
+  animation: jump2 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
-#kv .kv__background--people03 {
+#kv .kv__background--people3 {
   width: 150px;
   height: 270px;
-  background: url("../images/forum/img_kv-people03@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-people3@3x.png") 0 0/contain no-repeat;
   position: absolute;
   top: 800px;
   left: 320px;
   z-index: 2;
+  -webkit-animation: jump3 6s;
+  animation: jump3 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-#kv .kv__background--people04 {
+#kv .kv__background--people4 {
   width: 160px;
   height: 180px;
-  background: url("../images/forum/img_kv-people04@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-people4@3x.png") 0 0/contain no-repeat;
   position: absolute;
   top: 100px;
   left: 200px;
   z-index: 2;
+  -webkit-animation: jump2 4s;
+  animation: jump2 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-#kv .kv__background--ribbon01 {
+#kv .kv__background--ribbon1 {
   width: 1000px;
   height: 600px;
-  background: url("../images/forum/img_kv-ribbon01@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-ribbon1@3x.png") 0 0/contain no-repeat;
   position: absolute;
   top: 610px;
   left: -50px;
   z-index: 1;
 }
 
-#kv .kv__background--ribbon02 {
+#kv .kv__background--ribbon2 {
   position: absolute;
   z-index: 1;
   top: 20px;
@@ -1862,6 +1898,76 @@ ol ol {
   width: 550px;
   height: 263px;
   background: url("../images/forum/img_kv-ribbon02@3x.png") 0 0/contain no-repeat;
+}
+
+@-webkit-keyframes jump1 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0) rotate(0);
+    transform: scale(0.95) translateY(0) rotate(0);
+    -webkit-transform-origin: 100px 170px;
+    transform-origin: 100px 170px;
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-20px) rotate(3deg);
+    transform: scale(1) translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes jump1 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0) rotate(0);
+    transform: scale(0.95) translateY(0) rotate(0);
+    -webkit-transform-origin: 100px 170px;
+    transform-origin: 100px 170px;
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-20px) rotate(3deg);
+    transform: scale(1) translateY(-20px) rotate(3deg);
+  }
+}
+
+@-webkit-keyframes jump2 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0);
+    transform: scale(0.95) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+  }
+}
+
+@keyframes jump2 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0);
+    transform: scale(0.95) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateY(-10px);
+    transform: scale(1) translateY(-10px);
+  }
+}
+
+@-webkit-keyframes jump3 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0);
+    transform: scale(0.95) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1) rotate(5deg);
+    transform: scale(1) rotate(5deg);
+  }
+}
+
+@keyframes jump3 {
+  0%, 100% {
+    -webkit-transform: scale(0.95) translateY(0);
+    transform: scale(0.95) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1) rotate(5deg);
+    transform: scale(1) rotate(5deg);
+  }
 }
 
 #kv .kv__action {
@@ -1887,7 +1993,7 @@ ol ol {
   display: block;
   width: 270px;
   height: 365px;
-  background: url("../images/forum/img_kv-ribbon03@3x.png") 0 0/contain no-repeat;
+  background: url("../images/forum/img_kv-ribbon3@3x.png") 0 0/contain no-repeat;
   position: absolute;
   right: 0;
   bottom: -100px;
@@ -2579,10 +2685,10 @@ ol ol {
 }
 
 @media only screen and (max-width: 992px) {
-  #kv .kv__background--ribbon02 {
+  #kv .kv__background--ribbon2 {
     display: none;
   }
-  #kv .kv__background--people03 {
+  #kv .kv__background--people3 {
     display: none;
   }
   #kv .kv__background--circle {
@@ -2628,14 +2734,14 @@ ol ol {
     width: 1000px;
     height: 1000px;
   }
-  #kv .kv__background--people01 {
+  #kv .kv__background--people1 {
     width: 120px;
     height: 170px;
     top: 490px;
     left: 415px;
     z-index: 2;
   }
-  #kv .kv__background--people02 {
+  #kv .kv__background--people2 {
     width: 120px;
     height: 155px;
     top: 480px;
@@ -2643,7 +2749,7 @@ ol ol {
     left: auto;
     z-index: 2;
   }
-  #kv .kv__background--ribbon01 {
+  #kv .kv__background--ribbon1 {
     width: 800px;
     height: 435px;
     left: 0;
@@ -2741,11 +2847,11 @@ ol ol {
   #kv .kv__background--circle {
     left: -370px;
   }
-  #kv .kv__background--people02 {
+  #kv .kv__background--people2 {
     right: -360px;
     left: auto;
   }
-  #kv .kv__background--ribbon01 {
+  #kv .kv__background--ribbon1 {
     left: -50px;
   }
   #kv .kv__content {
