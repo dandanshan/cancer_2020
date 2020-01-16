@@ -408,6 +408,10 @@ th {
   width: 56px;
   height: 70px;
   z-index: 20;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .slides__arrow:before {
@@ -418,6 +422,11 @@ th {
   background-size: 56px 140px;
   background-repeat: no-repeat;
   opacity: 1;
+}
+
+.slides__arrow:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .slides__arrow--gray:before {
@@ -504,6 +513,7 @@ th {
   width: 120px;
   height: 120px;
   margin: 15px auto 0 auto;
+  background: #ebebeb;
 }
 
 .swal2-container .popup--speaker .intro__name {

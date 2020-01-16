@@ -6,6 +6,8 @@
         width: 56px;
         height: 70px;
         z-index: 20;
+        @include scale(.8);
+        @include transition(all, .2s, ease-in-out);
 
         &:before {
             content: '';
@@ -15,6 +17,10 @@
             background-size: 56px 140px;
             background-repeat: no-repeat;
             opacity: 1;
+        }
+
+        &:hover {
+            @include scale(1);
         }
 
         &--gray {
@@ -133,6 +139,7 @@
             .avatar {
                 @include wh-square(120px);
                 margin: 15px auto 0 auto;
+                background: forum(gray200);
             }
 
             .intro {

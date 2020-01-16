@@ -195,11 +195,21 @@
             cursor: pointer;
 
             &:hover {
-                .intro__avatar:after {
-                    @include wh-square(250px);
-                    right: 0;
-                    left: 0;
-                    bottom: -10px;
+                .intro {
+                    &__avatar {
+                        mix-blend-mode: multiply;
+
+                        .avatar {
+                            mix-blend-mode: multiply;
+                        }
+
+                        &:after {
+                            @include wh-square(250px);
+                            right: 0;
+                            left: 0;
+                            bottom: -10px;
+                        }
+                    }
                 }
 
                 .btn {
@@ -219,16 +229,20 @@
             position: relative;
             width: 250px;
             margin: 0 auto;
+            mix-blend-mode: normal;
+            @include transition(all, .6s, ease-in-out);
 
             .avatar {
                 @include wh-square(230px);
                 margin: 0 auto;
                 background: forum(gray400);
+                mix-blend-mode: normal;
+                @include transition(all, .6s, ease-in-out);
             }
 
             &:after {
                 content: '';
-                @include wh-square(130px);
+                @include wh-square(70px);
                 @include transition(all, .6s, ease-in-out);
                 @include mask-circle;
                 transform-origin: bottom left;
@@ -238,7 +252,8 @@
                 left: -10px;
                 bottom: 0;
                 background: forum(blue200);
-                z-index: -1;
+                z-index: 1;
+                mix-blend-mode: multiply;
             }
         }
 
@@ -276,9 +291,8 @@
     }
 
     .agenda {
-
         position: relative;
-        margin-bottom: 2px;
+        border-bottom: 2px solid forum(gray100);
         background: forum(white);
         padding: 25px 40px;
         overflow: hidden;

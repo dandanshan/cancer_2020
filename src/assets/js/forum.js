@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    mobileMenuClose();
+
     $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
@@ -14,7 +16,7 @@ $(document).ready(function () {
             $.each(value1, function (index, value2) {
                 $('.intro__slides').append('<li><div class="intro__info" data-id="' + value2.id + '">' +
                     '<div class="intro__avatar">' +
-                    '<div class="avatar"><img src="https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + value2.id + '.jpg" alt=""></div></div>' +
+                    '<div class="avatar"><img src="../assets/images/forum/speaker/' + value2.img + '.png" alt=""></div></div>' +
                     '<div class="intro__name">' + value2.name + '</div>' +
                     '<div class="intro__title">' + value2.title + '</div>' +
                     '<button class="btn btn--inblock btn--forumOutline btn--sm"><span class="btn__text">詳細介紹</span></button>' +
@@ -34,7 +36,7 @@ $(document).ready(function () {
                 $.each(value1, function (key, value2) {
                     if (dataId == value2.id) {
 
-                        img = 'https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + dataId + '.jpg';
+                        img = '../assets/images/forum/speaker/' + value2.img + '.png';
 
                         $('.agenda[data-id="' + dataId + '"]').append(
                             '<div class="agenda__info">' +
@@ -159,6 +161,11 @@ $(document).ready(function () {
         $(this).hide();
     });
 
+    $(window).resize(function () {
+        mobileMenuClose();
+    });
+
+
     $(window).scroll(function () {
         //header background color
         $(window).scrollTop() > $('#kv').outerHeight() ? $('.header').css('background', '#ffffff') : $('.header').css('background', 'transparent');
@@ -176,6 +183,15 @@ $(document).ready(function () {
         }
     });
 
+    //close menu before menuSpy on mobile
+    function mobileMenuClose() {
+        if ($(window).width() < 992) {
+            $('.nav .menu__name').click(function () {
+                $('.nav, .burger').removeClass('active');
+            });
+        }
+    }
+
     //get data
     function getData() {
         $.each(data, function (index, value1) {
@@ -187,7 +203,7 @@ $(document).ready(function () {
                         title = value2.title;
                         intro = value2.intro;
                         time = value2.sessions;
-                        img = 'https://www.commonhealth.com.tw/event/2019/cancer/assets/images/speaker/' + dataId + '.jpg';
+                        img = '../assets/images/forum/speaker/' + value2.img + '.png';
 
                         popup();
                     }
