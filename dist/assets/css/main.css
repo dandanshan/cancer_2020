@@ -1804,12 +1804,14 @@ p {
 
 #kv .kv__content {
   width: 100%;
+  max-width: 1140px;
   height: 80%;
   position: absolute;
   top: 10%;
   bottom: 0;
   right: 0;
   left: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -2100,6 +2102,10 @@ p {
   width: 100%;
 }
 
+.topic {
+  overflow: hidden;
+}
+
 .topic .wrapper {
   position: relative;
 }
@@ -2267,6 +2273,14 @@ p {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 1200px) {
+  #kv .kv__content--logotype {
+    width: 460px;
+    height: 120px;
+    background: url("../images/img_kv-logotype@3x.png") no-repeat 0 0/cover;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 10%;
+  }
   #topslide .slides {
     margin: 0;
   }
@@ -2325,6 +2339,14 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  #kv .kv__content--logotype {
+    width: 270px;
+    height: 70px;
+    background: url("../images/img_kv-logotype@3x.png") no-repeat 0 0/cover;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 10%;
+  }
   #topslide .wrap {
     padding: 0;
   }
