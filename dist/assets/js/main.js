@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     //close menu before menuSpy on mobile
     function mobileMenuClose() {
-        if ($(window).width() < 992) {
+        if ($(window).width() < 1200) {
             $('.nav .menu__name').click(function () {
                 $('.nav, .burger').removeClass('active');
             });
@@ -67,30 +67,33 @@ $(document).ready(function () {
     //mouse follow
     function mousefollow() {
 
-        var $cursor = $('#cursor');
-        var mouseX = 0;
-        var mouseY = 0;
-        var cursorX = 0;
-        var cursorY = 0;
-        var speed = 0.1;
+        if($(window).width() > 768) {
 
-        function animate() {
-            var distX = mouseX - cursorX + 40;
-            var distY = mouseY - cursorY + 40;
+            var $cursor = $('#cursor');
+            var mouseX = 0;
+            var mouseY = 0;
+            var cursorX = 0;
+            var cursorY = 0;
+            var speed = 0.1;
 
-            cursorX = cursorX + (distX * speed);
-            cursorY = cursorY + (distY * speed);
+            function animate() {
+                var distX = mouseX - cursorX + 40;
+                var distY = mouseY - cursorY + 40;
 
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
+                cursorX = cursorX + (distX * speed);
+                cursorY = cursorY + (distY * speed);
 
-            requestAnimationFrame(animate);
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            $('body').mousemove(function (e) {
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            });
         }
-        animate();
-
-        $('body').mousemove(function (e) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        });
     }
 });
