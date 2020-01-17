@@ -2765,8 +2765,9 @@ ol ol {
     right: 20px;
   }
   #kv .kv__content--logotype {
-    width: 300px;
-    height: 70px;
+    width: 90%;
+    height: auto;
+    padding-top: 20%;
   }
   #kv .kv__content--desc {
     width: 100%;
