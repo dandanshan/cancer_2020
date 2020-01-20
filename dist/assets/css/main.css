@@ -2072,6 +2072,7 @@ p {
 
 #month {
   background: #c6bfd3;
+  overflow: hidden;
   position: relative;
 }
 
@@ -2083,6 +2084,40 @@ p {
   top: 0;
   background: #fafafa;
   height: 215px;
+}
+
+#month .wrapper {
+  z-index: 1;
+}
+
+#month .wrapper:before {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 0;
+  background-size: cover;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 300px;
+  height: 295px;
+  position: absolute;
+  top: -40px;
+  left: -200px;
+  z-index: -1;
+}
+
+#month .wrapper:after {
+  content: '';
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 -195px;
+  background-size: cover;
+  display: block;
+  width: 200px;
+  height: 175px;
+  position: absolute;
+  top: 120px;
+  left: 70px;
+  z-index: -1;
 }
 
 #month .section__title {
@@ -2106,20 +2141,96 @@ p {
   overflow: hidden;
 }
 
-.topic .wrapper {
+.topic .wrap {
   position: relative;
 }
 
-.topic .wrapper:after {
+.topic .wrap:after {
   content: '';
   display: block;
   background: #ebebeb;
   width: calc(100% + 100px);
   position: absolute;
   bottom: 0;
-  top: 200px;
+  top: 120px;
   left: -50px;
   right: -50px;
+  z-index: -1;
+}
+
+.topic#life .wrapper:before {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 -235px;
+  background-size: cover;
+  width: 240px;
+  height: 210px;
+  position: absolute;
+  top: -40px;
+  left: -120px;
+  z-index: -1;
+}
+
+.topic#life .wrapper:after {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 0;
+  background-size: cover;
+  width: 125px;
+  height: 122px;
+  position: absolute;
+  top: 300px;
+  left: -200px;
+  z-index: -1;
+}
+
+.topic#thinking .wrapper:before {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 0;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 125px;
+  height: 122px;
+  position: absolute;
+  top: 150px;
+  right: -150px;
+  z-index: -1;
+}
+
+.topic#lavie .wrapper:before {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 -275px;
+  background-size: cover;
+  -webkit-transform: rotate(-30deg) scaleX(-1);
+  transform: rotate(-30deg) scaleX(-1);
+  width: 280px;
+  height: 240px;
+  position: absolute;
+  top: 20px;
+  left: -260px;
+  z-index: -1;
+}
+
+.topic#lavie .wrapper:after {
+  content: '';
+  display: block;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-position: 0 -240px;
+  background-size: cover;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 130px;
+  height: 95px;
+  position: absolute;
+  top: 350px;
+  left: -150px;
   z-index: -1;
 }
 
