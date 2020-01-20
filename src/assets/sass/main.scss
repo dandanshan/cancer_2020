@@ -146,14 +146,17 @@
         margin: 0 20px;
 
         &__top {
-            width: 940px;
-            height: 470px;
-            overflow: hidden;
-            display: block;
+            width: 100%;
+            max-width: 940px;
+            padding-top: 50%;
+            position: relative;
             margin: 0 auto;
 
             >img {
                 width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
     }
@@ -171,7 +174,7 @@
                 background-size: 250px 645px;
                 background-position-y: 0;
                 right: -100px;
-                bottom: 100px;
+                bottom: 125px;
             }
 
             &--blob2 {
@@ -180,7 +183,7 @@
                 background-size: 245px 632px;
                 background-position-y: -240px;
                 left: -100px;
-                top: 100px;
+                top: 130px;
             }
 
             &--blob3 {
@@ -237,6 +240,7 @@
 
 #month {
     background: color(purple200);
+    overflow: hidden;
     position: relative;
 
     &:after {
@@ -247,6 +251,36 @@
         top: 0;
         background: color(gray100);
         height: 215px;
+    }
+
+    .wrapper {
+        z-index: 1;
+
+        &:before {
+            content: '';
+            display: block;
+            @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+            @include rotate(90);
+            width: 300px;
+            height: 295px;
+            position: absolute;
+            top: -40px;
+            left: -200px;
+            z-index: -1;
+
+        }
+
+        &:after {
+            content: '';
+            @include bg-img('../images/img_blob-deco@3x.png', 0, -195px, cover);
+            display: block;
+            width: 200px;
+            height: 175px;
+            position: absolute;
+            top: 120px;
+            left: 70px;
+            z-index: -1;
+        }
     }
 
     .section__title {
@@ -264,8 +298,6 @@
 
     .grid--month {
 
-        li {}
-
         img {
             width: 100%;
         }
@@ -275,7 +307,7 @@
 .topic {
     overflow: hidden;
 
-    .wrapper {
+    .wrap {
         position: relative;
 
         &:after {
@@ -285,10 +317,85 @@
             width: calc(100% + 100px);
             position: absolute;
             bottom: 0;
-            top: 200px;
+            top: 120px;
             left: -50px;
             right: -50px;
             z-index: -1;
+        }
+    }
+
+    &#life {
+        .wrapper {
+            &:before {
+                content: '';
+                display: block;
+                @include bg-img('../images/img_blob-deco@3x.png', 0, -235px, cover);
+                width: 240px;
+                height: 210px;
+                position: absolute;
+                top: -40px;
+                left: -120px;
+                z-index: -1;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+                width: 125px;
+                height: 122px;
+                position: absolute;
+                top: 300px;
+                left: -200px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &#thinking {
+        .wrapper {
+            &:before {
+                content: '';
+                display: block;
+                @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+                transform: scaleX(-1);
+                width: 125px;
+                height: 122px;
+                position: absolute;
+                top: 150px;
+                right: -150px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &#lavie {
+        .wrapper {
+            &:before {
+                content: '';
+                display: block;
+                @include bg-img('../images/img_blob-deco@3x.png', 0, -275px, cover);
+                transform: rotate(-30deg) scaleX(-1);
+                width: 280px;
+                height: 240px;
+                position: absolute;
+                top: 20px;
+                left: -260px;
+                z-index: -1;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                @include bg-img('../images/img_blob-deco@3x.png', 0, -240px, cover);
+                @include rotate(45);
+                width: 130px;
+                height: 95px;
+                position: absolute;
+                top: 350px;
+                left: -150px;
+                z-index: -1;
+            }
         }
     }
 
@@ -480,18 +587,6 @@
     #topslide {
         .slides {
             margin: 0;
-
-            &__top {
-                width: 600px;
-                height: 300px;
-                overflow: hidden;
-                display: block;
-                margin: 0 auto;
-
-                >img {
-                    width: 100%;
-                }
-            }
         }
     }
 }
@@ -544,17 +639,27 @@
     }
 
     .topic {
-        background: color(gray100);
+        background: color(gray200);
 
-        .wrapper {
+        &#life,
+        &#thinking,
+        &#lavie {
+            .wrap {
+                &:after {
+                    content: none;
+                }
+                .wrapper {
 
-            &:after {
-                content: none;
-            }
+                    &:before,
+                    &:after {
+                        content: none;
+                    }
 
-            .section {
-                &__content {
-                    padding: 0;
+                    .section {
+                        &__content {
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
@@ -591,6 +696,7 @@
             }
         }
     }
+
     #topslide {
         .wrap {
             padding: 0;
@@ -635,6 +741,12 @@
     #promote {
         .promote {
             &__item {
+
+                &.normal {
+                    .action .btn {
+                        width: 100%;
+                    }
+                }
                 &.heighlight {
                     .action {
                         .btn {
