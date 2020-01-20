@@ -146,14 +146,17 @@
         margin: 0 20px;
 
         &__top {
-            width: 940px;
-            height: 470px;
-            overflow: hidden;
-            display: block;
+            width: 100%;
+            max-width: 940px;
+            padding-top: 50%;
+            position: relative;
             margin: 0 auto;
 
             >img {
                 width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
     }
@@ -171,7 +174,7 @@
                 background-size: 250px 645px;
                 background-position-y: 0;
                 right: -100px;
-                bottom: 100px;
+                bottom: 125px;
             }
 
             &--blob2 {
@@ -180,7 +183,7 @@
                 background-size: 245px 632px;
                 background-position-y: -240px;
                 left: -100px;
-                top: 100px;
+                top: 130px;
             }
 
             &--blob3 {
@@ -584,18 +587,6 @@
     #topslide {
         .slides {
             margin: 0;
-
-            &__top {
-                width: 600px;
-                height: 300px;
-                overflow: hidden;
-                display: block;
-                margin: 0 auto;
-
-                >img {
-                    width: 100%;
-                }
-            }
         }
     }
 }
@@ -648,17 +639,27 @@
     }
 
     .topic {
-        background: color(gray100);
+        background: color(gray200);
 
-        .wrapper {
+        &#life,
+        &#thinking,
+        &#lavie {
+            .wrap {
+                &:after {
+                    content: none;
+                }
+                .wrapper {
 
-            &:after {
-                content: none;
-            }
+                    &:before,
+                    &:after {
+                        content: none;
+                    }
 
-            .section {
-                &__content {
-                    padding: 0;
+                    .section {
+                        &__content {
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
@@ -695,6 +696,7 @@
             }
         }
     }
+
     #topslide {
         .wrap {
             padding: 0;
@@ -739,6 +741,12 @@
     #promote {
         .promote {
             &__item {
+
+                &.normal {
+                    .action .btn {
+                        width: 100%;
+                    }
+                }
                 &.heighlight {
                     .action {
                         .btn {

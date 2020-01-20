@@ -6,6 +6,7 @@
         width: 56px;
         height: 70px;
         z-index: 20;
+        top: calc(50% - 35px);
         @include scale(.8);
         @include transition(all, .2s, ease-in-out);
 

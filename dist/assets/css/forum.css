@@ -408,6 +408,7 @@ th {
   width: 56px;
   height: 70px;
   z-index: 20;
+  top: calc(50% - 35px);
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   -webkit-transition: all 0.2s ease-in-out;
