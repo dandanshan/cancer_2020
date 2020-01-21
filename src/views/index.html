@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../assets/css/slick.css" rel="stylesheet">
-    <link href="../assets/css/slick-theme.css" rel="stylesheet">
-    <link href="../assets/css/chart.css" rel="stylesheet">
-    <link href="../assets/css/aos.css" rel="stylesheet">
-    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/slick.css" rel="stylesheet">
+    <link href="./assets/css/slick-theme.css" rel="stylesheet">
+    <link href="./assets/css/chart.css" rel="stylesheet">
+    <link href="./assets/css/aos.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -543,162 +543,162 @@
         <div id="cursor">
             <div class="blob"></div>
         </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="./assets/js/rellax.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <script src="./assets/js/menuspy.min.js"></script>
-        <script src="./assets/js/chart.js"></script>
-        <script src="./assets/js/chartjs-plugin-deferred.js"></script>
-        <script src="./assets/js/aos.js"></script>
-        <script src="./assets/js/main.js"></script>
-        <script>
-            $(document).ready(function () {
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/rellax.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/menuspy.min.js"></script>
+    <script src="./assets/js/chart.js"></script>
+    <script src="./assets/js/chartjs-plugin-deferred.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
 
-                AOS.init({
-                    once: true,
-                });
+            AOS.init({
+                once: true,
+            });
 
-                $('.count__number span').each(function () {
-                    $(this).prop('Counter', 0).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: 2500,
-                        easing: 'swing',
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        }
-                    });
-                });
-
-                $(function () {
-                    var oTop = $('.chart__canvas').offset().top - window.innerHeight;
-                    var chartHidden = true;
-                    $(window).scroll(function () {
-                        var pTop = $('body').scrollTop();
-                        if ((pTop > oTop) && (chartHidden)) {
-                            chartHidden = false;
-                            start_count();
-                        }
-                    });
-                });
-
-                var fontFamily = "'Roboto', 'Noto Sans TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', '新細明體', 'Arial', 'sans-serif'";
-
-                var myChart1 = new Chart($('#chart1'), {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['惡性腫瘤', '心臟疾病（高血壓性疾病除外）', '肺炎', '腦血管疾病', '糖尿病', '事故傷害', '慢性下呼吸道疾病', '高血壓性疾病', '腎炎、腎病症候群及腎病變', '慢性肝病及肝硬化'],
-                        datasets: [{
-                            data: [28.2, 12.5, 7.8, 6.7, 5.4, 4.0, 3.6, 3.5, 3.2, 2.5],
-                            backgroundColor: [
-                                '#8A5082',
-                                '#705f92',
-                                '#8D7FA8',
-                                '#a99fbe',
-                                '#acbbd3',
-                                '#c7d2e2',
-                                '#E3E8F0',
-                                '#F0F0F0',
-                                '#E8DCE6',
-                                '#B996B4',
-                            ],
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        cutoutPercentage: 40,
-                        legend: {
-                            position: 'right',
-                            align: 'start',
-                            labels: {
-                                fontSize: 14,
-                            },
-                        },
-                        maintainAspectRatio: false,
-                        plugins: {
-                            deferred: {
-                                xOffset: 150,
-                                yOffset: '50%',
-                                delay: 500
-                            }
-                        }
-                    }
-                });
-
-                var myChart2 = new Chart($('#chart2'), {
-                    type: 'horizontalBar',
-                    data: {
-                        labels: ['卵巢癌', '子宮癌', '子宮頸癌', '前列腺癌', '鼻咽癌', '大腸直腸癌', '胃癌', '乳癌', '肺癌', '肝癌'],
-                        datasets: [{
-                            data: [0.7, 1.3, 3.3, 2.0, 2.1, 8.6, 3.8, 6.5, 7.8, 9.3],
-                            backgroundColor: [
-                                '#C6BFD3',
-                                '#C6BFD3',
-                                '#C6BFD3',
-                                '#C6BFD3',
-                                '#C6BFD3',
-                                '#A1739B',
-                                '#A1739B',
-                                '#A1739B',
-                                '#A1739B',
-                                '#A1739B',
-                            ],
-                            categoryPercentage: .5,
-                            barPercentage: 1,
-                        }]
-                    },
-                    options: {
-                        segmentShowStroke: false,
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        legend: {
-                            display: false,
-                            labels: {
-                                fontSize: 20,
-                            }
-                        },
-                        scales: {
-                            xAxes: [{
-                                barPercentage: .4,
-                                gridLines: {
-                                    offsetGridLines: true,
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: '罹癌率（%）'
-                                },
-                                ticks: {
-                                    maxTicksLimit: 10,
-                                    fontSize: 12,
-                                }
-                            }],
-                            yAxes: [{
-                                ticks: {
-                                    fontSize: 14,
-                                    fontFamily: fontFamily,
-                                }
-                            }]
-                        },
-                        tooltips: {
-                            titleFontSize: 16,
-                            titleFontFamily: fontFamily,
-                            bodyFontSize: 14,
-                            titleMarginBottom: 10,
-                            xPadding: 8,
-                            yPadding: 10,
-                        },
-                        plugins: {
-                            deferred: {
-                                xOffset: 150,
-                                yOffset: '50%',
-                                delay: 500
-                            }
-                        }
+            $('.count__number span').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
                     }
                 });
             });
-        </script>
+
+            $(function () {
+                var oTop = $('.chart__canvas').offset().top - window.innerHeight;
+                var chartHidden = true;
+                $(window).scroll(function () {
+                    var pTop = $('body').scrollTop();
+                    if ((pTop > oTop) && (chartHidden)) {
+                        chartHidden = false;
+                        start_count();
+                    }
+                });
+            });
+
+            var fontFamily = "'Roboto', 'Noto Sans TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', '新細明體', 'Arial', 'sans-serif'";
+
+            var myChart1 = new Chart($('#chart1'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['惡性腫瘤', '心臟疾病（高血壓性疾病除外）', '肺炎', '腦血管疾病', '糖尿病', '事故傷害', '慢性下呼吸道疾病', '高血壓性疾病', '腎炎、腎病症候群及腎病變', '慢性肝病及肝硬化'],
+                    datasets: [{
+                        data: [28.2, 12.5, 7.8, 6.7, 5.4, 4.0, 3.6, 3.5, 3.2, 2.5],
+                        backgroundColor: [
+                            '#8A5082',
+                            '#705f92',
+                            '#8D7FA8',
+                            '#a99fbe',
+                            '#acbbd3',
+                            '#c7d2e2',
+                            '#E3E8F0',
+                            '#F0F0F0',
+                            '#E8DCE6',
+                            '#B996B4',
+                        ],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutoutPercentage: 40,
+                    legend: {
+                        position: 'right',
+                        align: 'start',
+                        labels: {
+                            fontSize: 14,
+                        },
+                    },
+                    maintainAspectRatio: false,
+                    plugins: {
+                        deferred: {
+                            xOffset: 150,
+                            yOffset: '50%',
+                            delay: 500
+                        }
+                    }
+                }
+            });
+
+            var myChart2 = new Chart($('#chart2'), {
+                type: 'horizontalBar',
+                data: {
+                    labels: ['卵巢癌', '子宮癌', '子宮頸癌', '前列腺癌', '鼻咽癌', '大腸直腸癌', '胃癌', '乳癌', '肺癌', '肝癌'],
+                    datasets: [{
+                        data: [0.7, 1.3, 3.3, 2.0, 2.1, 8.6, 3.8, 6.5, 7.8, 9.3],
+                        backgroundColor: [
+                            '#C6BFD3',
+                            '#C6BFD3',
+                            '#C6BFD3',
+                            '#C6BFD3',
+                            '#C6BFD3',
+                            '#A1739B',
+                            '#A1739B',
+                            '#A1739B',
+                            '#A1739B',
+                            '#A1739B',
+                        ],
+                        categoryPercentage: .5,
+                        barPercentage: 1,
+                    }]
+                },
+                options: {
+                    segmentShowStroke: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false,
+                        labels: {
+                            fontSize: 20,
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            barPercentage: .4,
+                            gridLines: {
+                                offsetGridLines: true,
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: '罹癌率（%）'
+                            },
+                            ticks: {
+                                maxTicksLimit: 10,
+                                fontSize: 12,
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontFamily: fontFamily,
+                            }
+                        }]
+                    },
+                    tooltips: {
+                        titleFontSize: 16,
+                        titleFontFamily: fontFamily,
+                        bodyFontSize: 14,
+                        titleMarginBottom: 10,
+                        xPadding: 8,
+                        yPadding: 10,
+                    },
+                    plugins: {
+                        deferred: {
+                            xOffset: 150,
+                            yOffset: '50%',
+                            delay: 500
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
