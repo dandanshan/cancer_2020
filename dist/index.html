@@ -8,6 +8,7 @@
         <link href="../assets/css/slick.css" rel="stylesheet">
         <link href="../assets/css/slick-theme.css" rel="stylesheet">
         <link href="../assets/css/chart.css" rel="stylesheet">
+        <link href="../assets/css/aos.css" rel="stylesheet">
         <link href="../assets/css/main.css" rel="stylesheet">
     </head>
     <body>
@@ -84,34 +85,48 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="chart">
+            <div class="section" id="chart">
                 <div class="wrap">
                     <div class="wrapper">
                         <div class="section__title"><span>癌症關鍵數字</span></div>
-                        <div class="chart">
-                            <div class="chart__desc">
-                                <div class="subtitle">台灣癌症時鐘</div>
-                                <p>國民健康署統計，平均每4分鐘58秒就有1人罹癌。</p>
-                                <div>資料來源：衛生福利部</div>
+                        <div class="chart" data-aos="zoom-in-down">
+                            <div class="chart__content">
+                                <div class="chart__desc">
+                                    <div class="subtitle">台灣癌症時鐘</div>
+                                    <p>國民健康署統計，平均每4分鐘58秒就有1人罹癌。</p>
+                                    <div class="memo">資料來源：衛生福利部</div>
+                                </div>
                             </div>
                             <div class="chart__canvas">
+                                <div class="count">
+                                    <div class="count__number">
+                                        <span>4</span>分
+                                    </div>
+                                    <div class="count__number">
+                                        <span>58</span>秒
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="chart">
-                            <div class="chart__desc">
-                                <div class="subtitle">國人十大死因</div>
-                                <p>衛生福利部統計數據顯示，惡性腫瘤佔比28.2%，為國人十大死因之冠。</p>
-                                <div>資料來源：衛生福利部</div>
+                        <div class="chart" data-aos="zoom-in-down">
+                            <div class="chart__content">
+                                <div class="chart__desc">
+                                    <div class="subtitle">國人十大死因</div>
+                                    <p>衛生福利部統計數據顯示，惡性腫瘤佔比28.2%，為國人十大死因之冠。</p>
+                                    <div class="memo">資料來源：衛生福利部</div>
+                                </div>
                             </div>
                             <div class="chart__canvas">
                                 <canvas id="chart1" width="400" height="400"></canvas>
                             </div>
                         </div>
-                        <div class="chart">
-                            <div class="chart__desc">
-                                <div class="subtitle">家族癌症病史分佈</div>
-                                <p>根據台灣人體生物資料庫統計數據，家族癌症史分布中，肝癌佔比居冠，達9.3%，其次為肺癌7.8%、乳癌6.5%、胃癌3.8%、大腸癌8.6%。</p>
-                                <div>資料來源：台灣人體生物資料庫</div>
+                        <div class="chart" data-aos="zoom-in-down">
+                            <div class="chart__content">
+                                <div class="chart__desc">
+                                    <div class="subtitle">家族癌症病史分佈</div>
+                                    <p>根據台灣人體生物資料庫統計數據，家族癌症史分布中，肝癌佔比居冠，達9.3%，其次為肺癌7.8%、乳癌6.5%、胃癌3.8%、大腸癌8.6%。</p>
+                                    <div class="memo">資料來源：台灣人體生物資料庫</div>
+                                </div>
                             </div>
                             <div class="chart__canvas">
                                 <canvas id="chart2" width="400" height="400"></canvas>
@@ -475,29 +490,58 @@
         <script src="./assets/js/slick.min.js"></script>
         <script src="./assets/js/menuspy.min.js"></script>
         <script src="./assets/js/chart.js"></script>
+        <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/main.js"></script>
         <script>
             $(document).ready(function() {
 
+                AOS.init({
+                    once: true,
+                });
+
+                $('.count__number span').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 2500,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+
+                $(function() {
+                    var oTop = $('.chart__canvas').offset().top - window.innerHeight;
+                    var chartHidden = true;
+                    $(window).scroll(function(){
+                        var pTop = $('body').scrollTop();
+                        if ((pTop > oTop) && (chartHidden)) {
+                            chartHidden = false;
+                            start_count();
+                        }
+                    });
+                });
+
                 var fontFamily = "'Roboto', 'Noto Sans TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', '新細明體', 'Arial', 'sans-serif'";
 
-                new Chart($('#chart1'), {
+                var myChart1 = new Chart($('#chart1'), {
                     type: 'doughnut',
                     data: {
                         labels: ['惡性腫瘤', '心臟疾病（高血壓性疾病除外）', '肺炎', '腦血管疾病', '糖尿病', '事故傷害', '慢性下呼吸道疾病', '高血壓性疾病', '腎炎、腎病症候群及腎病變', '慢性肝病及肝硬化'],
                         datasets: [{
                             data: [28.2, 12.5, 7.8, 6.7, 5.4, 4.0, 3.6, 3.5, 3.2, 2.5],
                             backgroundColor: [
+                                '#8A5082',
                                 '#705f92',
-                                '#705f92',
-                                '#8d7fa8',
-                                '#8d7fa8',
-                                '#8d7fa8',
+                                '#8D7FA8',
                                 '#a99fbe',
-                                '#c6bfd3',
-                                '#c6bfd3',
-                                '#e2dfe9',
-                                '#e2dfe9',
+                                '#acbbd3',
+                                '#c7d2e2',
+                                '#E3E8F0',
+                                '#F0F0F0',
+                                '#E8DCE6',
+                                '#B996B4',
                             ],
                         }]
                     },
@@ -505,35 +549,42 @@
                         responsive: true,
                         cutoutPercentage: 40,
                         legend: {
-                            display: false
-                        }
+                            position: 'right',
+                            align: 'start',
+                            labels: {
+                                fontSize: 14,
+                            },
+                        },
+                        maintainAspectRatio: false,
                     }
                 });
 
-                new Chart($('#chart2'), {
+                var myChart2 = new Chart($('#chart2'), {
                     type: 'horizontalBar',
                     data: {
                         labels: ['卵巢癌', '子宮癌', '子宮頸癌', '前列腺癌', '鼻咽癌', '大腸直腸癌', '胃癌', '乳癌', '肺癌', '肝癌'],
                         datasets: [{
                             data: [0.7, 1.3, 3.3, 2.0, 2.1, 8.6, 3.8, 6.5, 7.8, 9.3],
                             backgroundColor: [
-                                '#ffcad0',
-                                '#ffcad0',
-                                '#ffcad0',
-                                '#ffcad0',
-                                '#ffcad0',
-                                '#ff95a1',
-                                '#ff95a1',
-                                '#ff95a1',
-                                '#ff95a1',
-                                '#ff95a1',
+                                '#C6BFD3',
+                                '#C6BFD3',
+                                '#C6BFD3',
+                                '#C6BFD3',
+                                '#C6BFD3',
+                                '#A1739B',
+                                '#A1739B',
+                                '#A1739B',
+                                '#A1739B',
+                                '#A1739B',
                             ],
-                            barPercentage: .7,
-                            categoryPercentage: .6,
+                            categoryPercentage: .5,
+                            barPercentage: 1,
                         }]
                     },
                     options: {
+                        segmentShowStroke: false,
                         responsive: true,
+                        maintainAspectRatio: false,
                         legend: {
                             display: false,
                             labels: {
@@ -542,6 +593,7 @@
                         },
                         scales: {
                             xAxes: [{
+                                barPercentage: .4,
                                 gridLines: {
                                     offsetGridLines: true,
                                 },
@@ -556,7 +608,6 @@
                             }],
                             yAxes: [{
                                 ticks: {
-                                    maxTicksLimit: 10,
                                     fontSize: 14,
                                     fontFamily: fontFamily,
                                 }

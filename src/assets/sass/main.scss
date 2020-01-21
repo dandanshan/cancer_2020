@@ -203,38 +203,106 @@
 
     .chart {
         overflow: hidden;
+        @include display-flex-box;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-        &__desc {
+        &__content {
             width: calc(45% - 50px);
+            position: relative;
         }
 
         &__canvas {
             width: 55%;
+
+            canvas {
+                max-height: 500px;
+            }
         }
 
         &:nth-child(odd) {
-            .chart__desc {
-                float: right;
+            .chart__content {
+                order: 2;
             }
 
             .chart__canvas {
-                float: left;
+                order: 1;
             }
         }
 
         &:nth-child(even) {
-            .chart__desc {
-                float: left;
+            .chart__content {
+                order: 1;
             }
 
             .chart__canvas {
-                float: right;
+                order: 2;
             }
         }
 
         &:not(:last-child) {
             margin-bottom: 70px;
         }
+    }
+
+    .count {
+        max-width: 500px;
+        padding: 50px 20px;
+        color: color(fuchsia300);
+        background: color(purple100);
+        text-align: center;
+        font-weight: bold;
+        font-size: $font-size-24;
+        @include animation(shake, 2.5s, 2, linear, 0s);
+
+        &__number {
+            display: inline-block;
+            background: color(white);
+            padding: 40px 20px;
+            position: relative;
+            border-radius: 10px;
+            width: 150px;
+
+            > span {
+                color: color(fuchsia500);
+                font-size: $font-size-72;
+                margin-right: 10px;
+            }
+
+            &:first-child {
+                margin-right: 10px;
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: color(fuchsia300);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                mix-blend-mode: multiply;
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes shake {
+            0%, 25%, 50%, 75%, 100% {
+                @include scale(1);
+            }
+
+            12.5%, 37.5%, 67.5%, 87.5%  {
+                @include scale(1.05);
+            }
+        }
+    }
+
+    .memo {
+        font-size: $font-size-14;
+        color: color(gray500);
     }
 }
 
@@ -595,20 +663,25 @@
 @media only screen and (max-width: $screen-md) {
     #chart {
         .chart {
+            flex-direction: column;
 
             &:nth-child(odd),
             &:nth-child(even) {
-                .chart__desc {
+                .chart__content {
                     width: 100%;
-                    float: left;
+                    order: 1;
                     margin-bottom: 20px;
                 }
 
                 .chart__canvas {
                     width: 100%;
                     max-width: 650px;
-                    float: left;
+                    order: 2;
                 }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
             }
         }
     }
