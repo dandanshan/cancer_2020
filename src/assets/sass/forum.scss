@@ -365,6 +365,7 @@
                 font-weight: $font-weight-bold;
                 color: forum(gray600);
                 display: inline-block;
+                cursor: pointer;
             }
 
             .title {
@@ -373,6 +374,7 @@
                 color: forum(gray500);
                 display: inline-block;
                 line-height: 1.6;
+                cursor: pointer;
 
                 &:before {
                     content: '/';
