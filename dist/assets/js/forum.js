@@ -65,10 +65,17 @@ $(document).ready(function () {
         });
     });
 
-    //speaker popup
+    //speaker avatar popup
     $('.agenda .avatar').click(function () {
 
         dataId = $(this).attr('data-id');
+        getData();
+    });
+
+    //speaker name and title  popup
+    $('.agenda .name, .agenda .title').click(function () {
+
+        dataId = $(this).closest('.agenda').attr('data-id');
         getData();
     });
 
