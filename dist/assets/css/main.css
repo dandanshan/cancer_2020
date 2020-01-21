@@ -2017,7 +2017,7 @@ p {
   background-size: 250px 645px;
   background-position-y: 0;
   right: -100px;
-  bottom: 125px;
+  bottom: -50px;
 }
 
 #topslide .ts__background--blob2 {
@@ -2026,7 +2026,7 @@ p {
   background-size: 245px 632px;
   background-position-y: -240px;
   left: -100px;
-  top: 130px;
+  top: 330px;
 }
 
 #topslide .ts__background--blob3 {
@@ -2035,7 +2035,7 @@ p {
   background-size: 120px 309px;
   background-position-y: -220px;
   right: -200px;
-  top: 100px;
+  top: 200px;
 }
 
 #chart {
@@ -2044,34 +2044,130 @@ p {
 
 #chart .chart {
   overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
 }
 
-#chart .chart__desc {
+#chart .chart__content {
   width: calc(45% - 50px);
+  position: relative;
 }
 
 #chart .chart__canvas {
   width: 55%;
 }
 
-#chart .chart:nth-child(odd) .chart__desc {
-  float: right;
+#chart .chart__canvas canvas {
+  max-height: 500px;
+}
+
+#chart .chart:nth-child(odd) .chart__content {
+  -webkit-box-ordinal-group: 3;
+  order: 2;
 }
 
 #chart .chart:nth-child(odd) .chart__canvas {
-  float: left;
+  -webkit-box-ordinal-group: 2;
+  order: 1;
 }
 
-#chart .chart:nth-child(even) .chart__desc {
-  float: left;
+#chart .chart:nth-child(even) .chart__content {
+  -webkit-box-ordinal-group: 2;
+  order: 1;
 }
 
 #chart .chart:nth-child(even) .chart__canvas {
-  float: right;
+  -webkit-box-ordinal-group: 3;
+  order: 2;
 }
 
 #chart .chart:not(:last-child) {
   margin-bottom: 70px;
+}
+
+#chart .count {
+  max-width: 500px;
+  padding: 50px 20px;
+  color: #b996b4;
+  background: #e2dfe9;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  -webkit-animation: shake 2.5s;
+  animation: shake 2.5s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#chart .count__number {
+  display: inline-block;
+  background: #ffffff;
+  padding: 40px 20px;
+  position: relative;
+  border-radius: 10px;
+  width: 150px;
+}
+
+#chart .count__number > span {
+  color: #8a5082;
+  font-size: 4.5rem;
+  margin-right: 10px;
+}
+
+#chart .count__number:first-child {
+  margin-right: 10px;
+}
+
+#chart .count__number:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #b996b4;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+}
+
+@-webkit-keyframes shake {
+  0%, 25%, 50%, 75%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  12.5%, 37.5%, 67.5%, 87.5% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%, 25%, 50%, 75%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  12.5%, 37.5%, 67.5%, 87.5% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+#chart .memo {
+  font-size: 0.875rem;
+  color: #88888f;
 }
 
 #month {
@@ -2256,6 +2352,16 @@ p {
 
 .recommend__media {
   line-height: 0;
+  width: 100%;
+  padding-top: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.recommend__media > img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .recommend__text {
@@ -2402,15 +2508,25 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
-  #chart .chart:nth-child(odd) .chart__desc, #chart .chart:nth-child(even) .chart__desc {
+  #chart .chart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+  #chart .chart:nth-child(odd) .chart__content, #chart .chart:nth-child(even) .chart__content {
     width: 100%;
-    float: left;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
     margin-bottom: 20px;
   }
   #chart .chart:nth-child(odd) .chart__canvas, #chart .chart:nth-child(even) .chart__canvas {
     width: 100%;
     max-width: 650px;
-    float: left;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+  }
+  #chart .chart:not(:last-child) {
+    margin-bottom: 30px;
   }
   #month .section__title {
     position: relative;
