@@ -2171,6 +2171,7 @@ p {
 }
 
 #month {
+  background: #c6bfd3;
   overflow: hidden;
   position: relative;
 }
@@ -2372,6 +2373,7 @@ p {
 }
 
 #promote {
+  background: #c6bfd3;
   font-size: 1rem;
   overflow: hidden;
 }
