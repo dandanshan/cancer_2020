@@ -428,13 +428,17 @@
                 &__speaker {
                     text-align: left;
 
-                    span {
+                    .title {
                         display: block;
                         font-size: $font-size-20;
                         font-weight: $font-weight-normal;
                         color: forum(gray500);
                         margin-top: 10px;
                         line-height: 1.4;
+
+                        &:before {
+                            content: none;
+                        }
                     }
                 }
             }

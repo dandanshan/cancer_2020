@@ -2234,13 +2234,17 @@ ol ol {
   text-align: left;
 }
 
-#agenda .agenda--tp .agenda__speaker span {
+#agenda .agenda--tp .agenda__speaker .title {
   display: block;
   font-size: 1.25rem;
   font-weight: 400;
   color: #88888f;
   margin-top: 10px;
   line-height: 1.4;
+}
+
+#agenda .agenda--tp .agenda__speaker .title:before {
+  content: none;
 }
 
 #agenda .agenda--tp .session {
