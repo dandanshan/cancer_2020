@@ -1,13 +1,10 @@
-
 //background
-$bg: (
-    white: #ffffff,
+$bg: (white: #ffffff,
     purple-light: #c6bfd3,
 );
 
 //cancer
-$colors: (
-    white: #ffffff,
+$colors: (white: #ffffff,
     black: #333333,
     gray100: #fafafa,
     gray200: #ebebeb,
@@ -23,8 +20,7 @@ $colors: (
 );
 
 //cancer-forum
-$forums: (
-    white: #ffffff,
+$forums: (white: #ffffff,
     black: #393942,
     gray100: #fafafa,
     gray200: #ebebeb,
@@ -60,42 +56,42 @@ $bg-sponsor: #e6e3e3;
     @return map-get($texts, $text-name);
 }
 
-$font-size-base:          1rem !default;
-$font-size-14:            0.875rem !default;
-$font-size-18:            1.125rem !default;
-$font-size-20:            1.25rem !default;
-$font-size-22:            1.375rem !default;
-$font-size-24:            1.5rem !default;
-$font-size-28:            1.75rem !default;
-$font-size-30:            1.875rem !default;
-$font-size-36:            2.25rem !default;
-$font-size-45:            2.8125rem !default;
-$font-size-60:            3.75rem !default;
-$font-size-72:            4.5rem !default;
+$font-size-base: 1rem !default;
+$font-size-14: 0.875rem !default;
+$font-size-18: 1.125rem !default;
+$font-size-20: 1.25rem !default;
+$font-size-22: 1.375rem !default;
+$font-size-24: 1.5rem !default;
+$font-size-28: 1.75rem !default;
+$font-size-30: 1.875rem !default;
+$font-size-36: 2.25rem !default;
+$font-size-45: 2.8125rem !default;
+$font-size-60: 3.75rem !default;
+$font-size-72: 4.5rem !default;
 
-$font-weight-normal:      400 !default;
-$font-weight-medium:      500 !default;
-$font-weight-bold:        700 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
 
 //== Media queries breakpoints
 //
 // Extra small screen / phone
-$screen-xs:                  576px !default;
-$screen-xs-min:              $screen-xs !default;
-$screen-phone:               $screen-xs-min !default;
+$screen-xs: 576px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
 // Small screen / tablet
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-$screen-tablet:              $screen-sm-min !default;
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
 // Medium screen / desktop
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
-$screen-desktop:             $screen-md-min !default;
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
 // Large screen / wide desktop
-$screen-lg:                  1200px !default;
-$screen-lg-min:              $screen-lg !default;
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;

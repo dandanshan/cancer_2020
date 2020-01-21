@@ -943,7 +943,8 @@ button:focus {
 }
 
 @-webkit-keyframes btnScale {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -954,7 +955,8 @@ button:focus {
 }
 
 @keyframes btnScale {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -1277,7 +1279,8 @@ button:focus {
     margin: 0;
     width: 100%;
   }
-  .grid--month > li, .grid--month li:first-child {
+  .grid--month > li,
+  .grid--month li:first-child {
     width: 100%;
     padding: 0;
     margin-bottom: 30px;
@@ -1286,7 +1289,8 @@ button:focus {
   .grid--topic {
     margin: 0;
   }
-  .grid--topic.top > li, .grid--topic.top li:first-child {
+  .grid--topic.top > li,
+  .grid--topic.top li:first-child {
     padding: 0;
     width: 100%;
     float: none;
@@ -1903,7 +1907,8 @@ ol ol {
 }
 
 @-webkit-keyframes jump1 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0) rotate(0);
     transform: scale(0.95) translateY(0) rotate(0);
     -webkit-transform-origin: 100px 170px;
@@ -1916,7 +1921,8 @@ ol ol {
 }
 
 @keyframes jump1 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0) rotate(0);
     transform: scale(0.95) translateY(0) rotate(0);
     -webkit-transform-origin: 100px 170px;
@@ -1929,7 +1935,8 @@ ol ol {
 }
 
 @-webkit-keyframes jump2 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0);
     transform: scale(0.95) translateY(0);
   }
@@ -1940,7 +1947,8 @@ ol ol {
 }
 
 @keyframes jump2 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0);
     transform: scale(0.95) translateY(0);
   }
@@ -1951,7 +1959,8 @@ ol ol {
 }
 
 @-webkit-keyframes jump3 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0);
     transform: scale(0.95) translateY(0);
   }
@@ -1962,7 +1971,8 @@ ol ol {
 }
 
 @keyframes jump3 {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(0.95) translateY(0);
     transform: scale(0.95) translateY(0);
   }
@@ -2035,12 +2045,8 @@ ol ol {
   cursor: pointer;
 }
 
-#intro .intro__info:hover .intro__avatar {
-  mix-blend-mode: multiply;
-}
-
 #intro .intro__info:hover .intro__avatar .avatar {
-  mix-blend-mode: multiply;
+  mix-blend-mode: color-burn;
 }
 
 #intro .intro__info:hover .intro__avatar:after {
@@ -2064,7 +2070,6 @@ ol ol {
   position: relative;
   width: 250px;
   margin: 0 auto;
-  mix-blend-mode: normal;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
@@ -2096,7 +2101,7 @@ ol ol {
   bottom: 0;
   background: #a6d3f9;
   z-index: 1;
-  mix-blend-mode: multiply;
+  mix-blend-mode: color-burn;
 }
 
 #intro .intro__avatar:after > img {

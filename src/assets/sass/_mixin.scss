@@ -1,5 +1,5 @@
 @mixin font-notoTC {
-    font-family: 'Roboto', 'Noto Serif TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', Arial, sans-serif;
+	font-family: 'Roboto', 'Noto Serif TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', Arial, sans-serif;
 }
 
 @mixin bg-img($url, $x, $y, $size) {
@@ -34,27 +34,27 @@
 }
 
 @mixin display-flex-inline {
-    display: -webkit-inline-flex;
-    display: inline-flex;
+	display: -webkit-inline-flex;
+	display: inline-flex;
 }
 
 @mixin display-flex-box {
 	display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 @mixin box-flex($value) {
 	-webkit-box-flex: $value;
-    -ms-flex: $value;
-    flex: $value;
+	-ms-flex: $value;
+	flex: $value;
 }
 
 @mixin mask-circle {
 	border-radius: 50%;
 	overflow: hidden;
 
-	& > img {
+	&>img {
 		width: 100%;
 	}
 }
@@ -78,7 +78,7 @@
 	box-sizing: $type;
 }
 
-@mixin appearance($type){
+@mixin appearance($type) {
 	-webkit-appearance: $type;
 	-moz-appearance: $type;
 	-ms-appearance: $type;
@@ -88,10 +88,10 @@
 
 //transform
 @mixin transform($transforms) {
-    -webkit-transform: $transforms;
-    -moz-transform: $transforms;
-    -ms-transform: $transforms;
-    transform: $transforms;
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
 }
 
 @mixin translateX($x) {
@@ -103,15 +103,15 @@
 }
 
 @mixin translate ($x, $y) {
-    @include transform(translate($x, $y));
+	@include transform(translate($x, $y));
 }
 
-@mixin translate3d($x,$y,$z) {
-		-webkit-transform: translate3d($x, $y, $z);
-		-moz-transform: translate3d($x, $y, $z);
-		-ms-transform: translate3d($x, $y, $z);
-		-o-transform: translate3d($x, $y, $z);
-		transform: translate3d($x, $y, $z);
+@mixin translate3d($x, $y, $z) {
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-ms-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
 }
 
 @mixin transition($property, $duration, $curve) {
@@ -122,18 +122,18 @@
 }
 
 @mixin rotate($deg) {
-    @include transform(rotate(#{$deg}deg));
+	@include transform(rotate(#{$deg}deg));
 }
 
 @mixin scale($scale) {
-    @include transform(scale($scale));
+	@include transform(scale($scale));
 }
 
 @mixin skew ($x, $y) {
-    @include transform(skew(#{$x}deg, #{$y}deg));
+	@include transform(skew(#{$x}deg, #{$y}deg));
 }
 
-@mixin transformOrigin($x,$y) {
+@mixin transformOrigin($x, $y) {
 	-moz-transform-origin: $x $y;
 	-o-transform-origin: $x $y;
 	-webkit-transform-origin: $x $y;
@@ -141,8 +141,8 @@
 }
 
 @mixin animation($property, $duration, $count, $timing, $delay) {
-    -webkit-animation: $property $duration;
-    -moz-animation: $property $duration;
+	-webkit-animation: $property $duration;
+	-moz-animation: $property $duration;
 	animation: $property $duration;
 	animation-iteration-count: $count;
 	animation-timing-function: $timing;
@@ -185,5 +185,3 @@
 	border-style: solid;
 	@include rotate(-45);
 }
-
-
