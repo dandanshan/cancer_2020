@@ -16,7 +16,6 @@
         <div class="wrapper">
             <h2 class="title">台北場議程</h2>
             <h3>上午場</h3>
-
             <div class="agenda" data-id="1"></div>
             <div class="agenda" data-id="2"></div>
             <div class="break">11:00-11:20 Break</div>
@@ -27,8 +26,7 @@
             <div class="agenda agenda--tp">
                 <h3>下午場</h3>
                 <div class="agenda__info">
-                    <div class="agenda__time">14:30-16:00 (下午場依不同癌別，分3小場同步進行)</div>
-
+                    <div class="agenda__time">14:30-16:00 (下午場依不同癌別，分3小場同步進行)</div>å
                     <ul class="grid grid--tp">
                         <li>
                             <div class="session session--breast">
@@ -156,7 +154,7 @@
                 <ul class="grid grid--buy">
                     <li>
                         <div class="session session--breast">
-                            <div class="icon icon__ticket icon__ticket--breast">
+                            <div class="icon icon__ticket icon__ticket--breast" data-type="1">
                                 <div class="session__title">2020 癌症趨勢論壇</div>
                                 <div class="session__type">上午場 + <span>乳癌場</span></div>
                                 <div class="action">
@@ -166,10 +164,10 @@
                         </div>
                     </li>
                     <li>
-                        <div class="session session--colorectal">
+                        <div class="session session--colorectal" data-type="2">
                             <div class="icon icon__ticket icon__ticket--colorectal">
                                 <div class="session__title">2020 癌症趨勢論壇</div>
-                                <div class="session__type">上午場 + <span>乳癌場</span></div>
+                                <div class="session__type">上午場 + <span>大腸癌場</span></div>
                                 <div class="action">
                                     <button class="btn btn--inblock btn--forumBuy"><span class="btn__text">立即購票</span></button>
                                 </div>
@@ -177,10 +175,10 @@
                         </a>
                     </li>
                     <li>
-                        <div class="session session--lung">
+                        <div class="session session--lung" data-type="3">
                             <div class="icon icon__ticket icon__ticket--lung">
                                 <div class="session__title">2020 癌症趨勢論壇</div>
-                                <div class="session__type">上午場 + <span>乳癌場</span></div>
+                                <div class="session__type">上午場 + <span>肺癌場</span></div>
                                 <div class="action">
                                     <button class="btn btn--inblock btn--forumBuy"><span class="btn__text">立即購票</span></button>
                                 </div>
@@ -266,13 +264,16 @@
 
     $('#ticket .session').click(function(){
 
-        var link = 'https://www.commonhealth.com.tw/';
+        var type = $(this).attr('data-type');
+
+        var linkNormal = 'https://www.commonhealth.com.tw/';
+        var linkMember = 'https://www.commonhealth.com.tw/';
 
         Swal.fire({
             title: '請選擇您想購買的票券類型',
             html: '<div><ul class="grid grid--plan">' +
-                  '<li><a href="' + link + '" target="_blank" class="plan"><div class="plan__price"><div>一般價</div><span>NT$<strong>250</strong></span></div><div class="plan__content"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '<li><a href="' + link + '" target="_blank" class="plan"><div class="plan__price"><div>與知識同行價</div><span>NT$<strong>350</strong></span></div><div class="plan__content"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkNormal + '" target="_blank" class="plan"><div class="plan__price"><div>一般價</div><span>NT$<strong>250</strong></span></div><div class="plan__content"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkMember + '" target="_blank" class="plan"><div class="plan__price"><div>與知識同行價</div><span>NT$<strong>350</strong></span></div><div class="plan__content"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
                   '</ul></div>',
             showCloseButton: true,
             showConfirmButton: false,
@@ -282,6 +283,5 @@
             }
         })
     });
-
 </script>
 <!-- @@close-->

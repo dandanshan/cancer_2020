@@ -40,7 +40,7 @@ gulp.task('webserver', function() {
 // gulp-html-extend
 gulp.task('extend', function() {
     gulp.src(viewPath.src)
-        .pipe(extend({ annotations: true, verbose: false })) // default options
+        .pipe(extend({ annotations: false, verbose: false })) // default options
         .pipe(gulp.dest(viewPath.dest))
 });
 

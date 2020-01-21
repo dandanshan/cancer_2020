@@ -24,6 +24,11 @@
                 height: 100px;
                 background: url('../images/forum/img_kv-logotype@3x.png') 0 0/contain no-repeat;
                 margin-bottom: 25px;
+                overflow: hidden;
+
+                h1 {
+                    visibility: hidden;
+                }
             }
 
             &--desc {
