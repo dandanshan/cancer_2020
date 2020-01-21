@@ -943,7 +943,8 @@ button:focus {
 }
 
 @-webkit-keyframes btnScale {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -954,7 +955,8 @@ button:focus {
 }
 
 @keyframes btnScale {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -1277,7 +1279,8 @@ button:focus {
     margin: 0;
     width: 100%;
   }
-  .grid--month > li, .grid--month li:first-child {
+  .grid--month > li,
+  .grid--month li:first-child {
     width: 100%;
     padding: 0;
     margin-bottom: 30px;
@@ -1286,7 +1289,8 @@ button:focus {
   .grid--topic {
     margin: 0;
   }
-  .grid--topic.top > li, .grid--topic.top li:first-child {
+  .grid--topic.top > li,
+  .grid--topic.top li:first-child {
     padding: 0;
     width: 100%;
     float: none;
@@ -2144,22 +2148,36 @@ p {
 }
 
 @-webkit-keyframes shake {
-  0%, 25%, 50%, 75%, 100% {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-  12.5%, 37.5%, 67.5%, 87.5% {
+  12.5%,
+  37.5%,
+  67.5%,
+  87.5% {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
 }
 
 @keyframes shake {
-  0%, 25%, 50%, 75%, 100% {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-  12.5%, 37.5%, 67.5%, 87.5% {
+  12.5%,
+  37.5%,
+  67.5%,
+  87.5% {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }

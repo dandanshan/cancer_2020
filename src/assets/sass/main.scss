@@ -264,7 +264,7 @@
             border-radius: 10px;
             width: 150px;
 
-            > span {
+            >span {
                 color: color(fuchsia500);
                 font-size: $font-size-72;
                 margin-right: 10px;
@@ -290,11 +290,19 @@
         }
 
         @keyframes shake {
-            0%, 25%, 50%, 75%, 100% {
+
+            0%,
+            25%,
+            50%,
+            75%,
+            100% {
                 @include scale(1);
             }
 
-            12.5%, 37.5%, 67.5%, 87.5%  {
+            12.5%,
+            37.5%,
+            67.5%,
+            87.5% {
                 @include scale(1.05);
             }
         }
@@ -498,7 +506,7 @@
         overflow: hidden;
         position: relative;
 
-        > img {
+        >img {
             position: absolute;
             top: 0;
             left: 0;
@@ -730,6 +738,7 @@
                 &:after {
                     content: none;
                 }
+
                 .wrapper {
 
                     &:before,
@@ -829,6 +838,7 @@
                         width: 100%;
                     }
                 }
+
                 &.heighlight {
                     .action {
                         .btn {

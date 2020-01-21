@@ -6,12 +6,17 @@
  *    user zoom.
  */
 
- html {
-	font-family: sans-serif; /* 1 */
-	-ms-text-size-adjust: 100%; /* 2 */
-	-moz-text-size-adjust: 100%; /* 2 */
-	-webkit-text-size-adjust: 100%; /* 2 */
-	text-size-adjust: 100%; /* 2 */
+html {
+	font-family: sans-serif;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-moz-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+	text-size-adjust: 100%;
+	/* 2 */
 }
 
 /**
@@ -19,12 +24,12 @@
  */
 
 body {
-  font-family: 'Roboto', "Noto Sans TC", "LiHei Pro  Medium", "Microsoft JhengHei", "新細明體", Arial, sans-serif;
-  color: #333333;
-  font-size: 1.125em;
-  line-height: 1.15;
-  min-width: inherit;
-  margin: 0;
+	font-family: 'Roboto', "Noto Sans TC", "LiHei Pro  Medium", "Microsoft JhengHei", "新細明體", Arial, sans-serif;
+	color: #333333;
+	font-size: 1.125em;
+	line-height: 1.15;
+	min-width: inherit;
+	margin: 0;
 }
 
 /* HTML5 display definitions
@@ -58,19 +63,21 @@ audio,
 canvas,
 progress,
 video {
-	display: inline-block; /* 1 */
-	vertical-align: baseline; /* 2 */
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
 }
 
-	/**
+/**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 
-	audio:not([controls]) {
-		display: none;
-		height: 0;
-	}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
 
 /**
  * Address `[hidden]` styling not present in IE 8/9.
@@ -94,14 +101,14 @@ a {
 	text-decoration: none;
 }
 
-	/**
+/**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-	a:active,
-	a:hover {
-		outline: 0;
-	}
+a:active,
+a:hover {
+	outline: 0;
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -259,9 +266,12 @@ input,
 optgroup,
 select,
 textarea {
-	color: inherit; /* 1 */
-	font: inherit; /* 2 */
-	margin: 0; /* 3 */
+	color: inherit;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+	margin: 0;
+	/* 3 */
 }
 
 /**
@@ -293,31 +303,34 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"],
+/* 1 */
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button; /* 2 */
-	cursor: pointer; /* 3 */
+	-webkit-appearance: button;
+	/* 2 */
+	cursor: pointer;
+	/* 3 */
 }
 
-	/**
+/**
  * Re-set default cursor for disabled elements.
  */
 
-	button[disabled],
-	html input[disabled] {
-		cursor: default;
-	}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
 
-	/**
+/**
  * Remove inner padding and border in Firefox 4+.
  */
 
-	button::-moz-focus-inner,
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -328,7 +341,7 @@ input {
 	line-height: normal;
 }
 
-	/**
+/**
  * It's recommended that you don't attempt to style these elements.
  * Firefox's implementation doesn't respect box-sizing, padding, or width.
  *
@@ -336,48 +349,52 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 
-	input[type="checkbox"],
-	input[type="radio"] {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box; /* 1 */
-		padding: 0; /* 2 */
-	}
+input[type="checkbox"],
+input[type="radio"] {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
 
-	/**
+/**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
 
-	input[type="number"]::-webkit-inner-spin-button,
-	input[type="number"]::-webkit-outer-spin-button {
-		height: auto;
-	}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
 
-	/**
+/**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
 
-	input[type="search"] {
-		-webkit-appearance: textfield; /* 1 */
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box; /* 2 */
-		box-sizing: content-box;
-	}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	/* 2 */
+	box-sizing: content-box;
+}
 
-		/**
+/**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
 
-		input[type="search"]::-webkit-search-cancel-button,
-		input[type="search"]::-webkit-search-decoration {
-			-webkit-appearance: none;
-		}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
 
 /**
  * Define consistent border, margin, and padding.
@@ -395,8 +412,10 @@ fieldset {
  */
 
 legend {
-	border: 0; /* 1 */
-	padding: 0; /* 2 */
+	border: 0;
+	/* 1 */
+	padding: 0;
+	/* 2 */
 }
 
 /**

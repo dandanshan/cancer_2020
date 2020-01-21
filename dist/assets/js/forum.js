@@ -72,10 +72,17 @@ $(document).ready(function () {
         getData();
     });
 
-    //speaker name and title  popup
+    //speaker name and title popup
     $('.agenda .name, .agenda .title').click(function () {
 
         dataId = $(this).closest('.agenda').attr('data-id');
+        getData();
+    });
+
+    //speaker name and title popup for tp afternoon session
+    $('.agenda--tp .name, .agenda--tp .title').click(function () {
+
+        dataId = $(this).parent('.agenda__speaker').attr('data-id');
         getData();
     });
 

@@ -290,11 +290,14 @@ button {
         @include animation(btnScale, 2s, infinite, ease, 0);
 
         @keyframes btnScale {
-            0%, 100% {
-            transform: scale(1);
+
+            0%,
+            100% {
+                transform: scale(1);
             }
+
             50% {
-            transform: scale(1.1);
+                transform: scale(1.1);
             }
         }
 
@@ -694,7 +697,8 @@ button {
             margin: 0;
             width: 100%;
 
-            &>li, li:first-child {
+            &>li,
+            li:first-child {
                 width: 100%;
                 padding: 0;
                 margin-bottom: 30px;
@@ -706,12 +710,15 @@ button {
             margin: 0;
 
             &.top {
-                &>li, li:first-child {
+
+                &>li,
+                li:first-child {
                     padding: 0;
                     width: 100%;
                     float: none;
                 }
             }
+
             &.more {
                 &>li {
                     padding: 0;
