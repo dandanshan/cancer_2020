@@ -2351,6 +2351,16 @@ p {
 
 .recommend__media {
   line-height: 0;
+  width: 100%;
+  padding-top: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.recommend__media > img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .recommend__text {
