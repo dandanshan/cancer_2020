@@ -23,6 +23,16 @@ $(document).ready(function () {
         dotsClass: 'slides__dots slides__dots--purple',
     });
 
+    //rellax
+    var rellax = new Rellax('.rellax', {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+
     //menuSpy
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);
