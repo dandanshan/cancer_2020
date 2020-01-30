@@ -1769,6 +1769,11 @@ ol ol {
   height: 100px;
   background: url("../images/forum/img_kv-logotype@3x.png") 0 0/contain no-repeat;
   margin-bottom: 25px;
+  overflow: hidden;
+}
+
+#kv .kv__content--logotype h1 {
+  visibility: hidden;
 }
 
 #kv .kv__content--desc {
@@ -2667,6 +2672,14 @@ ol ol {
 
 #sponsor .subtitle {
   margin-bottom: 15px;
+}
+
+#sponsor .text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #88888f;
 }
 
 #sponsor img {

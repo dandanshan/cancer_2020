@@ -24,6 +24,11 @@
                 height: 100px;
                 background: url('../images/forum/img_kv-logotype@3x.png') 0 0/contain no-repeat;
                 margin-bottom: 25px;
+                overflow: hidden;
+
+                h1 {
+                    visibility: hidden;
+                }
             }
 
             &--desc {
@@ -881,6 +886,14 @@
 
     .subtitle {
         margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: $font-size-14;
+        font-weight: $font-weight-normal;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        color: color(gray500);
     }
 
     img {
