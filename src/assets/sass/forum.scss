@@ -888,6 +888,14 @@
         margin-bottom: 15px;
     }
 
+    .text {
+        font-size: $font-size-14;
+        font-weight: $font-weight-normal;
+        margin-bottom: 15px;
+        line-height: 1.5;
+        color: color(gray500);
+    }
+
     img {
         margin-bottom: 25px;
 
