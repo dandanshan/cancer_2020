@@ -6,6 +6,7 @@ var rename = require('gulp-rename');
 var mincss = require('gulp-clean-css');
 var uglify = require('gulp-uglify-es').default;
 var prefix = require('gulp-autoprefixer');
+var minimage = require('gulp-imagemin');
 
 // file paths
 var distPath = './dist';
@@ -22,6 +23,7 @@ gulp.task('default', [
     'extend',
     'sass',
     'uglify',
+    'minimage',
     'assets-deploy',
 ]);
 
@@ -75,14 +77,19 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest(jsPath.dest));
 });
 
+// image minify
+gulp.task('minimage', function() {
+    gulp.src(imgPath.src)
+        .pipe(minimage())
+        .pipe(gulp.dest(imgPath.dest));
+});
+
 // assets-deploy
 gulp.task('assets-deploy', function() {
     gulp.src((cssPath.src))
       .pipe(gulp.dest(cssPath.dest));
     gulp.src((jsPath.src))
       .pipe(gulp.dest(jsPath.dest));
-    gulp.src((imgPath.src))
-      .pipe(gulp.dest(imgPath.dest));
 });
 
 // watch
