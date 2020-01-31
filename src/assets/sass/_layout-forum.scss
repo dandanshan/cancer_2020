@@ -299,6 +299,7 @@ ol {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 99;
     @include transition(all, .6s, ease);
 
     &.active {
@@ -486,4 +487,8 @@ ol {
 }
 
 //XSmall devices (portrait phones, 576 and down)
-@media only screen and (max-width: $screen-xs) {}
+@media only screen and (max-width: $screen-xs) {
+    .gotop {
+        right: 10px;
+    }
+}
