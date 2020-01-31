@@ -1239,6 +1239,33 @@ button:focus {
   background-position-y: -340px;
 }
 
+.icon__social {
+  position: relative;
+}
+
+.icon__social:before, .icon__social:after {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/forum/icon_social@3x.png");
+  background-size: 50px 150px;
+  background-position-x: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.icon__social--gotop:before, .icon__social--gotop:after {
+  background-position-y: 0;
+}
+
+.icon__social--fb:before, .icon__social--fb:after {
+  background-position-y: -50px;
+}
+
+.icon__social--line:before, .icon__social--line:after {
+  background-position-y: -100px;
+}
+
 /*---------- alignment ----------*/
 .text-left {
   text-align: left !important;

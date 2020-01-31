@@ -654,6 +654,49 @@ button {
     }
 }
 
+%icon-social {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(50px);
+        background-image: url('../images/forum/icon_social@3x.png');
+        background-size: 50px 150px;
+        background-position-x: 0;
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.icon__social {
+    @extend %icon-social;
+
+    &--gotop {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--fb {
+
+        &:before,
+        &:after {
+            background-position-y: -50px;
+        }
+    }
+
+    &--line {
+
+        &:before,
+        &:after {
+            background-position-y: -100px;
+        }
+    }
+}
+
 /*---------- alignment ----------*/
 .text-left {
     text-align: left !important;
