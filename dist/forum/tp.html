@@ -318,7 +318,7 @@
                         <ul><li><a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>（週一至週五 9:00-17:30）</li></ul>
                     </li>
                     <li><b>團訂諮詢：</b>
-                        <ul><li>購票10張以上另享優惠票價，請致電 <a href="tel:+886-2-25078627,125">(02)2507-8627 分機 125</a> 曾小姐，將由專人為您服</li></ul>
+                        <ul><li>購票10張以上另享優惠票價，請致電 <a href="tel:+886-2-25078627,125">(02)2507-8627 分機 125</a> 曾小姐，將由專人為您服務</li></ul>
                     </li>
                     <li><b>康健現訂戶專屬優惠：</b>
                         <ul><li></li>[優惠購票連結] 將於 2020.2.14（五）前以 E-mail 和簡訊寄出。每位訂戶限購一張優惠票券，優惠期限至2020.3.18(三)，若有疑問請洽客服<a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>。</li></ul>
@@ -452,7 +452,7 @@
                         </div>
                         <div class="promote__item">
                             <div class="promote__desc">
-                                <h2 class="title"><span>#特別企劃</span>抗癌生活計畫</h2>
+                                <h2 class="title"><span>#特別企劃</span>抗癌生活行動</h2>
                                 <div class="subtitle">與癌共處，更要活得精彩</div>
                                 <p>面對癌症，你我都不需懼怕！從生活飲食、醫療技術到癌後人生，抗癌生活計畫給你最需要的資訊與解方。</p>
                                 <div class="action">
@@ -473,7 +473,7 @@
                             <img src="../assets/images/forum/sponsor/sponsor_ch@3x.jpg" alt="" height="40">
                         </div>
                         <div class="subtitle">關懷夥伴</div>
-                        <div class="text">三軍總醫院癌症中心、中國醫藥大學附設醫院癌症中心、中華民國乳癌病友協會、天主教耕莘醫療財團法人耕莘醫院、台灣癌症全人關懷基金會、亞東紀念醫院癌症資源中心、和信治癌中心醫院、和信紫羅蘭(乳癌)關懷聯誼會、林口長庚紀念醫院癌症資源中心、社團法人中華民國大腸直腸癌關懷協會、社團法人台灣全癌症病友連線、社團法人高雄市抗癌服務協會、社團法人高雄市家庭照顧者關懷協會、長庚醫療財團法人高雄長庚紀念醫院、振興醫院、財團法人乳癌防治基金會、財團法人癌症關懷基金會、高雄市立大同醫院癌症中心、高雄醫學大學附設中和紀念醫院、義大醫療財團法人義大癌治療醫院、義大醫療財團法人義大醫院、彰化基督教醫院、臺北市立聯合醫院仁愛院區 癌症資源中心、衛生福利部雙和醫院、癌症希望基金會</div>
+                        <div class="text">三軍總醫院癌症中心、中山醫學大學附設醫院、中國醫藥大學附設醫院癌症中心、中華民國乳癌病友協會、中華民國癌病腫瘤患者扶助協會、天主教耕莘醫療財團法人耕莘醫院、台北慈濟醫院、台灣寬心癌症關懷協會、台灣癌症全人關懷基金會、台灣癌症基金會、行天宮醫療志業醫療財團法人恩主公醫院、亞東紀念醫院癌症資源中心、和信治癌中心醫院、和信紫羅蘭(乳癌)關懷聯誼會、林口長庚紀念醫院癌症資源中心、社團法人中華民國大腸直腸癌關懷協會、社團法人台灣全癌症病友連線、社團法人高雄市抗癌服務協會、社團法人高雄市家庭照顧者關懷協會、長庚醫療財團法人高雄長庚紀念醫院、屏東基督教醫院、振興醫院、財團法人大里仁愛醫院、財團法人乳癌防治基金會、財團法人癌症關懷基金會、高雄市立大同醫院癌症中心、高雄醫學大學附設中和紀念醫院、義大醫療財團法人義大癌治療醫院、義大醫療財團法人義大醫院、彰化基督教醫院、臺北市立聯合醫院仁愛院區 癌症資源中心、衛生福利部雙和醫院、癌症希望基金會</div>
                         <!-- <div class="subtitle">指導單位</div> -->
                     </div>
                 </div>
@@ -537,22 +537,28 @@
         switch (type) {
             case '1' :
                 gtmSession = '乳癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026479';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026485';
                 break;
 
             case '2' :
                 gtmSession = '大腸癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026481';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026487';
                 break;
 
             case '3' :
                 gtmSession = '肺癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026480';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026486';
                 break;
         }
 
         Swal.fire({
             title: '請選擇您想購買的票券類型',
             html: '<div><ul class="grid grid--plan">' +
-                  '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>一般價</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>與知識同行價</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>論壇全日票券</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
                   '</ul></div>',
             showCloseButton: true,
             showConfirmButton: false,
