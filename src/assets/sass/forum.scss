@@ -705,7 +705,7 @@
 
     .form {
         background-color: forum(gray200);
-        height: 725px;
+        height: 750px;
         margin-top: 20px;
 
         iframe {
@@ -999,6 +999,9 @@
                 bottom: 80px;
             }
         }
+        .form {
+            height: 790px;
+        }
     }
 }
 
@@ -1115,12 +1118,6 @@
         }
     }
 
-    #ticket {
-        .form {
-            height: 1055px;
-        }
-    }
-
     #traffic {
 
         .title {
@@ -1218,6 +1215,12 @@
                     }
                 }
             }
+        }
+    }
+
+    #ticket {
+        .form {
+            height: 1055px;
         }
     }
 
