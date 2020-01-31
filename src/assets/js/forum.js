@@ -104,6 +104,10 @@ $(document).ready(function () {
         });
     });
 
+    $('#goTop').click(function(){
+        $('html, body').animate({scrollTop: 0}, 1000);
+    });
+
     //rellax
     var rellax = new Rellax('.rellax', {
         speed: -2,
@@ -195,6 +199,12 @@ $(document).ready(function () {
             if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
                 $('.container').css('padding-bottom', paddingBottom);
             }
+        }
+        //go top show
+        if ( $(this).scrollTop() > 800){
+            $('#goTop, .gotop').addClass('active');
+        } else {
+            $('#goTop, .gotop').removeClass('active');
         }
     });
 
