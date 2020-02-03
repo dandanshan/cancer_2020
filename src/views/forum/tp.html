@@ -291,6 +291,49 @@
 <!-- @@close-->
 <!-- @@block  =  endBody-->
 <script>
+    var utmTrace = function (links) {
+
+        var url = new URL(window.location.href);
+        var query = url.search;
+
+        if (query.length <= 0) {
+            return links;
+        }
+
+        var searchArray = query.substring(1).split('&');
+        var params = {};
+
+        for (var i in searchArray) {
+            var keyValue = searchArray[i].split('=')
+            params[keyValue[0]] = keyValue[1]
+        }
+
+        for (var i in links) {
+            var link = links[i];
+            var utmParam = [];
+            for (var key in params) {
+                if (key.indexOf('utm_') != -1 && link.indexOf(key) == -1){
+                    utmParam.push(key + '=' + params[key]);
+                }
+            }
+
+            if (utmParam.length > 0) {
+                var queryString = utmParam.join('&');
+
+                var separator = link.indexOf('?') != -1 ? '&' : '?';
+                var hash = '';
+                if (link.indexOf('#') != -1) {
+                    hash = link.substring(link.indexOf('#'));
+                    link = link.substring(link.indexOf('#'), -1);
+                }
+                if (link.length > 0) {
+                    link = link + separator + queryString + hash;
+                }
+            }
+            links[i] = link;
+        }
+        return links;
+    }
 
     $('#ticket .session').click(function(){
 
@@ -299,8 +342,6 @@
         var linkMember = 'https://www.commonhealth.com.tw/';
 
         var type = $(this).attr('data-type');
-
-        console.log(type)
 
         switch (type) {
             case '1' :
@@ -322,11 +363,15 @@
                 break;
         }
 
+        var links = utmTrace([linkNormal, linkMember]);
+        linkNormal = links[0];
+        linkMember = links[1];
+
         Swal.fire({
             title: '請選擇您想購買的票券類型',
             html: '<div><ul class="grid grid--plan">' +
                   '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>論壇全日票券</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">《肺癌100問》專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
                   '</ul></div>',
             showCloseButton: true,
             showConfirmButton: false,

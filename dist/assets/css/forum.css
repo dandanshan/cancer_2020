@@ -2566,7 +2566,7 @@ ol ol {
 
 #ticket .form {
   background-color: #ebebeb;
-  height: 750px;
+  height: 880px;
   margin-top: 20px;
 }
 
@@ -2821,7 +2821,7 @@ ol ol {
     bottom: 80px;
   }
   #ticket .form {
-    height: 790px;
+    height: 910px;
   }
 }
 
@@ -2972,7 +2972,7 @@ ol ol {
     margin-bottom: 10px;
   }
   #ticket .form {
-    height: 1055px;
+    height: 1110px;
   }
   #traffic .traffic__map {
     height: 200px;
