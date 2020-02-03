@@ -19,6 +19,11 @@
         <div class="wrapper">
             <h2 class="title">台北場議程</h2>
             <h3>上午場</h3>
+            <div class="agenda">
+                <div class="agenda__info">
+                    <div class="agenda__time">9:30-9:50<span>開幕：主辦單位及貴賓致詞、主題影片播放</span></div>
+                </div>
+            </div>
             <div class="agenda" data-id="1"></div>
             <div class="agenda" data-id="2"></div>
             <div class="break">11:00-11:20 Break</div>
@@ -131,7 +136,7 @@
             <div class="info">
                 <ul>
                     <li><b>時間：</b>
-                        <ul><li>2020.4.26（日）9:30-16:00</li></ul>
+                        <ul><li>2020.4.26（日）9:30-16:00（9:00 開放入場）</li></ul>
                     </li>
                     <li><b>地點：</b>
                         <ul><li>台北華南銀行總行大樓2樓國際會議中心（台北市松仁路123號）</ul></li>
@@ -146,7 +151,7 @@
                         <ul><li><a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>（週一至週五 9:00-17:30）</li></ul>
                     </li>
                     <li><b>團訂諮詢：</b>
-                        <ul><li>購票10張以上另享優惠票價，請致電 <a href="tel:+886-2-25078627,125">(02)2507-8627 分機 125</a> 曾小姐，將由專人為您服</li></ul>
+                        <ul><li>購票10張以上另享優惠票價，請致電 <a href="tel:+886-2-25078627,125">(02)2507-8627 分機 125</a> 曾小姐，將由專人為您服務</li></ul>
                     </li>
                     <li><b>康健現訂戶專屬優惠：</b>
                         <ul><li></li>[優惠購票連結] 將於 2020.2.14（五）前以 E-mail 和簡訊寄出。每位訂戶限購一張優惠票券，優惠期限至2020.3.18(三)，若有疑問請洽客服<a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>。</li></ul>
@@ -221,7 +226,8 @@
                 </div>
                 <div class="accordion">
                     <div class="accordion__head">Q2.我是康健的長期訂戶，是否還有優惠？</div>
-                    <div class="accordion__body">康健雜誌為感謝訂戶的長期支持，此次癌症論壇特別提供訂戶專屬優惠，將會發送E-mail及簡訊給您，席次有限敬請把握。如有其他問題，請撥打客服專線 <a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>。（週一至週五 9:00-17:30）</div>
+                    <div class="accordion__body">康健現訂戶另享專屬優惠價格，優惠購票連結將於2020.2.14（五）後陸續以 E-mail 及簡訊寄出，每位訂戶限購一張優惠票券。
+                        優惠期限至2020.3.18（三），若有疑問請洽客服 <a href="tel:+886-2-26620332,9">(02)2662-0332 轉 9</a>。（週一至週五 9:00-17:30）</div>
                 </div>
                 <div class="accordion">
                     <div class="accordion__head">Q3.我有團體購票需求，請問是否有購票優惠？</div>
@@ -299,22 +305,28 @@
         switch (type) {
             case '1' :
                 gtmSession = '乳癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026479';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026485';
                 break;
 
             case '2' :
                 gtmSession = '大腸癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026481';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026487';
                 break;
 
             case '3' :
                 gtmSession = '肺癌場';
+                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026480';
+                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026486';
                 break;
         }
 
         Swal.fire({
             title: '請選擇您想購買的票券類型',
             html: '<div><ul class="grid grid--plan">' +
-                  '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>一般價</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>與知識同行價</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>論壇全日票券</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">肺癌專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
                   '</ul></div>',
             showCloseButton: true,
             showConfirmButton: false,

@@ -49,7 +49,48 @@
         <script src="https://apis.google.com/js/platform.js" async defer>
             { lang: 'zh-TW' }
         </script>
-         <!-- End Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- GTM -->
+        <script>
+            var utm_link = function(){
+                //檢查連結是否有utm參數
+                var url = new URL(window.location.href);
+                var query = url.search;
+                if (query.length <= 0) {
+                    return;
+                }
+                var params = new URLSearchParams(query.substring(1));
+                var utmParam = [];
+                params.forEach(function(val, key){
+                    if (key.indexOf('utm_') != -1){
+                        utmParam.push(key+'='+val);
+                    }
+                });
+                if (utmParam.length <= 0) {
+                    return;
+                }
+                var queryString = utmParam.join('&');
+                //所有連結加上utm參數
+                $.each($('a'), function(val){
+                    var link = $(this).attr('href');
+                    if(link === undefined){
+                        return;
+                    }
+                    var separator = link.indexOf('?') != -1 ? '&' : '?';
+                    var hash = '';
+                    if (link.indexOf('#') != -1) {
+                        hash = link.substring(link.indexOf('#'));
+                        link = link.substring(link.indexOf('#'), -1);
+                    }
+                    if (link.length <= 0) {
+                        return;
+                    }
+                    $(this).attr('href', link+separator+queryString+hash);
+                });
+            }
+            utm_link();
+        </script>
+        <!-- End GTM -->
         <!-- Facebook Pixel Code -->
         <script>
             !function(f,b,e,v,n,t,s)
@@ -91,7 +132,7 @@
                                 </div>
                             </li>
                             <li><a href="#sponsor" class="menu__name">共同推動</a></li>
-                            <li><a href="../" class="menu__name">抗癌生活行動</a></li>
+                            <!-- <li><a href="../" class="menu__name">抗癌生活行動</a></li> -->
                         </ul>
                     </nav>
                     <div class="burger">
@@ -142,6 +183,7 @@
                     <div class="wrapper">
                         <h2 class="title">關於</h2>
                         <p>過去50年來，醫藥界對癌症治療的新技術突飛猛進，從手術、化療、放療、標靶，到最新「免疫療法」與「細胞療法」等，再加上人工智慧發展，個人化精準的智慧醫療，為癌友帶來更聰明的抗癌新武器。</p>
+                        <p></p>
                         <p>如何選擇最適合自己的治療方式，做出正確的治療決策，達到高療效？如何在癌後重整腳步，建立抗癌生活型態，再次活出精彩？</p>
                         <p>《康健》癌症趨勢論壇，邀集重量級醫師與專家，從決策到實踐，提供癌友、照顧者及關注抗癌的民眾等，一次完整解析。</p>
                         <ul class="slides about__slides">
@@ -154,7 +196,7 @@
                             <li class="icon icon__about icon__about--talk">
                                 <div>
                                     <div class="icon__text">對話交流</div>
-                                    <div>與權威醫師、個管師對話，最值得信賴的交流</div>
+                                    <div>與權威醫師、個管師對話，<br>最值得信賴的交流</div>
                                 </div>
                             </li>
                             <li class="icon icon__about icon__about--plan">
@@ -183,7 +225,7 @@
                                 <div class="subtitle">讓我們主動提供您最新抗癌趨勢，戰勝癌症</div>
                                 <p>訂閱抗癌趨勢報，掌握《康健》第一手癌症最新醫療趨勢、抗癌、防癌生活解方、癌後人生專訪故事，另享有癌友小聚優先參與權益。</p>
                                 <div class="action">
-                                    <a href="#" class="btn btn--inblock btn--forumOutline gtm-track" data-action="免費訂閱抗癌電子報" gtm-name="免費訂閱抗癌電子報" target="_blank">
+                                    <a href="https://www.commonhealth.com.tw/member/newsletter" class="btn btn--inblock btn--forumOutline gtm-track" data-action="免費訂閱抗癌電子報" gtm-name="免費訂閱抗癌電子報" target="_blank">
                                         <span class="btn__text">免費訂閱</span>
                                     </a>
                                 </div>
@@ -192,11 +234,11 @@
                         </div>
                         <div class="promote__item">
                             <div class="promote__desc">
-                                <h2 class="title"><span>#特別企劃</span>抗癌生活計畫</h2>
+                                <h2 class="title"><span>#特別企劃</span>抗癌生活行動</h2>
                                 <div class="subtitle">與癌共處，更要活得精彩</div>
                                 <p>面對癌症，你我都不需懼怕！從生活飲食、醫療技術到癌後人生，抗癌生活計畫給你最需要的資訊與解方。</p>
                                 <div class="action">
-                                    <a href="#" class="btn btn--inblock btn--forumOutline gtm-track" data-action="了解抗癌生活計畫" gtm-name="了解抗癌生活計畫" target="_blank"><span class="btn__text">深入了解</span></a>
+                                    <a href="https://www.commonhealth.com.tw/event/2020/cancer/" class="btn btn--inblock btn--forumOutline gtm-track" data-action="了解抗癌生活計畫" gtm-name="了解抗癌生活計畫" target="_blank"><span class="btn__text">深入了解</span></a>
                                 </div>
                             </div>
                             <div class="icon icon--a icon__promote icon__promote--content"></div>
@@ -213,7 +255,7 @@
                             <img src="../assets/images/forum/sponsor/sponsor_ch@3x.jpg" alt="" height="40">
                         </div>
                         <div class="subtitle">關懷夥伴</div>
-                        <div class="text">三軍總醫院癌症中心、中國醫藥大學附設醫院癌症中心、中華民國乳癌病友協會、天主教耕莘醫療財團法人耕莘醫院、台灣癌症全人關懷基金會、亞東紀念醫院癌症資源中心、和信治癌中心醫院、和信紫羅蘭(乳癌)關懷聯誼會、林口長庚紀念醫院癌症資源中心、社團法人中華民國大腸直腸癌關懷協會、社團法人台灣全癌症病友連線、社團法人高雄市抗癌服務協會、社團法人高雄市家庭照顧者關懷協會、長庚醫療財團法人高雄長庚紀念醫院、振興醫院、財團法人乳癌防治基金會、財團法人癌症關懷基金會、高雄市立大同醫院癌症中心、高雄醫學大學附設中和紀念醫院、義大醫療財團法人義大癌治療醫院、義大醫療財團法人義大醫院、彰化基督教醫院、臺北市立聯合醫院仁愛院區 癌症資源中心、衛生福利部雙和醫院、癌症希望基金會</div>
+                        <div class="text">三軍總醫院癌症中心、中山醫學大學附設醫院、中國醫藥大學附設醫院癌症中心、中華民國乳癌病友協會、中華民國癌病腫瘤患者扶助協會、天主教耕莘醫療財團法人耕莘醫院、台北慈濟醫院、台灣寬心癌症關懷協會、台灣癌症全人關懷基金會、台灣癌症基金會、行天宮醫療志業醫療財團法人恩主公醫院、亞東紀念醫院癌症資源中心、和信治癌中心醫院、和信紫羅蘭(乳癌)關懷聯誼會、林口長庚紀念醫院癌症資源中心、社團法人中華民國大腸直腸癌關懷協會、社團法人台灣全癌症病友連線、社團法人高雄市抗癌服務協會、社團法人高雄市家庭照顧者關懷協會、長庚醫療財團法人高雄長庚紀念醫院、屏東基督教醫院、振興醫院、財團法人大里仁愛醫院、財團法人乳癌防治基金會、財團法人癌症關懷基金會、高雄市立大同醫院癌症中心、高雄醫學大學附設中和紀念醫院、義大醫療財團法人義大癌治療醫院、義大醫療財團法人義大醫院、彰化基督教醫院、臺北市立聯合醫院仁愛院區 癌症資源中心、衛生福利部雙和醫院、癌症希望基金會</div>
                         <!-- <div class="subtitle">指導單位</div> -->
                     </div>
                 </div>
