@@ -716,6 +716,21 @@ button:focus {
   vertical-align: middle;
 }
 
+.btn--disable {
+  padding: 13px 20px;
+  border: 1px solid #dcdcdc;
+  background: #dcdcdc;
+  border-radius: 24px;
+  width: 240px;
+  cursor: not-allowed;
+}
+
+.btn--disable .btn__text {
+  color: #fafafa;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
 .btn--mainOutline {
   padding: 13px 20px;
   border: 1px solid #705f92;
