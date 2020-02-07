@@ -75,6 +75,21 @@ button {
         }
     }
 
+    &--disable {
+        padding: 13px 20px;
+        border: 1px solid forum(gray300);
+        background: forum(gray300);
+        border-radius: 24px;
+        width: 240px;
+        cursor: not-allowed;
+
+        .btn__text {
+            color: forum(gray100);
+            font-size: $font-size-base;
+            vertical-align: middle;
+        }
+    }
+
     &--mainOutline {
         padding: 13px 20px;
         border: 1px solid color(purple500);
