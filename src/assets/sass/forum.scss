@@ -321,6 +321,7 @@
 
 .action {
     margin-top: 25px;
+    position: relative;
 }
 
 .memo {
@@ -676,6 +677,11 @@
                 .btn {
                     border-color: forum(red300);
                     background: forum(red300);
+
+                    &.btn--disable {
+                        border-color: forum(red100);
+                        background: forum(red100);
+                    }
                 }
             }
 
@@ -687,6 +693,11 @@
                 .btn {
                     border-color: forum(blue400);
                     background: forum(blue400);
+
+                    &.btn--disable {
+                        border-color: forum(blue100);
+                        background: forum(blue100);
+                    }
                 }
             }
 
@@ -698,6 +709,11 @@
                 .btn {
                     border-color: forum(gray600);
                     background: forum(gray600);
+
+                    &.btn--disable {
+                        border-color: forum(gray300);
+                        background: forum(gray300);
+                    }
                 }
             }
         }

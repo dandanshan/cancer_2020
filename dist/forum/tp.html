@@ -88,8 +88,8 @@
                                 <div class="menu__highlight">
                                     <div class="menu__name">論壇資訊</div>
                                     <ul class="menu__content">
-                                        <li><a href="./kh.html#intro" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.18</span> 高雄</span></a></li>
-                                        <li><a href="./tc.html#intro" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.19</span> 台中</span></a></li>
+                                        <li><a href="./kh.html#intro" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">6.13</span> 高雄</span></a></li>
+                                        <li><a href="./tc.html#intro" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">6.14</span> 台中</span></a></li>
                                         <li><a href="./tp.html#intro" class="btn btn--inblock btn--forumMain"><span class="btn__text"><span class="mbonly">4.24</span> 台北</span></a></li>
                                     </ul>
                                 </div>
@@ -339,7 +339,8 @@
                                 <div class="session__title">2020 癌症趨勢論壇</div>
                                 <div class="session__type">上午場 + <span>乳癌場</span></div>
                                 <div class="action">
-                                    <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_乳癌場"><span class="btn__text">立即購票</span></button>
+                                    <!-- <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_乳癌場"><span class="btn__text">立即購票</span></button> -->
+                                    <button class="btn btn--inblock btn--disable gtm-track" data-action="台北場" gtm-name="立即購票_乳癌場" disabled><span class="btn__text">Coming soon</span></button>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +351,8 @@
                                 <div class="session__title">2020 癌症趨勢論壇</div>
                                 <div class="session__type">上午場 + <span>大腸癌場</span></div>
                                 <div class="action">
-                                    <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_大腸癌場"><span class="btn__text">立即購票</span></button>
+                                    <!-- <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_大腸癌場"><span class="btn__text">立即購票</span></button> -->
+                                    <button class="btn btn--inblock btn--disable gtm-track" data-action="台北場" gtm-name="立即購票_大腸癌場" disabled><span class="btn__text">Coming soon</span></button>
                                 </div>
                             </div>
                         </a>
@@ -361,7 +363,8 @@
                                 <div class="session__title">2020 癌症趨勢論壇</div>
                                 <div class="session__type">上午場 + <span>肺癌場</span></div>
                                 <div class="action">
-                                    <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_肺癌場"><span class="btn__text">立即購票</span></button>
+                                    <!-- <button class="btn btn--inblock btn--forumBuy gtm-track" data-action="台北場" gtm-name="立即購票_肺癌場"><span class="btn__text">立即購票</span></button> -->
+                                    <button class="btn btn--inblock btn--disable gtm-track" data-action="台北場" gtm-name="立即購票_肺癌場" disabled><span class="btn__text">Coming soon</span></button>
                                 </div>
                             </div>
                         </a>
@@ -495,7 +498,7 @@
                             <li><a href="http://kb.commonhealth.com.tw/" target="_blank">康健知識庫</a></li>
                             <li><a href="https://club.commonhealth.com.tw/" target="_blank">大人社團</a></li>
                         </ul>
-                        <p>Copyright © 2020 康健雜誌. All rights reserved. 版權所有，禁止擅自轉貼節錄</p>
+                        <p>Copyright © 2020 康健雜誌 All rights reserved. 本網站內容不得轉載、公開播送或公開傳輸。</p>
                     </div>
                 </div>
             </footer>
@@ -574,52 +577,52 @@
         return links;
     }
 
-    $('#ticket .session').click(function(){
+    // $('#ticket .session').click(function(){
 
-        var gtmSession;
-        var linkNormal = 'https://www.commonhealth.com.tw/';
-        var linkMember = 'https://www.commonhealth.com.tw/';
+    //     var gtmSession;
+    //     var linkNormal = 'https://www.commonhealth.com.tw/';
+    //     var linkMember = 'https://www.commonhealth.com.tw/';
 
-        var type = $(this).attr('data-type');
+    //     var type = $(this).attr('data-type');
 
-        switch (type) {
-            case '1' :
-                gtmSession = '乳癌場';
-                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026479';
-                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026485';
-                break;
+    //     switch (type) {
+    //         case '1' :
+    //             gtmSession = '乳癌場';
+    //             linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026479';
+    //             linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026485';
+    //             break;
 
-            case '2' :
-                gtmSession = '大腸癌場';
-                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026481';
-                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026487';
-                break;
+    //         case '2' :
+    //             gtmSession = '大腸癌場';
+    //             linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026481';
+    //             linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026487';
+    //             break;
 
-            case '3' :
-                gtmSession = '肺癌場';
-                linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026480';
-                linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026486';
-                break;
-        }
+    //         case '3' :
+    //             gtmSession = '肺癌場';
+    //             linkNormal = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026480';
+    //             linkMember = 'https://www.cwbook.com.tw/subscription/SubscriptionAction.shtml?prodId=0000026486';
+    //             break;
+    //     }
 
-        var links = utmTrace([linkNormal, linkMember]);
-        linkNormal = links[0];
-        linkMember = links[1];
+    //     var links = utmTrace([linkNormal, linkMember]);
+    //     linkNormal = links[0];
+    //     linkMember = links[1];
 
-        Swal.fire({
-            title: '請選擇您想購買的票券類型',
-            html: '<div><ul class="grid grid--plan">' +
-                  '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>論壇全日票券</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">《肺癌100問》專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
-                  '</ul></div>',
-            showCloseButton: true,
-            showConfirmButton: false,
-            width: 700,
-            customClass: {
-                popup: 'popup--ticket',
-            }
-        })
-    });
+    //     Swal.fire({
+    //         title: '請選擇您想購買的票券類型',
+    //         html: '<div><ul class="grid grid--plan">' +
+    //               '<li><a href="' + linkNormal + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_250"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_250"><div>論壇全日票券</div><span>NT$<strong>250</strong></span></div><div class="plan__content gtm-track"><ul><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+    //               '<li><a href="' + linkMember + '" target="_blank" class="plan gtm-track" gtm-name="'+ gtmSession +'_350"><div class="plan__price gtm-track" gtm-name="'+ gtmSession +'_350"><div>論壇全日套組</div><span>NT$<strong>350</strong></span></div><div class="plan__content gtm-track"><ul><li class="plus">《肺癌100問》專刊 × 1</li><li>論壇全日票券 × 1</li><li>講者授權簡報</li><li>抗癌趨勢電子報<br>(含論壇重點整理)</li></ul><div class="action"><button class="btn btn--block btn--forumHighlight"><div class="btn__text">立即購票</div></button></div></div></li>' +
+    //               '</ul></div>',
+    //         showCloseButton: true,
+    //         showConfirmButton: false,
+    //         width: 700,
+    //         customClass: {
+    //             popup: 'popup--ticket',
+    //         }
+    //     })
+    // });
 </script>
 
     </body>
