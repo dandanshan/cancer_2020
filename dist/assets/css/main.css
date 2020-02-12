@@ -2449,6 +2449,12 @@ p {
   font-weight: 700;
 }
 
+#promote .promote__item .title > span {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
 #promote .promote__item.normal:after {
   content: '';
   display: block;

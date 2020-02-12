@@ -536,6 +536,12 @@
                 color: color(black);
                 font-size: $font-size-36;
                 font-weight: $font-weight-bold;
+
+                > span {
+                    font-size: $font-size-base;
+                    display: block;
+                    margin-bottom: 5px;
+                }
             }
 
             &.normal {
