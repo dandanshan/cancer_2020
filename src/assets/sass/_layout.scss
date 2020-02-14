@@ -24,6 +24,11 @@ p {
     margin: 0 0 15px 0;
 }
 
+::selection {
+    color: color(white);
+    background: color(purple500);
+}
+
 .container {
     position: relative;
     padding-top: 80px;
