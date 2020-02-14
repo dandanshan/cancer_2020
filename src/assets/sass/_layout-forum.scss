@@ -47,6 +47,11 @@ ol {
     }
 }
 
+::selection {
+    color: forum(white);
+    background:forum(blue500);
+}
+
 .container {
     position: relative;
     text-align: center;

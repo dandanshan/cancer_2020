@@ -1406,6 +1406,16 @@ p {
   margin: 0 0 15px 0;
 }
 
+::-moz-selection {
+  color: #ffffff;
+  background: #705f92;
+}
+
+::selection {
+  color: #ffffff;
+  background: #705f92;
+}
+
 .container {
   position: relative;
   padding-top: 80px;

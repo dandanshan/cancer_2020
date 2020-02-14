@@ -1429,6 +1429,16 @@ ol ol {
   margin-bottom: 0;
 }
 
+::-moz-selection {
+  color: #ffffff;
+  background: #3ca0f2;
+}
+
+::selection {
+  color: #ffffff;
+  background: #3ca0f2;
+}
+
 .container {
   position: relative;
   text-align: center;
