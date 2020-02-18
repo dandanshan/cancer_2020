@@ -537,7 +537,7 @@
                 font-size: $font-size-36;
                 font-weight: $font-weight-bold;
 
-                > span {
+                >span {
                     font-size: $font-size-base;
                     display: block;
                     margin-bottom: 5px;
@@ -678,6 +678,14 @@
     #topslide {
         .slides {
             margin: 0;
+        }
+    }
+
+    .menu {
+        &__highlight {
+            .mbonly {
+                display: inline-block;
+            }
         }
     }
 }
@@ -835,6 +843,25 @@
 
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {
+    #chart {
+        .count {
+            padding: 30px 0;
+
+            &__number {
+                padding: 30px 10px;
+                width: 120px;
+
+                >span {
+                    font-size: $font-size-60;
+                }
+            }
+        }
+
+        .chart__canvas canvas {
+            max-height: 260px;
+        }
+    }
+
     #promote {
         .promote {
             &__item {

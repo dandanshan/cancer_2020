@@ -49,7 +49,7 @@ ol {
 
 ::selection {
     color: forum(white);
-    background:forum(blue500);
+    background: forum(blue500);
 }
 
 .container {
@@ -359,6 +359,18 @@ ol {
                 color: forum(blue400);
             }
         }
+
+        &.btn {
+            display: block;
+            width: (100%/3);
+            float: left;
+            font-size: $font-size-20;
+            line-height: 30px;
+
+            &:not(:last-child) {
+                border-right: 1px solid color(white);
+            }
+        }
     }
 }
 
@@ -435,6 +447,9 @@ ol {
                 }
 
                 &__highlight {
+                    .mbonly {
+                        display: inline-block;
+                    }
 
                     &:before,
                     &:after {

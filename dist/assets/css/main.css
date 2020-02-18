@@ -1307,12 +1307,19 @@ button:focus {
   display: none;
 }
 
+.pconly {
+  display: block;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 1200px) {
   .mbonly {
-    display: inline-block;
+    display: block;
+  }
+  .pconly {
+    display: none;
   }
 }
 
@@ -2581,6 +2588,9 @@ p {
   #topslide .slides {
     margin: 0;
   }
+  .menu__highlight .mbonly {
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2671,6 +2681,19 @@ p {
 }
 
 @media only screen and (max-width: 576px) {
+  #chart .count {
+    padding: 30px 0;
+  }
+  #chart .count__number {
+    padding: 30px 10px;
+    width: 120px;
+  }
+  #chart .count__number > span {
+    font-size: 3.75rem;
+  }
+  #chart .chart__canvas canvas {
+    max-height: 260px;
+  }
   #promote .promote__item.normal .action .btn {
     width: 100%;
   }
