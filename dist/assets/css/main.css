@@ -95,6 +95,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
+a,
 a:active,
 a:hover {
   outline: 0;
@@ -409,6 +410,8 @@ th {
   height: 70px;
   z-index: 20;
   top: calc(50% - 35px);
+  -webkit-filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
+  filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   -webkit-transition: all 0.2s ease-in-out;
@@ -2055,9 +2058,10 @@ p {
 #topslide .slides__top {
   width: 100%;
   max-width: 940px;
-  padding-top: 50%;
+  padding-top: 42.8%;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #topslide .slides__top > img {

@@ -7,6 +7,7 @@
         height: 70px;
         z-index: 20;
         top: calc(50% - 35px);
+        filter: drop-shadow(0 3px 10px rgba(138, 80, 130, .5));
         @include scale(.8);
         @include transition(all, .2s, ease-in-out);
 
