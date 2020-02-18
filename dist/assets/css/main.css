@@ -1307,12 +1307,19 @@ button:focus {
   display: none;
 }
 
+.pconly {
+  display: block;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 1200px) {
   .mbonly {
-    display: inline-block;
+    display: block;
+  }
+  .pconly {
+    display: none;
   }
 }
 
@@ -2580,6 +2587,9 @@ p {
   }
   #topslide .slides {
     margin: 0;
+  }
+  .menu__highlight .mbonly {
+    display: inline-block;
   }
 }
 

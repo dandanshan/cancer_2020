@@ -359,6 +359,18 @@ ol {
                 color: forum(blue400);
             }
         }
+
+        &.btn {
+            display: block;
+            width: (100%/3);
+            float: left;
+            font-size: $font-size-20;
+            line-height: 30px;
+
+            &:not(:last-child) {
+                border-right: 1px solid color(white);
+            }
+        }
     }
 }
 

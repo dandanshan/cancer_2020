@@ -28,6 +28,7 @@
 
                 h1 {
                     visibility: hidden;
+                    position: absolute;
                 }
             }
 
@@ -1194,6 +1195,8 @@
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {
     #kv {
+        height: 520px;
+
         .kv {
             &__background {
                 &--circle {
@@ -1237,7 +1240,7 @@
 
     #ticket {
         .form {
-            height: 1110px;
+            height: 1200px;
         }
     }
 

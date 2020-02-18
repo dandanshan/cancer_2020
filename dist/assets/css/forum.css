@@ -1307,12 +1307,19 @@ button:focus {
   display: none;
 }
 
+.pconly {
+  display: block;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 1200px) {
   .mbonly {
-    display: inline-block;
+    display: block;
+  }
+  .pconly {
+    display: none;
   }
 }
 
@@ -1741,6 +1748,18 @@ ol ol {
   color: #5fb1f4;
 }
 
+.bottom__fixed a.btn {
+  display: block;
+  width: 33.33333%;
+  float: left;
+  font-size: 1.25rem;
+  line-height: 30px;
+}
+
+.bottom__fixed a.btn:not(:last-child) {
+  border-right: 1px solid #ffffff;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -1869,6 +1888,7 @@ ol ol {
 
 #kv .kv__content--logotype h1 {
   visibility: hidden;
+  position: absolute;
 }
 
 #kv .kv__content--desc {
@@ -2986,6 +3006,9 @@ ol ol {
 }
 
 @media only screen and (max-width: 576px) {
+  #kv {
+    height: 520px;
+  }
   #kv .kv__background--circle {
     left: -370px;
   }
@@ -3013,7 +3036,7 @@ ol ol {
     margin-bottom: 10px;
   }
   #ticket .form {
-    height: 1110px;
+    height: 1200px;
   }
   #traffic .traffic__map {
     height: 200px;

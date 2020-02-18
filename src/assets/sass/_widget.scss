@@ -738,13 +738,21 @@ button {
     display: none;
 }
 
+.pconly {
+    display: block;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 //Large devices (landscape tablets, 1200 and down)
 @media only screen and (max-width: $screen-lg) {
     .mbonly {
-        display: inline-block;
+        display: block;
+    }
+
+    .pconly {
+        display: none;
     }
 }
 

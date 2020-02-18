@@ -680,6 +680,14 @@
             margin: 0;
         }
     }
+
+    .menu {
+        &__highlight {
+            .mbonly {
+                display: inline-block;
+            }
+        }
+    }
 }
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
