@@ -1819,6 +1819,9 @@ ol ol {
     width: auto;
     margin-right: 5px;
   }
+  .header .nav .menu__highlight .mbonly {
+    display: inline-block;
+  }
   .header .nav .menu__highlight:before, .header .nav .menu__highlight:after {
     content: none;
   }

@@ -843,6 +843,24 @@
 
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {
+    #chart {
+        .count {
+            padding: 30px 0;
+
+            &__number {
+                padding: 30px 10px;
+                width: 120px;
+
+                > span {
+                    font-size: $font-size-60;
+                }
+            }
+        }
+
+        .chart__canvas canvas {
+            max-height: 260px;
+        }
+    }
     #promote {
         .promote {
             &__item {
