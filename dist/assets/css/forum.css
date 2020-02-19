@@ -623,12 +623,37 @@ th {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (max-width: 992px) {
+  #topslide .slides.top__slides .slick-list {
+    height: 360px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
-  .slides__dots > li {
-    padding: 0 6px;
+  #topslide .slides.top__slides .slick-list {
+    height: unset;
+  }
+  #topslide .slick-prev {
+    left: 10px;
+    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
+    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
+  }
+  #topslide .slick-next {
+    right: 10px;
+    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
+    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
   }
   .swal2-container .popup--ticket {
     padding: 50px 30px 40px 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #topslide .slick-prev {
+    left: -5px;
+  }
+  #topslide .slick-next {
+    right: -5px;
   }
 }
 

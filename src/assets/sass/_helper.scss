@@ -254,16 +254,39 @@
 @media only screen and (max-width: $screen-lg) {}
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
-@media only screen and (max-width: $screen-md) {}
+@media only screen and (max-width: $screen-md) {
+    #topslide  {
+        .slides {
+            &.top__slides {
+                .slick-list {
+                    height: 360px;
+                }
+            }
+        }
+    }
+}
 
 //Small devices (landscape tablets, 768 and down)
 @media only screen and (max-width: $screen-sm) {
-    .slides {
-        &__dots {
-            >li {
-                padding: 0 6px;
+    #topslide  {
+        .slides {
+            &.top__slides {
+                .slick-list {
+                    height: unset;
+                }
             }
         }
+
+        .slick-prev {
+            left: 10px;
+            filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
+        }
+
+        .slick-next {
+            right: 10px;
+            filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
+        }
+
     }
 
     .swal2-container {
@@ -276,4 +299,14 @@
 }
 
 //XSmall devices (portrait phones, 576 and down)
-@media only screen and (max-width: $screen-xs) {}
+@media only screen and (max-width: $screen-xs) {
+    #topslide  {
+        .slick-prev {
+            left: -5px;
+        }
+
+        .slick-next {
+            right: -5px;
+        }
+    }
+}
