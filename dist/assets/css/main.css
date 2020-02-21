@@ -625,7 +625,7 @@ th {
    ========================================================================== */
 @media only screen and (max-width: 992px) {
   #topslide .slides.top__slides .slick-list {
-    height: 360px;
+    height: 400px;
   }
 }
 
@@ -2151,7 +2151,7 @@ p {
 }
 
 #topslide .slides .slick-list {
-  height: 480px;
+  height: 500px;
 }
 
 #topslide .ts__background {
@@ -2711,6 +2711,9 @@ p {
   #topslide .slides {
     margin: 0;
   }
+  #topslide .slides .title {
+    right: 0;
+  }
   .menu__highlight .mbonly {
     display: inline-block;
   }
@@ -2786,8 +2789,8 @@ p {
     position: relative;
     right: 0;
     bottom: 0;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.875rem;
+    font-weight: 700;
     background: #ffffff;
     line-height: 1.4;
     width: calc(100% - 40px);

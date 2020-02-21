@@ -215,7 +215,7 @@
         }
 
         .slick-list {
-            height: 480px;
+            height: 500px;
         }
     }
 
@@ -771,6 +771,10 @@
     #topslide {
         .slides {
             margin: 0;
+
+            .title {
+                right: 0;
+            }
         }
     }
 
@@ -904,8 +908,8 @@
                     position: relative;
                     right: 0;
                     bottom: 0;
-                    font-size: $font-size-24;
-                    font-weight: $font-weight-medium;
+                    font-size: $font-size-30;
+                    font-weight: $font-weight-bold;
                     background: color(white);
                     line-height: 1.4;
                     width: calc(100% - 40px);

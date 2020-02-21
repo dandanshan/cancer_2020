@@ -625,7 +625,7 @@ th {
    ========================================================================== */
 @media only screen and (max-width: 992px) {
   #topslide .slides.top__slides .slick-list {
-    height: 360px;
+    height: 400px;
   }
 }
 
