@@ -582,10 +582,10 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: color(purple500);
+            background: color(white);
             opacity: 0;
             z-index: 1;
-            mix-blend-mode: overlay;
+            // mix-blend-mode: overlay;
             @include transition(all, .3s, ease);
         }
 
@@ -612,7 +612,7 @@
             }
 
             &:before {
-                opacity: 1;
+                opacity: .15;
             }
         }
     }

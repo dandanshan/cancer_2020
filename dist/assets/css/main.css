@@ -2544,10 +2544,9 @@ p {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #705f92;
+  background: #ffffff;
   opacity: 0;
   z-index: 1;
-  mix-blend-mode: overlay;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -2572,7 +2571,7 @@ p {
 }
 
 .recommend:hover .recommend__media:before {
-  opacity: 1;
+  opacity: .15;
 }
 
 #promote {
