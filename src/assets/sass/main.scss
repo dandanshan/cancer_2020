@@ -175,10 +175,9 @@
                 top: 0;
                 right: 0;
                 bottom: 0;
-                background: color(purple500);
+                background: #eee;
                 opacity: 0;
                 z-index: 1;
-                mix-blend-mode: overlay;
                 @include transition(all, .3s, ease);
             }
         }
@@ -187,11 +186,11 @@
             padding: 20px 30px;
             color: color(purple500);
             position: absolute;
-            right: 0;
-            bottom: -30px;
+            right: -30px;
+            bottom: -60px;
             width: 540px;
-            font-size: $font-size-24;
-            font-weight: $font-weight-medium;
+            font-size: $font-size-30;
+            font-weight: $font-weight-bold;
             background: color(white);
             line-height: 1.4;
             z-index: 2;
@@ -210,13 +209,13 @@
                 }
 
                 &:before {
-                    opacity: 1;
+                    opacity: .15;
                 }
             }
         }
 
         .slick-list {
-            height: 480px;
+            height: 500px;
         }
     }
 
@@ -583,10 +582,10 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: color(purple500);
+            background: color(white);
             opacity: 0;
             z-index: 1;
-            mix-blend-mode: overlay;
+            // mix-blend-mode: overlay;
             @include transition(all, .3s, ease);
         }
 
@@ -613,7 +612,7 @@
             }
 
             &:before {
-                opacity: 1;
+                opacity: .15;
             }
         }
     }
@@ -772,6 +771,10 @@
     #topslide {
         .slides {
             margin: 0;
+
+            .title {
+                right: 0;
+            }
         }
     }
 
@@ -905,8 +908,8 @@
                     position: relative;
                     right: 0;
                     bottom: 0;
-                    font-size: $font-size-24;
-                    font-weight: $font-weight-medium;
+                    font-size: $font-size-30;
+                    font-weight: $font-weight-bold;
                     background: color(white);
                     line-height: 1.4;
                     width: calc(100% - 40px);
