@@ -22,7 +22,7 @@ html {
  * Remove default margin.
  */
 body {
-  font-family: 'Roboto', "Noto Sans TC", "LiHei Pro  Medium", "Microsoft JhengHei", "新細明體", Arial, sans-serif;
+  font-family: 'Roboto', 'Tahoma', "Noto Sans TC", 'Microsoft YaHei', sans-serif;
   color: #333333;
   font-size: 1.125em;
   line-height: 1.15;
