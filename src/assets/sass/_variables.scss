@@ -1,6 +1,6 @@
 //background
 $bg: (white: #ffffff,
-    purple-light: #c6bfd3,
+    violet-light: #c6bfd3,
 );
 
 //cancer
@@ -11,9 +11,9 @@ $colors: (white: #ffffff,
     gray300: #d6d6d6,
     gray500: #88888f,
     gray600: #5c5c5c,
-    purple100: #e2dfe9,
-    purple200: #c6bfd3,
-    purple500: #705f92,
+    violet100: #e2dfe9,
+    violet200: #c6bfd3,
+    violet500: #705f92,
     pink500: #ff7b89,
     fuchsia300: #b996b4,
     fuchsia500: #8a5082,
@@ -59,13 +59,11 @@ $bg-sponsor: #e6e3e3;
 
 $font-size-base: 1rem !default;
 $font-size-14: 0.875rem !default;
-$font-size-18: 1.125rem !default;
 $font-size-20: 1.25rem !default;
 $font-size-24: 1.5rem !default;
 $font-size-30: 1.875rem !default;
 $font-size-36: 2.25rem !default;
 $font-size-60: 3.75rem !default;
-$font-size-72: 4.5rem !default;
 
 $font-weight-normal: 400 !default;
 $font-weight-medium: 500 !default;

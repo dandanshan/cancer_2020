@@ -22,7 +22,7 @@ html {
  * Remove default margin.
  */
 body {
-  font-family: 'Roboto', "Noto Sans TC", "LiHei Pro  Medium", "Microsoft JhengHei", "新細明體", Arial, sans-serif;
+  font-family: 'Roboto', 'Tahoma', "Noto Sans TC", 'Microsoft YaHei', sans-serif;
   color: #333333;
   font-size: 1.125em;
   line-height: 1.15;
@@ -481,11 +481,11 @@ th {
   outline: none;
 }
 
-.slides__dots--purple li.slick-active button {
+.slides__dots--violet li.slick-active button {
   background-color: #705f92;
 }
 
-.slides__dots--purple li button {
+.slides__dots--violet li button {
   background-color: #d6d6d6;
 }
 
@@ -691,6 +691,7 @@ button:focus {
 
 .btn--inblock {
   display: inline-block;
+  width: 240px;
 }
 
 .btn--block {
@@ -703,7 +704,6 @@ button:focus {
   border: 1px solid #705f92;
   background: #705f92;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -762,6 +762,14 @@ button:focus {
 .btn--mainOutline {
   padding: 13px 20px;
   border: 1px solid #705f92;
+  border-radius: 24px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--mainOutline .btn__text {
+  color: #705f92;
   font-size: 1rem;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -796,7 +804,6 @@ button:focus {
   padding: 13px 20px;
   border: 1px solid #ff7b89;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -1436,6 +1443,18 @@ ol ol {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 p {
   line-height: 1.6;
   margin: 0 0 15px 0;
@@ -1468,9 +1487,7 @@ p {
 }
 
 .section__title {
-  font-size: 2.25rem;
   color: #333333;
-  font-weight: 700;
   margin-bottom: 40px;
   position: relative;
   line-height: 1;
@@ -1505,8 +1522,6 @@ p {
 
 .subtitle {
   color: #705f92;
-  font-size: 1.5rem;
-  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -2127,7 +2142,7 @@ p {
   bottom: -60px;
   width: 540px;
   font-size: 1.875rem;
-  font-weight: 700;
+  font-weight: 500;
   background: #ffffff;
   line-height: 1.4;
   z-index: 2;
@@ -2271,7 +2286,7 @@ p {
 
 #chart .count__number > span {
   color: #8a5082;
-  font-size: 4.5rem;
+  font-size: 72px;
   margin-right: 10px;
 }
 
@@ -2589,7 +2604,7 @@ p {
   color: #333333;
   font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 #promote .promote__item .title > span {
@@ -2648,6 +2663,11 @@ p {
 
 #sponsor {
   text-align: center;
+}
+
+#sponsor .title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 #sponsor .subtitle {

@@ -22,7 +22,7 @@ html {
  * Remove default margin.
  */
 body {
-  font-family: 'Roboto', "Noto Sans TC", "LiHei Pro  Medium", "Microsoft JhengHei", "新細明體", Arial, sans-serif;
+  font-family: 'Roboto', 'Tahoma', "Noto Sans TC", 'Microsoft YaHei', sans-serif;
   color: #333333;
   font-size: 1.125em;
   line-height: 1.15;
@@ -481,11 +481,11 @@ th {
   outline: none;
 }
 
-.slides__dots--purple li.slick-active button {
+.slides__dots--violet li.slick-active button {
   background-color: #705f92;
 }
 
-.slides__dots--purple li button {
+.slides__dots--violet li button {
   background-color: #d6d6d6;
 }
 
@@ -691,6 +691,7 @@ button:focus {
 
 .btn--inblock {
   display: inline-block;
+  width: 240px;
 }
 
 .btn--block {
@@ -703,7 +704,6 @@ button:focus {
   border: 1px solid #705f92;
   background: #705f92;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -762,6 +762,14 @@ button:focus {
 .btn--mainOutline {
   padding: 13px 20px;
   border: 1px solid #705f92;
+  border-radius: 24px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--mainOutline .btn__text {
+  color: #705f92;
   font-size: 1rem;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -796,7 +804,6 @@ button:focus {
   padding: 13px 20px;
   border: 1px solid #ff7b89;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }

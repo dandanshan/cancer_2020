@@ -184,13 +184,13 @@
 
         .title {
             padding: 20px 30px;
-            color: color(purple500);
+            color: color(violet500);
             position: absolute;
             right: -30px;
             bottom: -60px;
             width: 540px;
             font-size: $font-size-30;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-medium;
             background: color(white);
             line-height: 1.4;
             z-index: 2;
@@ -308,7 +308,7 @@
         max-width: 500px;
         padding: 50px 20px;
         color: color(fuchsia300);
-        background: color(purple100);
+        background: color(violet100);
         text-align: center;
         font-weight: bold;
         font-size: $font-size-24;
@@ -324,7 +324,7 @@
 
             >span {
                 color: color(fuchsia500);
-                font-size: $font-size-72;
+                font-size: 72px;
                 margin-right: 10px;
             }
 
@@ -373,7 +373,7 @@
 }
 
 #month {
-    background: color(purple200);
+    background: color(violet200);
     overflow: hidden;
     position: relative;
 
@@ -619,7 +619,7 @@
 }
 
 #promote {
-    background: color(purple200);
+    background: color(violet200);
     font-size: $font-size-base;
     overflow: hidden;
 
@@ -632,7 +632,7 @@
                 color: color(black);
                 font-size: $font-size-36;
                 font-weight: $font-weight-bold;
-                margin-top: 0;
+                margin-bottom: 5px;
 
                 >span {
                     font-size: $font-size-base;
@@ -701,6 +701,11 @@
 #sponsor {
     text-align: center;
 
+    .title {
+        font-size: $font-size-24;
+        margin-bottom: 20px;
+    }
+
     .subtitle {
         margin-bottom: 15px;
         color: color(black);
@@ -721,7 +726,7 @@
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    background: color(purple500);
+    background: color(violet500);
     position: fixed;
     bottom: 0;
     z-index: 99;
@@ -741,7 +746,7 @@
             margin-left: 30px;
 
             .btn__text {
-                color: color(purple500);
+                color: color(violet500);
             }
         }
     }
@@ -904,7 +909,7 @@
             &__top {
                 .title {
                     padding: 15px 20px;
-                    color: color(purple500);
+                    color: color(violet500);
                     position: relative;
                     right: 0;
                     bottom: 0;
