@@ -691,6 +691,7 @@ button:focus {
 
 .btn--inblock {
   display: inline-block;
+  width: 240px;
 }
 
 .btn--block {
@@ -703,7 +704,6 @@ button:focus {
   border: 1px solid #705f92;
   background: #705f92;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -762,6 +762,14 @@ button:focus {
 .btn--mainOutline {
   padding: 13px 20px;
   border: 1px solid #705f92;
+  border-radius: 24px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--mainOutline .btn__text {
+  color: #705f92;
   font-size: 1rem;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -796,7 +804,6 @@ button:focus {
   padding: 13px 20px;
   border: 1px solid #ff7b89;
   border-radius: 24px;
-  width: 240px;
   position: relative;
   overflow: hidden;
 }
@@ -2271,7 +2278,7 @@ p {
 
 #chart .count__number > span {
   color: #8a5082;
-  font-size: 4.5rem;
+  font-size: 72px;
   margin-right: 10px;
 }
 

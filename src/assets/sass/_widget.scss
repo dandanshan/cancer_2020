@@ -22,6 +22,7 @@ button {
 
     &--inblock {
         display: inline-block;
+        width: 240px;
     }
 
     &--block {
@@ -34,7 +35,6 @@ button {
         border: 1px solid color(purple500);
         background: color(purple500);
         border-radius: 24px;
-        width: 240px;
         position: relative;
         overflow: hidden;
 
@@ -93,8 +93,16 @@ button {
     &--mainOutline {
         padding: 13px 20px;
         border: 1px solid color(purple500);
+        border-radius: 24px;
         font-size: $font-size-base;
-        @include transition(all, .6s, ease);
+        position: relative;
+        overflow: hidden;
+
+        .btn__text {
+            color: color(purple500);
+            font-size: $font-size-base;
+            @include transition(all, .6s, ease);
+        }
 
         &:before {
             content: '';
@@ -126,7 +134,6 @@ button {
         padding: 13px 20px;
         border: 1px solid color(pink500);
         border-radius: 24px;
-        width: 240px;
         position: relative;
         overflow: hidden;
 
