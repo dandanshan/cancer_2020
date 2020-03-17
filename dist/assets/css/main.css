@@ -481,11 +481,11 @@ th {
   outline: none;
 }
 
-.slides__dots--purple li.slick-active button {
+.slides__dots--violet li.slick-active button {
   background-color: #705f92;
 }
 
-.slides__dots--purple li button {
+.slides__dots--violet li button {
   background-color: #d6d6d6;
 }
 
@@ -1443,6 +1443,18 @@ ol ol {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 p {
   line-height: 1.6;
   margin: 0 0 15px 0;
@@ -1475,9 +1487,7 @@ p {
 }
 
 .section__title {
-  font-size: 2.25rem;
   color: #333333;
-  font-weight: 700;
   margin-bottom: 40px;
   position: relative;
   line-height: 1;
@@ -1512,8 +1522,6 @@ p {
 
 .subtitle {
   color: #705f92;
-  font-size: 1.5rem;
-  font-weight: 700;
   margin-bottom: 15px;
 }
 
@@ -2134,7 +2142,7 @@ p {
   bottom: -60px;
   width: 540px;
   font-size: 1.875rem;
-  font-weight: 700;
+  font-weight: 500;
   background: #ffffff;
   line-height: 1.4;
   z-index: 2;
@@ -2596,7 +2604,7 @@ p {
   color: #333333;
   font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 #promote .promote__item .title > span {
@@ -2655,6 +2663,11 @@ p {
 
 #sponsor {
   text-align: center;
+}
+
+#sponsor .title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 #sponsor .subtitle {

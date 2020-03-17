@@ -19,6 +19,18 @@ ol {
     }
 }
 
+h2 {
+    font-size: $font-size-36;
+    font-weight: $font-weight-bold;
+    margin: 0;
+}
+
+h5 {
+    font-size: $font-size-24;
+    font-weight: $font-weight-medium;
+    margin: 0;
+}
+
 p {
     line-height: 1.6;
     margin: 0 0 15px 0;
@@ -26,7 +38,7 @@ p {
 
 ::selection {
     color: color(white);
-    background: color(purple500);
+    background: color(violet500);
 }
 
 .container {
@@ -46,9 +58,7 @@ p {
 }
 
 .section__title {
-    font-size: $font-size-36;
     color: color(black);
-    font-weight: $font-weight-bold;
     margin-bottom: 40px;
     position: relative;
     line-height: 1;
@@ -80,9 +90,7 @@ p {
 }
 
 .subtitle {
-    color: color(purple500);
-    font-size: $font-size-24;
-    font-weight: $font-weight-bold;
+    color: color(violet500);
     margin-bottom: 15px;
 }
 
@@ -98,7 +106,7 @@ p {
         float: left;
         width: 305px;
         height: 80px;
-        background: color(purple500) url('../images/logo_cancer@3x.png') 0 0/cover no-repeat;
+        background: color(violet500) url('../images/logo_cancer@3x.png') 0 0/cover no-repeat;
     }
 
     .nav {
@@ -123,7 +131,7 @@ p {
             &__name {
                 display: inline-block;
                 padding: 31px 12px;
-                color: color(purple500);
+                color: color(violet500);
                 position: relative;
 
                 &:before {
@@ -136,7 +144,7 @@ p {
                     bottom: 0;
                     @include transition(all, .3s, ease-out);
                     position: absolute;
-                    background: color(purple500);
+                    background: color(violet500);
                 }
 
                 &:hover {
@@ -180,7 +188,7 @@ p {
                 &:before {
                     content: '';
                     display: inline-block;
-                    background: color(purple500);
+                    background: color(violet500);
                     width: 1px;
                     height: 15px;
                     position: absolute;
@@ -233,7 +241,7 @@ p {
         &.active {
             .burger__wrap {
                 span {
-                    background-color: color(purple500);
+                    background-color: color(violet500);
 
                     &:nth-of-type(1),
                     &:nth-of-type(4) {
@@ -262,7 +270,7 @@ p {
 
 .footer {
     @include list-reset;
-    background: color(purple500);
+    background: color(violet500);
     padding: 30px 0;
     text-align: center;
     color: forum(white);
@@ -299,7 +307,7 @@ p {
         position: absolute;
         top: 0;
         left: 0;
-        background: color(purple500);
+        background: color(violet500);
         transform-origin: 50% 50%;
         animation: transform 10s ease-in-out infinite both alternate;
         opacity: .4;
@@ -362,7 +370,7 @@ p {
     }
 
     .header {
-        background: color(purple500);
+        background: color(violet500);
 
         &__logo {
             width: 190px;

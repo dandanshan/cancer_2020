@@ -481,11 +481,11 @@ th {
   outline: none;
 }
 
-.slides__dots--purple li.slick-active button {
+.slides__dots--violet li.slick-active button {
   background-color: #705f92;
 }
 
-.slides__dots--purple li button {
+.slides__dots--violet li button {
   background-color: #d6d6d6;
 }
 

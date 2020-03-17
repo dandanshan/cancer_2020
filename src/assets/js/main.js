@@ -20,7 +20,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         prevArrow: '<button class="slick-prev slides__arrow slides__arrow--gray slides__arrow--prev" aria-label="Previous" type="button"></button>',
         nextArrow: '<button class="slick-next slides__arrow slides__arrow--gray slides__arrow--next" aria-label="Next" type="button"></button>',
-        dotsClass: 'slides__dots slides__dots--purple',
+        dotsClass: 'slides__dots slides__dots--violet',
     });
 
     //rellax
