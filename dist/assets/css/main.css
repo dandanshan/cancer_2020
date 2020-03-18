@@ -625,7 +625,7 @@ th {
    ========================================================================== */
 @media only screen and (max-width: 992px) {
   #topslide .slides.top__slides .slick-list {
-    height: 400px;
+    height: 430px;
   }
 }
 
@@ -2105,7 +2105,7 @@ p {
 #topslide .slides__media {
   width: 100%;
   max-width: 940px;
-  padding-top: 42.8%;
+  padding-top: 50%;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -2166,7 +2166,7 @@ p {
 }
 
 #topslide .slides .slick-list {
-  height: 500px;
+  height: 530px;
 }
 
 #topslide .ts__background {
@@ -2809,7 +2809,6 @@ p {
     right: 0;
     bottom: 0;
     font-size: 1.875rem;
-    font-weight: 700;
     background: #ffffff;
     line-height: 1.4;
     width: calc(100% - 40px);

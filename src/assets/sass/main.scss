@@ -155,7 +155,7 @@
         &__media {
             width: 100%;
             max-width: 940px;
-            padding-top: 42.8%;
+            padding-top: 50%;
             position: relative;
             margin: 0 auto;
             overflow: hidden;
@@ -215,7 +215,7 @@
         }
 
         .slick-list {
-            height: 500px;
+            height: 530px;
         }
     }
 
@@ -914,7 +914,6 @@
                     right: 0;
                     bottom: 0;
                     font-size: $font-size-30;
-                    font-weight: $font-weight-bold;
                     background: color(white);
                     line-height: 1.4;
                     width: calc(100% - 40px);
