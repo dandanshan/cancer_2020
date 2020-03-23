@@ -410,8 +410,6 @@ th {
   height: 70px;
   z-index: 20;
   top: calc(50% - 35px);
-  -webkit-filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
-  filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   -webkit-transition: all 0.2s ease-in-out;
@@ -635,13 +633,9 @@ th {
   }
   #topslide .slick-prev {
     left: 10px;
-    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
-    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
   }
   #topslide .slick-next {
     right: 10px;
-    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
-    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
   }
   .swal2-container .popup--ticket {
     padding: 50px 30px 40px 30px;
