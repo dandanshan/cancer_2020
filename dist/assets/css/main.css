@@ -410,8 +410,6 @@ th {
   height: 70px;
   z-index: 20;
   top: calc(50% - 35px);
-  -webkit-filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
-  filter: drop-shadow(0 3px 10px rgba(138, 80, 130, 0.5));
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   -webkit-transition: all 0.2s ease-in-out;
@@ -635,13 +633,9 @@ th {
   }
   #topslide .slick-prev {
     left: 10px;
-    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
-    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
   }
   #topslide .slick-next {
     right: 10px;
-    -webkit-filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
-    filter: drop-shadow(0 1px 5px rgba(138, 80, 130, 0.8));
   }
   .swal2-container .popup--ticket {
     padding: 50px 30px 40px 30px;
@@ -1890,6 +1884,10 @@ p {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #kv {
   overflow: hidden;
   position: relative;
@@ -2179,7 +2177,7 @@ p {
 #topslide .ts__background--blob1 {
   width: 250px;
   height: 245px;
-  background-size: 250px 645px;
+  background-size: 250px 885px;
   background-position-y: 0;
   right: -100px;
   bottom: -50px;
@@ -2188,7 +2186,7 @@ p {
 #topslide .ts__background--blob2 {
   width: 245px;
   height: 210px;
-  background-size: 245px 632px;
+  background-size: 245px 867px;
   background-position-y: -240px;
   left: -100px;
   top: 330px;
@@ -2197,7 +2195,7 @@ p {
 #topslide .ts__background--blob3 {
   width: 120px;
   height: 89px;
-  background-size: 120px 309px;
+  background-size: 120px 424px;
   background-position-y: -220px;
   right: -200px;
   top: 200px;
@@ -2587,6 +2585,99 @@ p {
 
 .recommend:hover .recommend__media:before {
   opacity: .15;
+}
+
+#campaign {
+  background: #fafafa;
+}
+
+#campaign .wrapper:before {
+  content: '';
+  display: block;
+  width: 250px;
+  height: 240px;
+  background-image: url("../images/img_blob-deco@3x.png");
+  background-size: 250px 885px;
+  background-position-y: -645px;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+#campaign .section__title {
+  padding-left: 60px;
+}
+
+#campaign .slides {
+  margin: 0 20px;
+  padding: 0 20px;
+  position: relative;
+}
+
+#campaign .slides__campaign {
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 0 15px;
+}
+
+#campaign .slides__media {
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+  overflow: hidden;
+}
+
+#campaign .slides__media > img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#campaign .slides__media:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #eee;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#campaign .slides .title {
+  margin-top: 10px;
+  color: #333333;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#campaign .slides .title > span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#campaign .slides a:hover .slides__media img {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+#campaign .slides a:hover .slides__media:before {
+  opacity: .15;
+}
+
+#campaign .slides .slick-list {
+  margin-bottom: 40px;
 }
 
 #promote {

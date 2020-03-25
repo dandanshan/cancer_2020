@@ -1,4 +1,4 @@
-//slides
+
 .slides {
     position: relative;
 
@@ -7,7 +7,7 @@
         height: 70px;
         z-index: 20;
         top: calc(50% - 35px);
-        filter: drop-shadow(0 3px 10px rgba(138, 80, 130, .5));
+        // filter: drop-shadow(0 3px 10px rgba(138, 80, 130, .5));
         @include scale(.8);
         @include transition(all, .2s, ease-in-out);
 
@@ -279,12 +279,12 @@
 
         .slick-prev {
             left: 10px;
-            filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
+            // filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
         }
 
         .slick-next {
             right: 10px;
-            filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
+            // filter: drop-shadow(0 1px 5px rgba(138, 80, 130, .8))
         }
 
     }

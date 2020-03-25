@@ -5,6 +5,10 @@
 @import "widget";
 @import "layout";
 
+body {
+    overflow-x: hidden; //fix mouse effect
+}
+
 #kv {
     overflow: hidden;
     position: relative;
@@ -229,7 +233,7 @@
             &--blob1 {
                 width: 250px;
                 height: 245px;
-                background-size: 250px 645px;
+                background-size: 250px 885px;
                 background-position-y: 0;
                 right: -100px;
                 bottom: -50px;
@@ -238,7 +242,7 @@
             &--blob2 {
                 width: 245px;
                 height: 210px;
-                background-size: 245px 632px;
+                background-size: 245px 867px;
                 background-position-y: -240px;
                 left: -100px;
                 top: 330px;
@@ -247,7 +251,7 @@
             &--blob3 {
                 width: 120px;
                 height: 89px;
-                background-size: 120px 309px;
+                background-size: 120px 424px;
                 background-position-y: -220px;
                 right: -200px;
                 top: 200px;
@@ -614,6 +618,100 @@
             &:before {
                 opacity: .15;
             }
+        }
+    }
+}
+
+#campaign {
+    background: color(gray100);
+
+    .wrapper {
+        &:before {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 240px;
+            background-image: url('../images/img_blob-deco@3x.png');
+            background-size: 250px 885px;
+            background-position-y: -645px;
+            position: absolute;
+            top: -100px;
+            left: -100px;
+        }
+    }
+
+    .section__title {
+        padding-left: 60px;
+    }
+
+    .slides {
+        margin: 0 20px;
+        padding: 0 20px;
+        position: relative;
+
+        &__campaign {
+            position: relative;
+            margin: 0 auto;
+            max-width: 940px;
+            padding: 0 15px;
+        }
+
+        &__media {
+            width: 100%;
+            padding-top: 60%;
+            position: relative;
+            overflow: hidden;
+
+            >img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include transition(all, .3s, ease);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: #eee;
+                opacity: 0;
+                z-index: 1;
+                @include transition(all, .3s, ease);
+            }
+        }
+
+        .title {
+            margin-top: 10px;
+            color: color(black);
+            font-size: $font-size-20;
+            font-weight: $font-weight-medium;
+            line-height: 1.4;
+
+            > span {
+                @include line-clamp(2);
+            }
+
+        }
+
+        a:hover {
+            .slides__media {
+
+                img {
+                    @include scale(1.02)
+                }
+
+                &:before {
+                    opacity: .15;
+                }
+            }
+        }
+
+        .slick-list {
+            margin-bottom: 40px;
         }
     }
 }
