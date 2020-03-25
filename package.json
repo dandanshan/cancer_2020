@@ -2,7 +2,7 @@
   "name": "cancer_2020",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "",
   "dependencies": {
     "gulp-uglify-es": "^2.0.0",
     "node": "^13.6.0",
