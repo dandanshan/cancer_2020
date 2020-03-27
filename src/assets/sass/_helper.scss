@@ -247,6 +247,7 @@
 
         &--info {
             padding: 40px;
+
             .swal2-content {
                 text-align: left;
 
@@ -299,14 +300,18 @@
                     h5 {
                         font-size: $font-size-30;
                         font-weight: $font-weight-bold;
-                        color: forum(gray600);
+                        color: color(black);
     
                         .caption {
                             display: block;
                             font-weight: $font-weight-bold;
                             font-size: $font-size-base;
-                            color: forum(gray600);
+                            color: color(black);
                         }
+                    }
+
+                    p {
+                        color: color(gray600);
                     }
 
                     .btn {
@@ -323,7 +328,7 @@
                 }
     
                 p {
-                    color: forum(gray500);
+                    color: forum(navy);
                 }
 
                 .subtitle {

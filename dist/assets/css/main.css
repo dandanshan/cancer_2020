@@ -622,6 +622,11 @@ th {
   padding: 40px;
 }
 
+.swal2-container .popup--info .swal2-title {
+  color: #454550;
+  font-size: 1.5rem;
+}
+
 .swal2-container .popup--info .swal2-content {
   text-align: left;
 }
@@ -675,14 +680,18 @@ th {
 .swal2-container .popup--info .swal2-content .grid--info h5 {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #66666f;
+  color: #333333;
 }
 
 .swal2-container .popup--info .swal2-content .grid--info h5 .caption {
   display: block;
   font-weight: 700;
   font-size: 1rem;
-  color: #66666f;
+  color: #333333;
+}
+
+.swal2-container .popup--info .swal2-content .grid--info p {
+  color: #5c5c5c;
 }
 
 .swal2-container .popup--info .swal2-content .grid--info .btn {
@@ -698,7 +707,7 @@ th {
 }
 
 .swal2-container .popup--info .swal2-content p {
-  color: #88888f;
+  color: #454550;
 }
 
 .swal2-container .popup--info .swal2-content .subtitle {
