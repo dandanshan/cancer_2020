@@ -266,20 +266,6 @@ button {
             @include transition(all, .6s, ease);
         }
 
-        &:before {
-            content: '';
-            @include transition(all, .6s, ease);
-            @include transform(skew(15deg));
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: 110%;
-            bottom: -10px;
-            opacity: 0;
-            background: forum(navy);
-            z-index: -1;
-        }
-
         &:hover {
 
             &:before {
@@ -410,6 +396,15 @@ button {
 
     &--plan {
         margin: 30px -15px 0 -15px;
+
+        &>li {
+            width: 50%;
+            padding: 0 15px;
+        }
+    }
+
+    &--info {
+        margin: 0 -15px;
 
         &>li {
             width: 50%;
@@ -847,6 +842,19 @@ button {
 
                 &:not(:last-child) {
                     margin-bottom: 30px;
+                }
+            }
+        }
+
+        &--info {
+            margin: 0 -15px;
+    
+            &>li {
+                width: 100%;
+                padding: 0 15px;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
                 }
             }
         }
