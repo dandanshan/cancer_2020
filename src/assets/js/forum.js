@@ -55,6 +55,27 @@ $(document).ready(function () {
         });
     });
 
+    Swal.fire({
+        title: '公告',
+        html: '<p>為配合中央防疫政策，原訂於今年 6 月舉辦的《康健癌症論壇》決定取消 台北、台中、高雄 三場現場活動。造成不便，敬請見諒。</p>' + 
+        '<p>今年的康健癌症論壇，我們將改以<b>線上影音</b>呈現，提供「精準抗癌x智慧醫療」的治療新知，持續陪伴癌友啟動癌後新生活。</p>' +
+        '<div class="subtitle">邀請您一起追蹤</div><ul class="grid grid--info">' +
+        '<li><a href="https://www.commonhealth.com.tw/event/2020/cancer/" target="_blank">' +
+        '<div class="content"><h5><span class="caption">#全新推出</span>抗癌生活行動</h5>' +
+        '<p>從生活飲食、醫療技術到癌後人生，抗癌生活計畫給你最需要的資訊與解方</p>' +
+        '<div class="btn btn--main"><span class="btn__text">了解更多</span></div></div></a></li>' +
+        '<li><a href="https://www.commonhealth.com.tw/member/newsletter" target="_blank">' +
+        '<div class="content"><h5><span class="caption">#免費訂閱</span>抗癌趨勢電子報</h5>' + 
+        '<p>讓我們主動提供您最新抗癌趨勢，戰勝癌症</p>' +
+        '<div class="btn btn--main"><span class="btn__text">立即訂閱</span></div></div></a></li></ul>',
+        showCloseButton: true,
+        showConfirmButton: false,
+        width: 800,
+        customClass: {
+            popup: 'popup--info',
+        }
+    })
+
     //intro popup
     $('.intro__slides').on('init', function (event, slick) {
 
@@ -85,6 +106,7 @@ $(document).ready(function () {
         dataId = $(this).parent('.agenda__speaker').attr('data-id');
         getData();
     });
+    
 
     //qa accordion
     $('.accordion').click(function () {
