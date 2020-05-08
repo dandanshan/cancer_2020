@@ -23,7 +23,7 @@ gulp.task('default', [
     'extend',
     'sass',
     'uglify',
-    'minimage',
+    // 'minimage',
     'assets-deploy',
 ]);
 
@@ -31,7 +31,7 @@ gulp.task('default', [
 gulp.task('webserver', function() {
     gulp.src(distPath)
         .pipe(webserver({
-            port: 1234,
+            port: 1235,
             livereload: true,
             directoryListing: false,
             open: true,

@@ -2,15 +2,25 @@ $(document).ready(function () {
 
     mobileMenuClose();
     mousefollow();
+    checkCookie();
 
     $('.burger').click(function () {
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
     });
 
-    $('.action.more .btn').click(function () {
-        $(this).closest('.section__content').find('.grid.more').slideDown();
-        $(this).parent('.more').hide();
+
+    //article load more
+    $('.action.more').click(function () {
+
+        var $this = $(this);
+        var $el = $this.closest('.section__content').find('.grid.more li:hidden');
+
+        $el.slice(0, 3).slideDown();
+
+        if ($this.parent('.section__content').find('.grid.more li:hidden').length == 0) {
+            $this.hide();
+        }
     });
 
     $('.top__slides').slick({
@@ -84,6 +94,50 @@ $(document).ready(function () {
             }
         }
     });
+
+    function checkCookie(){
+        var headerH = $('header').outerHeight();
+        var $alert = $('.alert');
+        var alertH = $alert.outerHeight();
+        var $topSlide = $('#topslide');
+
+        var cookieString = getCookie('agree');
+
+        if (cookieString !== 'yes') {
+            // console.log('doesnt exist');
+            $alert.show().css('top', headerH);
+            $topSlide.css('padding-top', headerH);
+
+            $('#setCookie').click(function () {
+                setCookie('agree', 'yes', 30);
+
+                $alert.css('right', '100%').fadeOut('fast');
+                $topSlide.css('padding-top', '0');
+            });
+        } else {
+            // console.log('exist');
+        }
+    }
+
+    function setCookie(cname, cvalue, exdays){
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = 'expires=' + d.toGMTString();
+        document.cookie = cname + '=' + cvalue + ';' + expires;
+        // console.log('set');
+        // console.log(cname +'/'+ cvalue +'/'+ exdays);
+    }
+
+    function getCookie(cname) {
+        var name = cname + '=';
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i ++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return '';
+    }
 
     //close menu before menuSpy on mobile
     function mobileMenuClose() {

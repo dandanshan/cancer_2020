@@ -1,13 +1,13 @@
 
 .slides {
     position: relative;
+    line-height: 0;
 
     &__arrow {
         width: 56px;
         height: 70px;
         z-index: 20;
         top: calc(50% - 35px);
-        // filter: drop-shadow(0 3px 10px rgba(138, 80, 130, .5));
         @include scale(.8);
         @include transition(all, .2s, ease-in-out);
 
@@ -261,7 +261,7 @@
                         overflow: hidden;
                         background: color(violet200);
                         @include transition(all, .3s, ease);
-                        
+
                         &:hover {
                             box-shadow: 0 3px 15px -3px rgba(0 ,0, 0, .1);
                         }
@@ -296,12 +296,12 @@
                         right: 0;
                         z-index: 1;
                     }
-    
+
                     h5 {
                         font-size: $font-size-30;
                         font-weight: $font-weight-bold;
                         color: color(black);
-    
+
                         .caption {
                             display: block;
                             font-weight: $font-weight-bold;
@@ -322,11 +322,11 @@
                         right: 0;
                     }
                 }
-                
+
                 b {
                   color: forum(blue500);
                 }
-    
+
                 p {
                     color: forum(navy);
                 }
