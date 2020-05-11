@@ -123,6 +123,15 @@
                 }
             }
         }
+
+        &--video {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            bottom: unset;
+            width: auto;
+            margin-top: 0;
+        }
     }
 
     &.slick-dotted {

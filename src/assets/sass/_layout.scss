@@ -24,6 +24,8 @@ h2 {
     font-size: $font-size-36;
     font-weight: $font-weight-bold;
     margin: 0;
+    color: color(black);
+    margin-bottom: 20px;
 }
 
 h5 {
@@ -35,6 +37,7 @@ h5 {
 p {
     line-height: 1.6;
     margin: 0 0 15px 0;
+    color: color(gray600);
 }
 
 ::selection {
@@ -293,6 +296,7 @@ p {
     p {
         font-size: $font-size-14;
         margin-bottom: 0;
+        color: color(white);
     }
 }
 
@@ -340,7 +344,7 @@ p {
                     height: 385px;
                     background: url('../images/img_blob-bg@3x.png') no-repeat 0 -375px/450px 1080px;
                     position: absolute;
-                    top: 0;
+                    top: calc(50% - 170px);
                     left: 0;
                     z-index: -1;
                 }
@@ -591,7 +595,7 @@ p {
         .promote {
 
             &__item {
-                &.heighlight {
+                &.normal {
                     &:before {
                         content: none;
                     }

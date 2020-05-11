@@ -30,6 +30,11 @@ button {
         width: 100%;
     }
 
+    &--auto {
+        display: inline-block;
+        width: auto;
+    }
+
     &--main {
         padding: 13px 20px;
         border: 1px solid color(violet500);
@@ -92,7 +97,7 @@ button {
 
     &--mainOutline {
         padding: 13px 20px;
-        border: 1px solid color(violet500);
+        border: 2px solid color(violet500);
         border-radius: 24px;
         font-size: $font-size-base;
         position: relative;
@@ -132,7 +137,7 @@ button {
 
     &--secOutline {
         padding: 13px 20px;
-        border: 1px solid color(pink500);
+        border: 2px solid color(pink500);
         border-radius: 24px;
         position: relative;
         overflow: hidden;
@@ -168,7 +173,6 @@ button {
             }
         }
     }
-
 
     &--forumOutline {
         padding: 13px 20px;
@@ -368,11 +372,14 @@ button {
     &__media {
         line-height: 0;
         width: 100%;
-        padding-top: 50%;
+        padding-top: 60%;
         overflow: hidden;
         position: relative;
 
         >img {
+            position: absolute;
+            top: 0;
+            left: 0;
             @include transition(all, .3s, ease);
             @include scale(1);
         }
@@ -388,12 +395,6 @@ button {
             opacity: 0;
             z-index: 1;
             @include transition(all, .3s, ease);
-        }
-
-        >img {
-            position: absolute;
-            top: 0;
-            left: 0;
         }
     }
 
@@ -928,6 +929,30 @@ button {
     }
 }
 
+%icon-play {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(18px);
+        background-image: url('../images/icon_play@3x.png');
+        background-size: 18px 36px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.icon__play {
+    @extend %icon-play;
+
+    &--v {
+        &:before,
+        &:after {
+            background-position-y: 0px;
+        }
+    }
+}
+
 /*---------- alignment ----------*/
 .text-left {
     text-align: left !important;
@@ -1071,6 +1096,8 @@ button {
         }
 
         &--hscroll {
+            margin: 0 -20px 0 -20px;
+            padding-left: 10px;
 
             &>li {
                 width: 240px;
@@ -1153,7 +1180,7 @@ button {
             .recommend {
                 &__media {
                     width: 120px;
-                    padding-top: 60px;
+                    padding-top: 72px;
                     float: left;
                     margin-right: 10px;
                 }
