@@ -946,6 +946,7 @@ button {
     @extend %icon-play;
 
     &--v {
+
         &:before,
         &:after {
             background-position-y: 0px;
@@ -984,11 +985,11 @@ button {
 
 /*---------- visibility ----------*/
 .mbonly {
-    display: none;
+    display: none !important;
 }
 
 .pconly {
-    display: block;
+    display: block !important;
 }
 
 /* ==========================================================================
@@ -1014,11 +1015,11 @@ button {
     }
 
     .mbonly {
-        display: block;
+        display: block !important;
     }
 
     .pconly {
-        display: none;
+        display: none !important;
     }
 }
 

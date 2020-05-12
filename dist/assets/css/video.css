@@ -504,7 +504,7 @@ th {
 .slides__dots--video {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 20px;
   bottom: unset;
   width: auto;
   margin-top: 0;
@@ -720,6 +720,13 @@ th {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .slides__dots--video {
+    bottom: 20px;
+    top: unset;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   #topslide .slides.top__slides .slick-list {
     height: 430px;
@@ -1625,11 +1632,11 @@ button:focus {
 
 /*---------- visibility ----------*/
 .mbonly {
-  display: none;
+  display: none !important;
 }
 
 .pconly {
-  display: block;
+  display: block !important;
 }
 
 /* ==========================================================================
@@ -1651,10 +1658,10 @@ button:focus {
     text-align: center;
   }
   .mbonly {
-    display: block;
+    display: block !important;
   }
   .pconly {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -2409,7 +2416,7 @@ p {
   position: absolute;
   bottom: 40px;
   right: 0;
-  padding: 30px 40px 30px 30px;
+  padding: 20px 30px 20px 25px;
   background: #ffffff;
   width: calc(50% - 70px);
   max-width: 500px;
@@ -2419,12 +2426,13 @@ p {
   font-size: 2.25rem;
   font-weight: 700;
   color: #333333;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
 
-.slides__content .title span {
+.slides__content .title > span {
   font-size: 1.25rem;
   display: block;
-  margin-bottom: 5px;
 }
 
 .slides__content .btn {
@@ -2452,6 +2460,15 @@ p {
   left: 0;
   transition: all 0.3s ease;
   transform: scale(1);
+}
+
+.slides__action {
+  display: inline-block;
+  line-height: 0;
+}
+
+.slides__action .btn {
+  font-weight: 400;
 }
 
 .action.more {
@@ -2534,21 +2551,19 @@ p {
    ========================================================================== */
 @media only screen and (max-width: 1200px) {
   .slides__content {
-    bottom: 40px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .slides__content {
     position: relative;
     bottom: unset;
     width: calc(100% - 40px);
     padding: 20px;
+    max-width: unset;
   }
   .slick-dots {
     top: 18px;
     right: 15px;
   }
+}
+
+@media only screen and (max-width: 992px) {
   .tag {
     margin: 0 0 20px 0;
   }

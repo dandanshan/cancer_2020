@@ -504,7 +504,7 @@ th {
 .slides__dots--video {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 20px;
   bottom: unset;
   width: auto;
   margin-top: 0;
@@ -720,6 +720,13 @@ th {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  .slides__dots--video {
+    bottom: 20px;
+    top: unset;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   #topslide .slides.top__slides .slick-list {
     height: 430px;
@@ -1625,11 +1632,11 @@ button:focus {
 
 /*---------- visibility ----------*/
 .mbonly {
-  display: none;
+  display: none !important;
 }
 
 .pconly {
-  display: block;
+  display: block !important;
 }
 
 /* ==========================================================================
@@ -1651,10 +1658,10 @@ button:focus {
     text-align: center;
   }
   .mbonly {
-    display: block;
+    display: block !important;
   }
   .pconly {
-    display: none;
+    display: none !important;
   }
 }
 

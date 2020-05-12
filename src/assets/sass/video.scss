@@ -10,7 +10,7 @@
         position: absolute;
         bottom: 40px;
         right: 0;
-        padding: 30px 40px 30px 30px;
+        padding: 20px 30px 20px 25px;
         background: color(white);
         width: calc(50% - 70px);
         max-width: 500px;
@@ -19,11 +19,12 @@
             font-size: $font-size-36;
             font-weight: $font-weight-bold;
             color: color(black);
+            line-height: 1.4;
+            margin-bottom: 10px;
 
-            span {
+            >span {
                 font-size: $font-size-20;
                 display: block;
-                margin-bottom: 5px;
             }
         }
 
@@ -32,6 +33,7 @@
 
             &:hover {
                 .icon__play--v {
+
                     &:before,
                     &:after {
                         background-position-y: -18px;
@@ -40,7 +42,6 @@
                 }
             }
         }
-
     }
 
     &__media {
@@ -57,6 +58,16 @@
             left: 0;
             @include transition(all, .3s, ease);
             @include scale(1);
+        }
+    }
+
+
+    &__action {
+        display: inline-block;
+        line-height: 0;
+
+        .btn {
+            font-weight: $font-weight-normal;
         }
     }
 }
@@ -148,19 +159,11 @@
 @media only screen and (max-width: $screen-lg) {
     .slides {
         &__content {
-            bottom: 40px;
-        }
-    }
-}
-
-//Medium devices (portrait tablets,landscape phone, 992 and down)
-@media only screen and (max-width: $screen-md) {
-    .slides {
-        &__content {
             position: relative;
             bottom: unset;
             width: calc(100% - 40px);
             padding: 20px;
+            max-width: unset;
         }
     }
 
@@ -168,6 +171,11 @@
         top: 18px;
         right: 15px;
     }
+}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {
+
 
     .tag {
         margin: 0 0 20px 0;
@@ -182,9 +190,7 @@
 }
 
 //Small devices (landscape tablets, 768 and down)
-@media only screen and (max-width: $screen-sm) {
-
-}
+@media only screen and (max-width: $screen-sm) {}
 
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {}
