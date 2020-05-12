@@ -2407,11 +2407,12 @@ p {
 
 .slides__content {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   right: 0;
-  padding: 40px 40px 40px 30px;
+  padding: 30px 40px 30px 30px;
   background: #ffffff;
   width: calc(50% - 70px);
+  max-width: 500px;
 }
 
 .slides__content .title {

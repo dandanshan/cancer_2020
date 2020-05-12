@@ -8,11 +8,12 @@
 .slides {
     &__content {
         position: absolute;
-        bottom: 60px;
+        bottom: 40px;
         right: 0;
-        padding: 40px 40px 40px 30px;
+        padding: 30px 40px 30px 30px;
         background: color(white);
         width: calc(50% - 70px);
+        max-width: 500px;
 
         .title {
             font-size: $font-size-36;
