@@ -5,6 +5,7 @@ html {
 body {
     color: color(gray600);
     font-size: $font-size-base;
+    // overflow-x: hidden; //fix mouse effect
 }
 
 ul,
@@ -23,6 +24,8 @@ h2 {
     font-size: $font-size-36;
     font-weight: $font-weight-bold;
     margin: 0;
+    color: color(black);
+    margin-bottom: 20px;
 }
 
 h5 {
@@ -34,6 +37,7 @@ h5 {
 p {
     line-height: 1.6;
     margin: 0 0 15px 0;
+    color: color(gray600);
 }
 
 ::selection {
@@ -55,37 +59,39 @@ p {
 
 .section {
     padding: 60px 0;
-}
 
-.section__title {
-    color: color(black);
-    margin-bottom: 40px;
-    position: relative;
-    line-height: 1;
+    &__header {}
 
-    span {
-        padding-left: 15px;
-    }
+    &__title {
+        color: color(black);
+        position: relative;
+        line-height: 1;
+        margin-bottom: 10px;
 
-    &:before {
-        content: '';
-        display: inline-block;
-        width: 2px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        background: color(pink500);
-        @include rotate(15);
-    }
+        span {
+            padding-left: 15px;
+        }
 
-    &:after {
-        content: '';
-        @include wh-square(10px);
-        display: inline-block;
-        border-radius: 5px;
-        margin-left: 10px;
-        background: color(pink500);
-        vertical-align: -webkit-baseline-middle;
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: color(pink500);
+            @include rotate(15);
+        }
+
+        &:after {
+            content: '';
+            @include wh-square(10px);
+            display: inline-block;
+            border-radius: 5px;
+            margin-left: 10px;
+            background: color(pink500);
+            vertical-align: -webkit-baseline-middle;
+        }
     }
 }
 
@@ -290,6 +296,142 @@ p {
     p {
         font-size: $font-size-14;
         margin-bottom: 0;
+        color: color(white);
+    }
+}
+
+#promote {
+    background: color(violet200);
+    font-size: $font-size-base;
+    overflow: hidden;
+
+    .promote {
+        &__item {
+            // padding: 40px 0;
+            position: relative;
+
+            .title {
+                color: color(black);
+                font-size: $font-size-36;
+                font-weight: $font-weight-bold;
+                margin-bottom: 5px;
+
+                >span {
+                    font-size: $font-size-base;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &.normal {
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 260px;
+                    height: 190px;
+                    background: url('../images/img_blob-bg@3x.png') no-repeat 0 -438px/260px 624px;
+                    position: absolute;
+                    top: calc(50% - 90px);
+                    right: 0;
+                    z-index: -1;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 450px;
+                    height: 385px;
+                    background: url('../images/img_blob-bg@3x.png') no-repeat 0 -375px/450px 1080px;
+                    position: absolute;
+                    top: calc(50% - 170px);
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+
+            &.heighlight {
+                .subtitle {
+                    color: color(pink500);
+                }
+
+                .action {
+                    .btn {
+                        width: 150px;
+
+                        &:not(:last-of-type) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 400px;
+                    height: 330px;
+                    background: url('../images/img_blob-bg@3x.png') no-repeat 0 0/400px 960px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+#sponsor {
+    text-align: center;
+
+    .title {
+        font-size: $font-size-24;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        margin-bottom: 15px;
+        color: color(black);
+        font-size: $font-size-base;
+        font-weight: $font-weight-normal;
+    }
+
+    img {
+        margin-bottom: 25px;
+
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.bottom__fixed {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    background: color(violet500);
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+
+    a {
+        color: color(white);
+        font-size: $font-size-24;
+        font-weight: $font-weight-bold;
+
+        >span {
+            font-size: $font-size-base;
+            padding-left: 20px;
+            vertical-align: middle;
+        }
+
+        .btn {
+            margin-left: 30px;
+
+            .btn__text {
+                color: color(violet500);
+            }
+        }
     }
 }
 
@@ -440,6 +582,27 @@ p {
         max-width: 720px;
         margin: 0 auto;
     }
+
+    .menu {
+        &__highlight {
+            .mbonly {
+                display: inline-block;
+            }
+        }
+    }
+
+    #promote {
+        .promote {
+
+            &__item {
+                &.normal {
+                    &:before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //Small devices (landscape tablets, 768 and down)
@@ -453,10 +616,48 @@ p {
         padding: 40px 0;
 
         &__title {
-            margin-bottom: 30px;
+            display: block;
+        }
+    }
+
+    .bottom__fixed {
+        .wrap {
+            padding: 0;
+        }
+
+        a {
+            >span {
+                display: none;
+            }
+
+            .btn {
+                margin-left: 10px;
+            }
         }
     }
 }
 
 //XSmall devices (portrait phones, 576 and down)
-@media only screen and (max-width: $screen-xs) {}
+@media only screen and (max-width: $screen-xs) {
+    #promote {
+        .promote {
+            &__item {
+
+                &.normal {
+                    .action .btn {
+                        width: 100%;
+                    }
+                }
+
+                &.heighlight {
+                    .action {
+                        .btn {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

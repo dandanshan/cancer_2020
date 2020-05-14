@@ -1,0 +1,196 @@
+@import "variables";
+@import "mixin";
+@import "normalize";
+@import "helper";
+@import "widget";
+@import "layout";
+
+.slides {
+    &__content {
+        position: absolute;
+        bottom: 40px;
+        right: 0;
+        padding: 20px 30px 20px 25px;
+        background: color(white);
+        width: calc(50% - 70px);
+        max-width: 500px;
+
+        .title {
+            font-size: $font-size-36;
+            font-weight: $font-weight-bold;
+            color: color(black);
+            line-height: 1.4;
+            margin-bottom: 10px;
+
+            >span {
+                font-size: $font-size-20;
+                display: block;
+            }
+        }
+
+        .btn {
+            position: sticky;
+
+            &:hover {
+                .icon__play--v {
+
+                    &:before,
+                    &:after {
+                        background-position-y: -18px;
+                        @include transition(all, .3s, ease-in-out);
+                    }
+                }
+            }
+        }
+    }
+
+    &__media {
+        line-height: 0;
+        width: 100%;
+        padding-top: 40%;
+        overflow: hidden;
+        position: relative;
+
+        >img {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            @include transition(all, .3s, ease);
+            @include scale(1);
+        }
+    }
+
+
+    &__action {
+        display: inline-block;
+        line-height: 0;
+
+        .btn {
+            font-weight: $font-weight-normal;
+        }
+    }
+}
+
+.action.more {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+#topslide {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    @include transition(all, .6s, ease-in-out);
+}
+
+#cure {
+    background: color(violet100);
+}
+
+#care {
+    .wrapper {
+        z-index: 1;
+
+        &:before {
+            content: '';
+            display: block;
+            @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+            @include rotate(90);
+            width: 300px;
+            height: 295px;
+            position: absolute;
+            top: -170px;
+            left: -250px;
+            z-index: -1;
+        }
+
+        &:after {
+            content: '';
+            @include bg-img('../images/img_blob-deco@3x.png', 0, -195px, cover);
+            display: block;
+            width: 200px;
+            height: 175px;
+            position: absolute;
+            top: -30px;
+            left: 90px;
+            z-index: -1;
+        }
+    }
+}
+
+#todo {
+    .wrapper {
+        &:before {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 240px;
+            background-image: url('../images/img_blob-deco@3x.png');
+            background-size: 250px 885px;
+            background-position-y: -645px;
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+        }
+    }
+}
+
+#other {
+    .section__content {
+        background: color(pink50);
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+.tag {
+    display: inline-block;
+    margin-left: 20px;
+    color: color(black);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+//Large devices (landscape tablets, 1200 and down)
+@media only screen and (max-width: $screen-lg) {
+    .slides {
+        &__content {
+            position: relative;
+            bottom: unset;
+            width: calc(100% - 40px);
+            padding: 20px;
+            max-width: unset;
+        }
+    }
+
+    .slick-dots {
+        top: 18px;
+        right: 15px;
+    }
+}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {
+
+
+    .tag {
+        margin: 0 0 20px 0;
+
+    }
+
+    #todo {
+        .icon__video {
+            float: left;
+        }
+    }
+}
+
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}
