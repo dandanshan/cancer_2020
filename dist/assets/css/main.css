@@ -2925,6 +2925,10 @@ p {
   z-index: -1;
 }
 
+.topic .section__title {
+  margin-bottom: 20px;
+}
+
 .topic#lavie {
   padding-top: 80px;
 }
@@ -3037,6 +3041,7 @@ p {
 
 #campaign .section__title {
   padding-left: 60px;
+  margin-bottom: 20px;
 }
 
 #campaign .slides {
