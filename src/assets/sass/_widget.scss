@@ -788,6 +788,12 @@ button {
         &:after {
             background-position-y: -30px;
         }
+
+        .icon__text {
+            color: color(pink500);
+            font-size: $font-size-14;
+            margin-top: 5px;
+        }
     }
 }
 

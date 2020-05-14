@@ -1502,6 +1502,12 @@ button:focus {
   background-position-y: -30px;
 }
 
+.icon__video--pink .icon__text {
+  color: #ff7b89;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
 .icon__traffic {
   position: relative;
 }
