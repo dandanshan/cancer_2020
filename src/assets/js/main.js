@@ -9,6 +9,24 @@ $(document).ready(function () {
         $('.nav').toggleClass('active');
     });
 
+    //menu scrolling
+    $('.menu__name').click(function(e) {
+        if (this.hash !== '') {
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+
+                //add hash to URL when done scrolling
+                window.location.hash = hash;
+            });
+
+            return false;
+        }
+    });
+
 
     //article load more
     $('.action.more').click(function () {
