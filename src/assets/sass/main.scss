@@ -435,7 +435,6 @@
 .topic {
     overflow: hidden;
 
-
     .wrap {
         position: relative;
 
@@ -451,6 +450,10 @@
             right: -50px;
             z-index: -1;
         }
+    }
+
+    .section__title {
+        margin-bottom: 20px;
     }
 
 
@@ -566,6 +569,7 @@
 
     .section__title {
         padding-left: 60px;
+        margin-bottom: 20px;
     }
 
     .slides {

@@ -1802,10 +1802,6 @@ button:focus {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: #5c5c5c;
   font-size: 1rem;
