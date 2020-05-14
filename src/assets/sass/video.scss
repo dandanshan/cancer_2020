@@ -140,10 +140,21 @@
 
 #other {
     .section__content {
-        background: color(pink50);
         padding: 40px;
         text-align: center;
+
+        &.lung {
+            background: color(pink50);
+        }
+
+        &.breast {
+            background: color(gray200);
+        }
     }
+}
+
+.section__content {
+    margin-top: 20px;
 }
 
 .tag {
