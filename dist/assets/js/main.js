@@ -10,14 +10,14 @@ $(document).ready(function () {
     });
 
     //menu scrolling
-    $('.menu__name').click(function(e) {
+    $('.menu__name').click(function (e) {
         if (this.hash !== '') {
 
             var hash = this.hash;
 
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function() {
+            }, 800, function () {
 
                 //add hash to URL when done scrolling
                 window.location.hash = hash;
@@ -103,7 +103,7 @@ $(document).ready(function () {
         }
     });
 
-    function checkCookie(){
+    function checkCookie() {
         var headerH = $('header').outerHeight();
         var $alert = $('.alert');
         var alertH = $alert.outerHeight();
@@ -127,7 +127,7 @@ $(document).ready(function () {
         }
     }
 
-    function setCookie(cname, cvalue, exdays){
+    function setCookie(cname, cvalue, exdays) {
         var d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         var expires = 'expires=' + d.toGMTString();
@@ -139,7 +139,7 @@ $(document).ready(function () {
     function getCookie(cname) {
         var name = cname + '=';
         var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i ++) {
+        for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
             while (c.charAt(0) == ' ') c = c.substring(1);
             if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
@@ -159,7 +159,7 @@ $(document).ready(function () {
     //mouse follow
     function mousefollow() {
 
-        if($(window).width() > 768) {
+        if ($(window).width() > 768) {
 
             var $cursor = $('#cursor');
             var mouseX = 0;
