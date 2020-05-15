@@ -3181,6 +3181,12 @@ p {
   .topic#life .wrap .wrapper .section__content, .topic#thinking .wrap .wrapper .section__content, .topic#lavie .wrap .wrapper .section__content {
     padding: 0;
   }
+  .topic .action {
+    position: relative;
+    left: unset;
+    right: 0px;
+    bottom: unset;
+  }
 }
 
 @media only screen and (max-width: 768px) {

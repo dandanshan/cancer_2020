@@ -754,6 +754,13 @@
                 }
             }
         }
+
+        .action {
+            position: relative;
+            left: unset;
+            right: 0px;
+            bottom: unset;
+        }
     }
 }
 
