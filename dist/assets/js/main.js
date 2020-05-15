@@ -81,6 +81,27 @@ $(document).ready(function () {
         ]
     });
 
+    //first slide
+    $('.slides--video').on('init', function(event, slick, direction){
+        var text = $('.slick-slide.slick-active .slides__media img').data('content');
+        $('.slides__content').find('.title').html(text);
+    });
+
+    $('.slides--video').on('afterChange', function(event, slick, currentSlide){
+
+        var text = $('.slick-slide.slick-active .slides__media img').data('content');
+        $('.slides__content').find('.title').html(text);
+    });
+
+    $('.slides--video').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        appendDots: $(this).find('.slides__title'),
+        dotsClass: 'slides__dots slides__dots--violet slides__dots--video',
+    });
+
     //menuSpy
     var elm = document.querySelector('.nav');
     var ms = new MenuSpy(elm);

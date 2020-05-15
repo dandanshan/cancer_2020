@@ -534,7 +534,6 @@ button {
             flex: 0 0 auto;
             width: 20%;
             padding: 0 10px;
-            margin-bottom: 30px;
         }
     }
 
@@ -1206,6 +1205,17 @@ button {
                                 height: 18px;
                                 width: 21px;
                                 background-size: cover;
+                            }
+
+                            &--violet {
+                            }
+
+                            &--pink {
+
+                                &:before,
+                                &:after {
+                                    background-position-y: -18px;
+                                }
                             }
 
                             .icon__text {

@@ -110,22 +110,22 @@
     </div>
 </div>
 <section class="section" id="topslide">
-    <ul class="slides slides--lung">
+    <ul class="slides slides--video">
         <li>
             <div class="slides__media">
-                <img src="./assets/images/img_topSlide-dp.png" alt="" class="pconly" data-content="<span>#全新策劃</span>匯聚台灣肺癌醫學權威，全面掌握治療良機">
-                <img src="./assets/images/img_topSlide-mb.png" alt="" class="mbonly" data-content="<span>#全新策劃</span>匯聚台灣肺癌醫學權威，全面掌握治療良機">
+                <img src="./assets/images/img_topSlide-dp.png" alt="" class="pconly" data-content="<span>#全新策劃</span><div>匯聚台灣肺癌醫學權威，全面掌握治療良機</div>">
+                <img src="./assets/images/img_topSlide-mb.png" alt="" class="mbonly" data-content="<span>#全新策劃</span><div>匯聚台灣肺癌醫學權威，全面掌握治療良機</div>">
             </div>
         </li>
         <li>
             <div class="slides__media">
-                <img src="https://as.chdev.tw/web/article/d/1/4/d37f1ea3-1da2-4fac-9c44-e92e3d3ee512/A1017228.jpg" alt="" data-content="<span>#全新策劃</span>222">
-            </div>
+                <img src="https://as.chdev.tw/web/article/d/1/4/d37f1ea3-1da2-4fac-9c44-e92e3d3ee512/A1017228.jpg" alt="" data-content="<span>#全新策劃2</span><div>標題222</div>">
+            </>
         </li>
         <li>
             <div class="slides__media">
-                <img src="https://as.chdev.tw/web/article/d/1/4/d37f1ea3-1da2-4fac-9c44-e92e3d3ee512/A1017228.jpg" alt="" data-content="<span>#全新策劃</span>333">
-            </div>
+                <img src="https://as.chdev.tw/web/article/d/1/4/d37f1ea3-1da2-4fac-9c44-e92e3d3ee512/A1017228.jpg" alt="" data-content="<span>#全新策劃3</span><div>標題333</div>">
+            </>
         </li>
     </ul>
     <div class="slides__content">
@@ -219,6 +219,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- load more -->
                 <ul class="grid grid--video more">
                     <li>
                         <a href="https://www.commonhealth.com.tw/article/article.action?nid=81112"
@@ -263,6 +264,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- end load more -->
                 <div class="action more">
                     <button class="btn btn--inblock btn--main">
                         <div class="btn__text">看更多</div>
@@ -272,7 +274,7 @@
         </div>
     </div>
 </section>
-<section class="section" id="cure">
+<section class="section lung" id="cure">
     <div class="wrap">
         <div class="wrapper">
             <div class="section__header">
@@ -366,6 +368,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- load more -->
                 <ul class="grid grid--three more">
                     <li>
                         <a href="https://www.commonhealth.com.tw/article/article.action?nid=81112"
@@ -424,6 +427,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- end load more -->
                 <div class="action more">
                     <button class="btn btn--inblock btn--main">
                         <div class="btn__text">看更多</div>
@@ -513,6 +517,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- load more -->
                 <ul class="grid grid--video more">
                     <li>
                         <a href="https://www.commonhealth.com.tw/article/article.action?nid=81112"
@@ -557,6 +562,7 @@
                         </a>
                     </li>
                 </ul>
+                <!-- end load more -->
                 <div class="action more">
                     <button class="btn btn--inblock btn--main">
                         <div class="btn__text">看更多</div>
@@ -654,12 +660,10 @@
         <div class="wrapper">
             <a href="./breast.html">
                 <div class="section__content lung">
-
                     <div class="section__header">
                         <h2>名醫談乳癌</h2>
                     </div>
                     <p>前往名醫談乳癌，了解更多乳癌資訊，如何治療、癌後照顧、照顧者實戰等影音。</p>
-
                     <div class="btn btn--sec btn--inblock"><div class="btn__text">了解更多</div></div>
                 </div>
             </a>
@@ -737,30 +741,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/menuspy@1.3.0/dist/menuspy.min.js"></script>
 
-<script>
-    $(document).ready(function () {
 
-        //first slide
-        $('.slides--lung').on('init', function(event, slick, direction){
-            var text = $('.slick-slide.slick-active .slides__media img').data('content');
-            $('.slides__content').find('.title').html(text);
-        });
-
-        $('.slides--lung').on('afterChange', function(event, slick, currentSlide){
-
-            var text = $('.slick-slide.slick-active .slides__media img').data('content');
-            $('.slides__content').find('.title').html(text);
-        });
-
-        $('.slides--lung').slick({
-            arrows: false,
-            dots: true,
-            appendDots: $(this).find('.slides__title'),
-            dotsClass: 'slides__dots slides__dots--violet slides__dots--video',
-        });
-
-    });
-</script>
 
     <script src="./assets/js/main.js"></script>
 </body>

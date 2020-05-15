@@ -22,6 +22,11 @@
             line-height: 1.4;
             margin-bottom: 10px;
 
+            >div {
+                @include line-clamp(2);
+                height: 100px;
+            }
+
             >span {
                 font-size: $font-size-20;
                 display: block;
@@ -86,7 +91,13 @@
 }
 
 #cure {
-    background: color(violet100);
+    &.lung {
+        background: color(violet100);
+    }
+
+    &.breast {
+        background: color(pink50);
+    }
 }
 
 #care {
