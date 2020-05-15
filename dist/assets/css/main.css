@@ -1307,7 +1307,6 @@ button:focus {
   flex: 0 0 auto;
   width: 20%;
   padding: 0 10px;
-  margin-bottom: 30px;
 }
 
 .grid--three {
@@ -1795,6 +1794,9 @@ button:focus {
     height: 18px;
     width: 21px;
     background-size: cover;
+  }
+  .recommend--list .recommend__text .icon__video--pink:before, .recommend--list .recommend__text .icon__video--pink:after {
+    background-position-y: -18px;
   }
   .recommend--list .recommend__text .icon__video .icon__text {
     display: inline-block;
