@@ -2919,10 +2919,10 @@ p {
 .topic .wrap:after {
   content: '';
   display: block;
-  background: #ebebeb;
+  background: #fafafa;
   width: calc(100% + 100px);
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   top: 120px;
   left: -50px;
   right: -50px;
@@ -3023,7 +3023,7 @@ p {
   position: absolute;
   left: calc(100% / 3);
   right: 0px;
-  bottom: 40px;
+  bottom: 10px;
 }
 
 #campaign {
