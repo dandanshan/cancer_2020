@@ -404,6 +404,8 @@ button {
         font-weight: $font-weight-medium;
         line-height: 1.4;
         color: color(black);
+        overflow: hidden;
+        min-height: 56px;
 
         .icon {
             &__video {

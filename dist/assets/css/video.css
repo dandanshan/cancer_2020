@@ -1177,6 +1177,8 @@ button:focus {
   font-weight: 500;
   line-height: 1.4;
   color: #333333;
+  overflow: hidden;
+  min-height: 56px;
 }
 
 .recommend__text .icon__video {
