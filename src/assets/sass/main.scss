@@ -441,10 +441,10 @@
         &:after {
             content: '';
             display: block;
-            background: color(gray200);
+            background: color(gray100);
             width: calc(100% + 100px);
             position: absolute;
-            bottom: 0;
+            bottom: -10px;
             top: 120px;
             left: -50px;
             right: -50px;
@@ -545,7 +545,7 @@
         position: absolute;
         left: calc(100% / 3);
         right: 0px;
-        bottom: 40px;
+        bottom: 10px;
     }
 }
 

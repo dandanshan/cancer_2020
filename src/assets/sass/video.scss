@@ -174,9 +174,34 @@
     color: color(black);
 }
 
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+//Just for damn devices (landscape tablets, 1500 - 1200)
+@media only screen and (max-width: 1500px) {
+    .slides {
+        &__content {
+            bottom: 0;
+            height: 125px;
+            width: 600px;
+            max-width: unset;
+            padding: 20px;
+
+            .title {
+                font-size: $font-size-30;
+
+                > span {
+                    font-size: $font-size-base;
+                }
+
+                > div {
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
 //Large devices (landscape tablets, 1200 and down)
 @media only screen and (max-width: $screen-lg) {
     .slides {

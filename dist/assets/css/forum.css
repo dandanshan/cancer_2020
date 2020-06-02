@@ -1177,6 +1177,8 @@ button:focus {
   font-weight: 500;
   line-height: 1.4;
   color: #333333;
+  overflow: hidden;
+  min-height: 56px;
 }
 
 .recommend__text .icon__video {
@@ -1197,6 +1199,24 @@ button:focus {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.recommend .pr {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 12px;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 8px;
+  background: #ebebeb;
+  color: #5c5c5c;
+  z-index: 99;
+}
+
+.recommend .pr:before {
+  content: 'PR';
+  display: block;
 }
 
 .recommend:hover .recommend__media img {

@@ -365,7 +365,6 @@ button {
     }
 }
 
-
 .recommend {
     &--list {}
 
@@ -404,6 +403,8 @@ button {
         font-weight: $font-weight-medium;
         line-height: 1.4;
         color: color(black);
+        overflow: hidden;
+        min-height: 56px;
 
         .icon {
             &__video {
@@ -421,6 +422,24 @@ button {
             width: calc(100% - 55px);
             float: left;
             @include line-clamp(2);
+        }
+    }
+
+    .pr {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 12px;
+        line-height: 1;
+        padding: 2px 5px;
+        border-radius: 8px;
+        background: color(gray200);
+        color: color(gray600);
+        z-index: 99;
+
+        &:before {
+            content: 'PR';
+            display: block;
         }
     }
 
@@ -1207,8 +1226,7 @@ button {
                                 background-size: cover;
                             }
 
-                            &--violet {
-                            }
+                            &--violet {}
 
                             &--pink {
 
