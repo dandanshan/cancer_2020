@@ -2143,7 +2143,27 @@ p {
   margin-bottom: 5px;
 }
 
-#promote .promote__item.normal:before {
+#promote .promote__item.normal:after {
+  content: '';
+  display: block;
+  width: 400px;
+  height: 330px;
+  background: url("../images/img_blob-bg@3x.png") no-repeat 0 0/400px 960px;
+  position: absolute;
+  top: -80px;
+  right: 150px;
+  z-index: -1;
+}
+
+#promote .promote__item.highlight .subtitle {
+  color: #ff7b89;
+}
+
+#promote .promote__item.highlight .action .btn:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+#promote .promote__item.highlight:before {
   content: '';
   display: block;
   width: 260px;
@@ -2155,7 +2175,7 @@ p {
   z-index: -1;
 }
 
-#promote .promote__item.normal:after {
+#promote .promote__item.highlight:after {
   content: '';
   display: block;
   width: 450px;
@@ -2167,28 +2187,8 @@ p {
   z-index: -1;
 }
 
-#promote .promote__item.heighlight .subtitle {
-  color: #ff7b89;
-}
-
-#promote .promote__item.heighlight .action .btn {
-  width: 150px;
-}
-
-#promote .promote__item.heighlight .action .btn:not(:last-of-type) {
-  margin-right: 20px;
-}
-
-#promote .promote__item.heighlight:after {
-  content: '';
-  display: block;
-  width: 400px;
-  height: 330px;
-  background: url("../images/img_blob-bg@3x.png") no-repeat 0 0/400px 960px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
+#promote .promote__item:not(:last-child) {
+  margin-bottom: 80px;
 }
 
 #sponsor {
@@ -2430,7 +2430,7 @@ p {
   #promote .promote__item.normal .action .btn {
     width: 100%;
   }
-  #promote .promote__item.heighlight .action .btn {
+  #promote .promote__item.highlight .action .btn {
     width: 100%;
     margin-bottom: 10px;
   }
@@ -2597,6 +2597,25 @@ p {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (max-width: 1500px) {
+  .slides__content {
+    bottom: 0;
+    height: 125px;
+    width: 600px;
+    max-width: unset;
+    padding: 20px;
+  }
+  .slides__content .title {
+    font-size: 1.875rem;
+  }
+  .slides__content .title > span {
+    font-size: 1rem;
+  }
+  .slides__content .title > div {
+    height: 45px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .slides__content {
     position: relative;

@@ -23,7 +23,7 @@ gulp.task('default', [
     'extend',
     'sass',
     'uglify',
-    // 'minimage',
+    'minimage',
     'assets-deploy',
 ]);
 

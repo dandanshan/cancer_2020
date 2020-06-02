@@ -320,6 +320,31 @@ p {
             }
 
             &.normal {
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 400px;
+                    height: 330px;
+                    background: url('../images/img_blob-bg@3x.png') no-repeat 0 0/400px 960px;
+                    position: absolute;
+                    top: -80px;
+                    right: 150px;
+                    z-index: -1;
+                }
+            }
+
+            &.highlight {
+                .subtitle {
+                    color: color(pink500);
+                }
+
+                .action {
+                    .btn {
+                        &:not(:last-of-type) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
 
                 &:before {
                     content: '';
@@ -346,32 +371,8 @@ p {
                 }
             }
 
-            &.heighlight {
-                .subtitle {
-                    color: color(pink500);
-                }
-
-                .action {
-                    .btn {
-                        width: 150px;
-
-                        &:not(:last-of-type) {
-                            margin-right: 20px;
-                        }
-                    }
-                }
-
-                &:after {
-                    content: '';
-                    display: block;
-                    width: 400px;
-                    height: 330px;
-                    background: url('../images/img_blob-bg@3x.png') no-repeat 0 0/400px 960px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    z-index: -1;
-                }
+            &:not(:last-child) {
+                margin-bottom: 80px;
             }
         }
     }
@@ -645,7 +646,7 @@ p {
                     }
                 }
 
-                &.heighlight {
+                &.highlight {
                     .action {
                         .btn {
                             width: 100%;
