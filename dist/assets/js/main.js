@@ -84,13 +84,16 @@ $(document).ready(function () {
     //first slide
     $('.slides--video').on('init', function(event, slick, direction){
         var text = $('.slick-slide.slick-active .slides__media img').data('content');
+        var link = $('.slick-slide.slick-active a').attr('href');
         $('.slides__content').find('.title').html(text);
+        $('.slides__content a').attr('href', link);
     });
 
     $('.slides--video').on('afterChange', function(event, slick, currentSlide){
-
         var text = $('.slick-slide.slick-active .slides__media img').data('content');
+        var link = $('.slick-slide.slick-active a').attr('href');
         $('.slides__content').find('.title').html(text);
+        $('.slides__content a').attr('href', link);
     });
 
     $('.slides--video').slick({

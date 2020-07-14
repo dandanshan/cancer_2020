@@ -411,9 +411,7 @@ th {
   height: 70px;
   z-index: 20;
   top: calc(50% - 35px);
-  -webkit-transform: scale(0.8);
   transform: scale(0.8);
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -428,7 +426,6 @@ th {
 }
 
 .slides__arrow:hover {
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -558,7 +555,6 @@ th {
   box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   display: block;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -605,7 +601,6 @@ th {
   border-color: #88888f;
   border-style: solid;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   left: 0;
@@ -644,7 +639,6 @@ th {
   position: relative;
   overflow: hidden;
   background: #c6bfd3;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -799,7 +793,6 @@ button:focus {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -890,15 +883,12 @@ button:focus {
 .btn--mainOutline .btn__text {
   color: #705f92;
   font-size: 1rem;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 .btn--mainOutline:before {
   content: '';
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-  -webkit-transform: skew(15deg);
   transform: skew(15deg);
   position: absolute;
   top: -10px;
@@ -930,15 +920,12 @@ button:focus {
 .btn--secOutline .btn__text {
   color: #ff7b89;
   font-size: 1rem;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 .btn--secOutline:before {
   content: '';
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-  -webkit-transform: skew(15deg);
   transform: skew(15deg);
   position: absolute;
   top: -10px;
@@ -971,15 +958,12 @@ button:focus {
 .btn--forumOutline .btn__text {
   color: #454550;
   font-size: 1rem;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 .btn--forumOutline:before {
   content: '';
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-  -webkit-transform: skew(15deg);
   transform: skew(15deg);
   position: absolute;
   top: -10px;
@@ -1012,15 +996,12 @@ button:focus {
 .btn--forumOutlineSec .btn__text {
   color: #66666f;
   font-size: 1rem;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
 .btn--forumOutlineSec:before {
   content: '';
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
-  -webkit-transform: skew(15deg);
   transform: skew(15deg);
   position: absolute;
   top: -10px;
@@ -1055,7 +1036,6 @@ button:focus {
   color: #ffffff;
   font-size: 1rem;
   vertical-align: middle;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -1077,7 +1057,6 @@ button:focus {
   color: #ffffff;
   font-size: 1rem;
   vertical-align: middle;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -1098,11 +1077,9 @@ button:focus {
 @-webkit-keyframes btnScale {
   0%,
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -1110,11 +1087,9 @@ button:focus {
 @keyframes btnScale {
   0%,
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -1123,7 +1098,6 @@ button:focus {
   color: #ffffff;
   font-size: 1rem;
   vertical-align: middle;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -1149,7 +1123,6 @@ button:focus {
   padding: 20px 0;
   right: 0;
   display: none;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -1181,9 +1154,7 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -1197,7 +1168,6 @@ button:focus {
   background: #ffffff;
   opacity: 0;
   z-index: 1;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -1250,7 +1220,6 @@ button:focus {
 }
 
 .recommend:hover .recommend__media img {
-  -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
 
@@ -1349,14 +1318,12 @@ button:focus {
 
 .grid--hscroll {
   margin: 0 -10px;
-  display: -webkit-box;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
 
 .grid--hscroll > li {
-  -webkit-box-flex: 0;
   flex: 0 0 auto;
   width: 20%;
   padding: 0 10px;
@@ -1947,7 +1914,6 @@ p {
   top: 0;
   bottom: 0;
   background: #ff7b89;
-  -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 
@@ -2017,7 +1983,6 @@ p {
   left: 51%;
   right: 51%;
   bottom: 0;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   position: absolute;
   background: #705f92;
@@ -2091,9 +2056,7 @@ p {
   height: 2px;
   background-color: #ffffff;
   border-radius: 2px;
-  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2124,12 +2087,10 @@ p {
 }
 
 .header .burger.active .burger__wrap span:nth-of-type(2) {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .header .burger.active .burger__wrap span:nth-of-type(3) {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -2290,7 +2251,6 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   z-index: 99;
   mix-blend-mode: multiply;
@@ -2302,7 +2262,6 @@ p {
   top: 0;
   left: 0;
   background: #705f92;
-  -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   -webkit-animation: transform 10s ease-in-out infinite both alternate;
   animation: transform 10s ease-in-out infinite both alternate;
@@ -2310,7 +2269,6 @@ p {
   mix-blend-mode: difference;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2318,7 +2276,6 @@ p {
   0%,
   100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
   14% {
@@ -2332,7 +2289,6 @@ p {
   }
   56% {
     border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
   70% {
@@ -2347,7 +2303,6 @@ p {
   0%,
   100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-    -webkit-transform: scale(1);
     transform: scale(1);
   }
   14% {
@@ -2361,7 +2316,6 @@ p {
   }
   56% {
     border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
-    -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
   70% {
@@ -2403,7 +2357,6 @@ p {
     position: fixed;
     background: #ffffff;
     left: 100vw;
-    -webkit-transition: left 0.6s ease;
     transition: left 0.6s ease;
   }
   .header .nav.active {
@@ -2522,7 +2475,6 @@ p {
 
 .slides__content .btn:hover .icon__play--v:before, .slides__content .btn:hover .icon__play--v:after {
   background-position-y: -18px;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -2539,9 +2491,7 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -2563,7 +2513,6 @@ p {
   position: relative;
   padding: 0;
   overflow: hidden;
-  -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
 
@@ -2585,7 +2534,6 @@ p {
   background-image: url("../images/img_blob-deco@3x.png");
   background-position: 0 0;
   background-size: cover;
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   width: 300px;
   height: 295px;
