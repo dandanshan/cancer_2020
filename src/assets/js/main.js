@@ -96,13 +96,22 @@ $(document).ready(function () {
         $('.slides__content a').attr('href', link);
     });
 
-    $('.slides--video').slick({
+    $('.slides--video.slides--v').slick({
         arrows: false,
         dots: true,
         autoplay: true,
         autoplaySpeed: 3000,
         appendDots: $(this).find('.slides__title'),
         dotsClass: 'slides__dots slides__dots--violet slides__dots--video',
+    });
+
+    $('.slides--video.slides--p').slick({
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        appendDots: $(this).find('.slides__title'),
+        dotsClass: 'slides__dots slides__dots--pink slides__dots--video',
     });
 
     //menuSpy

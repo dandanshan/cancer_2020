@@ -64,31 +64,91 @@ p {
         line-height: 1;
         margin-bottom: 10px;
 
-        span {
-            padding-left: 15px;
+        &--normal {
+            span {
+                padding-left: 15px;
+            }
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background: color(pink500);
+                @include rotate(15);
+            }
+
+            &:after {
+                content: '';
+                @include wh-square(10px);
+                display: inline-block;
+                border-radius: 5px;
+                margin-left: 10px;
+                background: color(pink500);
+                vertical-align: -webkit-baseline-middle;
+            }
         }
 
-        &:before {
-            content: '';
-            display: inline-block;
-            width: 2px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            background: color(pink500);
-            @include rotate(15);
-        }
+        &--deco {
+            color: color(black);
+            position: relative;
+            line-height: 1;
+            margin-bottom: 10px;
 
-        &:after {
-            content: '';
-            @include wh-square(10px);
-            display: inline-block;
-            border-radius: 5px;
-            margin-left: 10px;
-            background: color(pink500);
-            vertical-align: -webkit-baseline-middle;
+            span {
+                padding-left: 50px;
+            }
+
+            &.deco {
+                &--v {
+                    &:before {
+                        content: '';
+                        @include bg-img('../images/icon_title-deco@3x.png', 0, 0, cover);
+                        width: 43px;
+                        height: 61px;
+                        position: absolute;
+                        bottom: -10px;
+                    }
+
+                    &:after {
+                        content: '';
+                        @include wh-square(10px);
+                        display: inline-block;
+                        border-radius: 5px;
+                        margin-left: 10px;
+                        background: color(violet500);
+                        vertical-align: -webkit-baseline-middle;
+                    }
+                }
+
+                &--p {
+                    &:before {
+                        content: '';
+                        @include bg-img('../images/icon_title-deco@3x.png', 0, -61px, cover);
+                        width: 43px;
+                        height: 61px;
+                        position: absolute;
+                        bottom: -10px;
+                    }
+
+                    &:after {
+                        content: '';
+                        @include wh-square(10px);
+                        display: inline-block;
+                        border-radius: 5px;
+                        margin-left: 10px;
+                        background: color(pink500);
+                        vertical-align: -webkit-baseline-middle;
+                    }
+
+                }
+            }
         }
     }
+
+
 }
 
 .subtitle {
@@ -375,6 +435,10 @@ p {
                 margin-bottom: 80px;
             }
         }
+    }
+
+    &.pink {
+        background: color(pink50);
     }
 }
 

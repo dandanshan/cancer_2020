@@ -485,6 +485,14 @@ th {
   background-color: #d6d6d6;
 }
 
+.slides__dots--pink li.slick-active button {
+  background-color: #ff7b89;
+}
+
+.slides__dots--pink li button {
+  background-color: #d6d6d6;
+}
+
 .slides__dots--gray li.slick-active button {
   background-color: #88888f;
 }
@@ -1617,13 +1625,17 @@ button:focus {
   width: 18px;
   height: 18px;
   background-image: url("../images/icon_play@3x.png");
-  background-size: 18px 36px;
+  background-size: 18px 72px;
   display: inline-block;
   margin-right: 5px;
 }
 
 .icon__play--v:before, .icon__play--v:after {
   background-position-y: 0px;
+}
+
+.icon__play--p:before, .icon__play--p:after {
+  background-position-y: -36px;
 }
 
 /*---------- alignment ----------*/

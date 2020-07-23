@@ -960,7 +960,7 @@ button {
     &:after {
         @include wh-square(18px);
         background-image: url('../images/icon_play@3x.png');
-        background-size: 18px 36px;
+        background-size: 18px 72px;
         display: inline-block;
         margin-right: 5px;
     }
@@ -974,6 +974,14 @@ button {
         &:before,
         &:after {
             background-position-y: 0px;
+        }
+    }
+
+    &--p {
+
+        &:before,
+        &:after {
+            background-position-y: -36px;
         }
     }
 }

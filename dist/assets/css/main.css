@@ -485,6 +485,14 @@ th {
   background-color: #d6d6d6;
 }
 
+.slides__dots--pink li.slick-active button {
+  background-color: #ff7b89;
+}
+
+.slides__dots--pink li button {
+  background-color: #d6d6d6;
+}
+
 .slides__dots--gray li.slick-active button {
   background-color: #88888f;
 }
@@ -1617,13 +1625,17 @@ button:focus {
   width: 18px;
   height: 18px;
   background-image: url("../images/icon_play@3x.png");
-  background-size: 18px 36px;
+  background-size: 18px 72px;
   display: inline-block;
   margin-right: 5px;
 }
 
 .icon__play--v:before, .icon__play--v:after {
   background-position-y: 0px;
+}
+
+.icon__play--p:before, .icon__play--p:after {
+  background-position-y: -36px;
 }
 
 /*---------- alignment ----------*/
@@ -1902,11 +1914,11 @@ p {
   margin-bottom: 10px;
 }
 
-.section__title span {
+.section__title--normal span {
   padding-left: 15px;
 }
 
-.section__title:before {
+.section__title--normal:before {
   content: '';
   display: inline-block;
   width: 2px;
@@ -1917,7 +1929,62 @@ p {
   transform: rotate(15deg);
 }
 
-.section__title:after {
+.section__title--normal:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: #ff7b89;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.section__title--deco {
+  color: #333333;
+  position: relative;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.section__title--deco span {
+  padding-left: 50px;
+}
+
+.section__title--deco.deco--v:before {
+  content: '';
+  background-image: url("../images/icon_title-deco@3x.png");
+  background-position: 0 0;
+  background-size: cover;
+  width: 43px;
+  height: 61px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.section__title--deco.deco--v:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: #705f92;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.section__title--deco.deco--p:before {
+  content: '';
+  background-image: url("../images/icon_title-deco@3x.png");
+  background-position: 0 -61px;
+  background-size: cover;
+  width: 43px;
+  height: 61px;
+  position: absolute;
+  bottom: -10px;
+}
+
+.section__title--deco.deco--p:after {
   content: '';
   width: 10px;
   height: 10px;
@@ -2189,6 +2256,10 @@ p {
 
 #promote .promote__item:not(:last-child) {
   margin-bottom: 80px;
+}
+
+#promote.pink {
+  background: #ffeff0;
 }
 
 #sponsor {
@@ -2700,7 +2771,7 @@ p {
 }
 
 #topslide .ts__background {
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position-x: 0;
   z-index: -1;
   position: absolute;
@@ -2889,7 +2960,7 @@ p {
 #month .wrapper:before {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 0;
   background-size: cover;
   transform: rotate(90deg);
@@ -2903,7 +2974,7 @@ p {
 
 #month .wrapper:after {
   content: '';
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 -195px;
   background-size: cover;
   display: block;
@@ -2960,7 +3031,7 @@ p {
 .topic#lavie .wrapper:before {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 -275px;
   background-size: cover;
   transform: rotate(-30deg) scaleX(-1);
@@ -2975,7 +3046,7 @@ p {
 .topic#lavie .wrapper:after {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 -240px;
   background-size: cover;
   transform: rotate(45deg);
@@ -2990,7 +3061,7 @@ p {
 .topic#thinking .wrapper:before {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 0;
   background-size: cover;
   transform: scaleX(-1);
@@ -3009,7 +3080,7 @@ p {
 .topic#life .wrapper:before {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 -235px;
   background-size: cover;
   width: 240px;
@@ -3023,7 +3094,7 @@ p {
 .topic#life .wrapper:after {
   content: '';
   display: block;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-position: 0 0;
   background-size: cover;
   width: 125px;
@@ -3055,7 +3126,7 @@ p {
   display: block;
   width: 250px;
   height: 240px;
-  background-image: url("../images/img_blob-deco@3x.png");
+  background-image: url("../images/img_blob-deco-1@3x.png");
   background-size: 250px 885px;
   background-position-y: -645px;
   position: absolute;

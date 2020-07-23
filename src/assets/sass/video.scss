@@ -37,11 +37,20 @@
             position: sticky;
 
             &:hover {
-                .icon__play--v {
+                .icon__play--v, .icon__play--p {
 
                     &:before,
                     &:after {
                         background-position-y: -18px;
+                        @include transition(all, .3s, ease-in-out);
+                    }
+                }
+
+                .icon__play--p {
+
+                    &:before,
+                    &:after {
+                        background-position-y: -54px;
                         @include transition(all, .3s, ease-in-out);
                     }
                 }
@@ -107,7 +116,7 @@
         &:before {
             content: '';
             display: block;
-            @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+            @include bg-img('../images/img_blob-deco-1@3x.png', 0, 0, cover);
             @include rotate(90);
             width: 300px;
             height: 295px;
@@ -119,7 +128,7 @@
 
         &:after {
             content: '';
-            @include bg-img('../images/img_blob-deco@3x.png', 0, -195px, cover);
+            @include bg-img('../images/img_blob-deco-1@3x.png', 0, -195px, cover);
             display: block;
             width: 200px;
             height: 175px;
@@ -127,6 +136,16 @@
             top: -30px;
             left: 90px;
             z-index: -1;
+        }
+    }
+
+    &.pink .wrapper {
+        &:before {
+            @include bg-img('../images/img_blob-deco-2@3x.png', 0, 0, cover);
+        }
+
+        &:after {
+            @include bg-img('../images/img_blob-deco-2@3x.png', 0, -195px, cover);
         }
     }
 }
@@ -138,13 +157,19 @@
             display: block;
             width: 250px;
             height: 240px;
-            background-image: url('../images/img_blob-deco@3x.png');
+            background-image: url('../images/img_blob-deco-1@3x.png');
             background-size: 250px 885px;
             background-position-y: -645px;
             position: absolute;
             top: -70px;
             left: -100px;
             z-index: -1;
+        }
+    }
+
+    &.pink .wrapper {
+        &:before {
+            background-image: url('../images/img_blob-deco-2@3x.png');
         }
     }
 }
