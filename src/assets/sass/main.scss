@@ -223,7 +223,7 @@
 
     .ts {
         &__background {
-            background-image: url('../images/img_blob-deco@3x.png');
+            background-image: url('../images/img_blob-deco-1@3x.png');
             background-position-x: 0;
             z-index: -1;
             position: absolute;
@@ -395,7 +395,7 @@
         &:before {
             content: '';
             display: block;
-            @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+            @include bg-img('../images/img_blob-deco-1@3x.png', 0, 0, cover);
             @include rotate(90);
             width: 300px;
             height: 295px;
@@ -407,7 +407,7 @@
 
         &:after {
             content: '';
-            @include bg-img('../images/img_blob-deco@3x.png', 0, -195px, cover);
+            @include bg-img('../images/img_blob-deco-1@3x.png', 0, -195px, cover);
             display: block;
             width: 200px;
             height: 175px;
@@ -464,7 +464,7 @@
             &:before {
                 content: '';
                 display: block;
-                @include bg-img('../images/img_blob-deco@3x.png', 0, -275px, cover);
+                @include bg-img('../images/img_blob-deco-1@3x.png', 0, -275px, cover);
                 transform: rotate(-30deg) scaleX(-1);
                 width: 280px;
                 height: 240px;
@@ -477,7 +477,7 @@
             &:after {
                 content: '';
                 display: block;
-                @include bg-img('../images/img_blob-deco@3x.png', 0, -240px, cover);
+                @include bg-img('../images/img_blob-deco-1@3x.png', 0, -240px, cover);
                 @include rotate(45);
                 width: 130px;
                 height: 95px;
@@ -494,7 +494,7 @@
             &:before {
                 content: '';
                 display: block;
-                @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+                @include bg-img('../images/img_blob-deco-1@3x.png', 0, 0, cover);
                 transform: scaleX(-1);
                 width: 125px;
                 height: 122px;
@@ -513,7 +513,7 @@
             &:before {
                 content: '';
                 display: block;
-                @include bg-img('../images/img_blob-deco@3x.png', 0, -235px, cover);
+                @include bg-img('../images/img_blob-deco-1@3x.png', 0, -235px, cover);
                 width: 240px;
                 height: 210px;
                 position: absolute;
@@ -525,7 +525,7 @@
             &:after {
                 content: '';
                 display: block;
-                @include bg-img('../images/img_blob-deco@3x.png', 0, 0, cover);
+                @include bg-img('../images/img_blob-deco-1@3x.png', 0, 0, cover);
                 width: 125px;
                 height: 122px;
                 position: absolute;
@@ -558,7 +558,7 @@
             display: block;
             width: 250px;
             height: 240px;
-            background-image: url('../images/img_blob-deco@3x.png');
+            background-image: url('../images/img_blob-deco-1@3x.png');
             background-size: 250px 885px;
             background-position-y: -645px;
             position: absolute;

@@ -95,6 +95,20 @@
             }
         }
 
+        &--pink {
+            li {
+                &.slick-active {
+                    button {
+                        background-color: color(pink500);
+                    }
+                }
+
+                button {
+                    background-color: color(gray300);
+                }
+            }
+        }
+
         &--gray {
             li {
                 &.slick-active {
