@@ -2743,6 +2743,18 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
+  .slides__content {
+    height: unset;
+  }
+  .slides__content .title {
+    font-size: 1.875rem;
+  }
+  .slides__content .title > span {
+    font-size: 1rem;
+  }
+  .slides__content .title > div {
+    height: 88px;
+  }
   .tag {
     margin: 0 0 20px 0;
   }
