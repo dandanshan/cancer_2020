@@ -2060,6 +2060,26 @@ p {
   right: 0;
 }
 
+.header .nav .menu__name--breast {
+  display: inline-block;
+  padding: 31px 12px;
+  color: #ff7b89;
+  position: relative;
+}
+
+.header .nav .menu__name--breast:before {
+  content: '';
+  display: block;
+  z-index: 1;
+  height: 4px;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  transition: all 0.3s ease-out;
+  position: absolute;
+  background: #ff7b89;
+}
+
 .header .nav .menu__content {
   display: inline-block;
   vertical-align: middle;
@@ -2723,6 +2743,18 @@ p {
 }
 
 @media only screen and (max-width: 992px) {
+  .slides__content {
+    height: unset;
+  }
+  .slides__content .title {
+    font-size: 1.875rem;
+  }
+  .slides__content .title > span {
+    font-size: 1rem;
+  }
+  .slides__content .title > div {
+    height: 88px;
+  }
   .tag {
     margin: 0 0 20px 0;
   }

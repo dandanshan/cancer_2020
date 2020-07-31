@@ -215,6 +215,26 @@ p {
                         right: 0;
                     }
                 }
+
+                &--breast {
+                    display: inline-block;
+                    padding: 31px 12px;
+                    color: color(pink500);
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        z-index: 1;
+                        height: 4px;
+                        left: 51%;
+                        right: 51%;
+                        bottom: 0;
+                        @include transition(all, .3s, ease-out);
+                        position: absolute;
+                        background: color(pink500);
+                    }
+                }
             }
 
             &__content {

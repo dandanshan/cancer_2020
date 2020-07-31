@@ -247,6 +247,23 @@
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
+    .slides {
+        &__content {
+            height: unset;
+
+            .title {
+                font-size: $font-size-30;
+
+                > span {
+                    font-size: $font-size-base;
+                }
+
+                > div {
+                    height: 88px;
+                }
+            }
+        }
+    }
 
 
     .tag {
