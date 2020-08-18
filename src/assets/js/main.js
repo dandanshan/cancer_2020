@@ -147,7 +147,7 @@ $(document).ready(function () {
         if (cookieString !== 'yes') {
             // console.log('doesnt exist');
             $alert.show().css('top', headerH);
-            $topSlide.css('padding-top', headerH);
+            $topSlide.css('padding-top', alertH);
 
             $('#setCookie').click(function () {
                 setCookie('agree', 'yes', 30);
